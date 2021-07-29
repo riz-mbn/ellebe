@@ -27,6 +27,7 @@
                         <?php
                             wp_nav_menu( array( 
                                 'theme_location' => 'main-menu',
+                                'depth'          => 1,
                                 'menu'         => '',
                                 'container'    => 'ul',
                                 'items_wrap' => '<ul class="menu align-right dropdown" data-dropdown-menu>%3$s</ul>' ,

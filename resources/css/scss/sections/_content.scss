@@ -3,10 +3,6 @@
     margin-top: -265px;
     min-height: 86vh !important;
     padding-top: 100px;
-
-    .fixed_header{
-
-    }
     
 }
 
@@ -185,7 +181,7 @@
     .button {
         width: 200px;
         margin: 0 auto;
-        
+
         &.hollow {
             color: $color-secondary;
             border-color: $color-secondary;
@@ -205,8 +201,7 @@
                     background: $color-secondary;
                     font-family: $heading-font-family;
                 }
-            }
-            
+            }            
             .services_content {
                 padding-left: 30px;
 
@@ -618,10 +613,7 @@ figure {
             top: 20%;
             z-index: -1;
         }
-        &.img_flower{
-            
-        }
-
+        
     }
     
 }
