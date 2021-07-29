@@ -110,9 +110,11 @@
             <div class="cell large-12">
                 <div class="section_title">
                     <h2 class="sec_title">Services</h2>
-                    <p class="sec_subtitle">We pride ourselves in providing a range of aesthetic services at ElleBe.<br/>
-                    You will always feel warm and welcome while in our care.</p>
-                    <a class="button hollow desktop_only" href="/services">Learn more</a>
+                    <div class="sec_subtitle">
+                        <p>We pride ourselves in providing a range of aesthetic services at ElleBe.</p>
+                        <p>You will always feel warm and welcome while in our care.</p>
+                    </div>
+                    <a class="button hollow learn_more_desktop" href="/services">Learn more</a>
                 </div>
                 <div class="section_content">
                     <div class="services_info">

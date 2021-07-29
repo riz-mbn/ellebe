@@ -72,9 +72,10 @@
                       arrow: true,
                       infinite: true,
                       speed: 300,
-                      slidesToShow: 6,
+                      slidesToShow: 5,
                       slidesToScroll: 1,
                       variableWidth: true,
+                      focusOnSelect: true,
                       asNavFor: '.services_info_contents',
                       responsive: [
                         {

@@ -479,3 +479,76 @@ a.btn-back {
         margin:-2px 5px;
     }
 }
+
+
+.btn_floating {
+    position: fixed;
+    top: 40%;
+    right: -105px;
+    transform: rotate(270deg);
+    z-index: 2;
+
+    .button {
+        background: #805C3C;
+        font-weight: 300;
+        font-size: 14px;
+        border-radius: 0;
+        
+    }
+
+    @include media (max-width, 1023px){
+        transform: rotate(0);
+        right: 0;
+        .button {
+            min-width: 100%;
+            padding: 10px 15px;
+            margin-bottom: 0;
+            line-height: 0;
+            font-size: 0;
+
+            &:before {
+                margin: 0 auto;
+                content: url(../img/icon/icn-book.svg);
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.btn_scroll_up {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 99999;
+    background-color: rgba(128, 92, 60, 0.8);
+    padding: 10px 20px;
+    border-radius: 10px 10px 0 0;
+    font-size: 0;
+    cursor:pointer;
+
+    span{
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            border-top: 3px solid $color-white;
+            height: 3px;
+        }
+        
+        &:before {
+            transform: rotate(-45deg);
+            border-bottom: 0;
+            width: 10px;
+            box-shadow: none;
+            left: 14px;
+            top: 24px;
+        }
+
+        &:after {
+            left: 14px;
+            top: 24px;
+            transform: rotate(45deg);
+        }
+
+    }
+}

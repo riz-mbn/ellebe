@@ -373,10 +373,12 @@ header {
 
 			}
 
-			@include media (max-width, 1600px){				
-				padding-top: 5%;		
+			
+			@media (max-width: 1600px) and (min-width:1024px){				
+				padding-top: 35%;		
 				padding-bottom: 5%;
 			}
+
 
 			
 			@include media (max-width, 1381px){		
