@@ -215,7 +215,7 @@
     <figure class="floating_img img_lady_2"><img src="<?php echo MBN_ASSETS_URI ?>/img/img_lady_2.png" alt="" class="" /></figure>
     <figure class="floating_img img_flower"><img src="<?php echo MBN_ASSETS_URI ?>/img/img_flower.png" alt="" class="" /></figure>
     <div class="grid-container">
-        <div class="grid-x grid-margin-x cols2-s4 contact_wrap">
+        <div class="grid-x grid-margin-x contact_wrap">
             <div class="cell large-8 medium-12 small-12">
                 <figure class=""><img src="<?php echo MBN_ASSETS_URI ?>/img/img_ladies.jpg" alt="" class="" /></figure>
             </div>
