@@ -157,8 +157,8 @@
                                 <div class="item kybella">
                                     <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img_kybella.png" alt=""></figure>
                                     <div class="services_content">
-                                        <h3>Dermal filler </h3>
-                                        <p>Microneedling is a popular treatment that provides multiple skin benefits.</p>
+                                        <h3>Kybella </h3>
+                                        <p>Kybella consists of deoxycholic acid which helps to destroy fat cells.</p>
                                     </div>
                                 </div>
                             </div>
@@ -196,8 +196,8 @@
                                 </div>
                                 <div class="item kybella">
                                     <div class="services_content">
-                                        <h3>Dermal filler </h3>
-                                        <p>Microneedling is a popular treatment that provides multiple skin benefits.</p>
+                                        <h3>Kybella </h3>
+                                        <p>Kybella consists of deoxycholic acid which helps to destroy fat cells.</p>
                                     </div>
                                 </div>
                             </div>                            

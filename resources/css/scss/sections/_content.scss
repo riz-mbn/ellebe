@@ -183,6 +183,9 @@
     }
 
     .button {
+        width: 200px;
+        margin: 0 auto;
+        
         &.hollow {
             color: $color-secondary;
             border-color: $color-secondary;
