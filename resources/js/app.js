@@ -32,8 +32,117 @@
                 else{
                     $('.filter_sticky').removeClass("active");
                 }
+
+                var offset = 0, button_up;
+                var sticky = false;
+                var top = $(window).scrollTop();
+                    
+                if ( $(".sticky-container").offset().top < top ) {
+
+                    $('.sticky').addClass('is-stuck');
+                    $('.sticky').removeClass('is-anchored');
+                    sticky = true;
+
+                    } else {
+
+                        $('.sticky').addClass('is-anchored');
+                        $('.sticky').removeClass('is-stuck');
+
+                    }
+                        
+                    /* Button Scroll Up */
+                    (button_up = function() {
+                        var button;
+                        button = $('.btn_scroll_up');
+                        if (top > $(window).offset().top){
+                            return button.fadeIn('slow');
+                        } else {
+                            return button.fadeOut('slow');
+                        }
+                    })();
             });
 
+            $(window).resize(function(){
+                var $windowWidth = $(window).width();
+                console.log($windowWidth);
+                if ($windowWidth <= 1400) {
+                    
+                    $('.services_info_items').slick({
+                      dots: false,
+                      arrow: true,
+                      infinite: true,
+                      speed: 300,
+                      slidesToShow: 4,
+                      slidesToScroll: 1,
+                      variableWidth: true,
+                      asNavFor: '.services_info_contents',
+                      responsive: [
+                        {
+                          breakpoint: 1200,
+                          settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 1
+                          }
+                        },
+                        {
+                          breakpoint: 1024,
+                          settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1
+                          }
+                        },
+                        {
+                          breakpoint: 768,
+                          settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                          }
+                        }
+                      ]                      
+                    });
+                    $('.services_info_contents').slick({
+                        dots: false,
+                        arrow: false,
+                        infinite: true,
+                        speed: 300,
+                        asNavFor: '.services_info_items',                 
+                      });
+                  }
+            });
+
+            var $el, $ps, $up, totalHeight;
+
+            $(".col-copy .button").click(function() {
+                
+            totalHeight = 0
+
+            $el = $(this);
+            $p  = $el.parent();
+            $up = $p.parent();
+            $ps = $up.find("div:not('.btn_read_more')");
+            
+            // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
+            $ps.each(function() {
+                totalHeight += $(this).outerHeight();
+            });
+                    
+            $up
+                .css({
+                // Set height to prevent instant jumpdown when max height is removed
+                "height": $up.height(),
+                "max-height": '100%'
+                })
+                .animate({
+                "height": '100%'
+                });
+            
+            // fade out read-more
+            $p.fadeOut();
+            
+            // prevent jump-down
+            return false;
+                
+            });
         },
 
         customDropdown: function() {

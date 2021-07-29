@@ -63,7 +63,7 @@ header {
 
 				.navlogo {
 					figure {
-						width: 90px;
+						width: 70px;
 					}
 				}
 
@@ -95,13 +95,19 @@ header {
 				float: left;				
 				height: 100%;
 				overflow: visible;
+				align-items: center;
+				display: flex;
 
 				figure {
 					width: 180px;
 					transition: all 0.3s ease;
 
-					@media(max-width: 1023px) and (min-width:783px){		
+					@media(max-width: 1023px) {		
 						width: 100px;
+					}
+					
+					@media(max-width: 375px) {		
+						width: 90px;
 					}
 				}
 				
@@ -204,15 +210,14 @@ header {
 						border-bottom: 0; 
 					}
 					&:after {
-						width: 22px; 
 						left: 14px; 
 						top: 24px; 
 						transform: rotate(45deg);
 					}
 				}
 
-				@media(max-width: 1023px) and (min-width:783px){									
-					right: 50px;
+				@media(max-width: 1023px){									
+					right: 30px;
 					top: 30%;
 				}
 
@@ -295,10 +300,10 @@ header {
 
 				}
 			}
+		}
 
-			@include media(max-width,1023px){
-				min-height: 135px;
-			}
+		@include media(max-width,1023px){
+			top: 130px;
 		}
 
 	}
@@ -330,6 +335,16 @@ header {
 					width: 100%;
 					left: 0;
 					right: 0;
+					
+					@include media (max-width, 480px) {						
+						background-size: 150% 100px;
+						background-position: center;
+					}
+					
+					@include media (max-width, 375px) {						
+						background-size: 200% 100px;
+						background-position: center;
+					}
 				}
 			}
 		}
@@ -368,10 +383,21 @@ header {
 				}
 			}
 
+			@include media (max-width, 768px){		
+				h1 {
+					font-size: 30px;
+				}
+				.grid-x {
+					min-height: 100%;
+				}
+			}
+
 		}
 
 		@include media (max-width, 1023px){
 			margin-top: 0;
+			display: block;
+			min-height: 100%;
 
 			.bg {
 				position: relative;

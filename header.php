@@ -33,7 +33,6 @@
                                 'menu_class'   => 'menu align-right dropdown',
                             ));
                         ?>  
-                       <a href="#" class="button menu_button"><?php echo esc_html('Schedule Services'); ?></a>
                     </nav>
                     <nav class="mobmenu hide-for-large">     
                         <?php

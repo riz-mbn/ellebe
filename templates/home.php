@@ -9,7 +9,7 @@
         <div class="grid-container"> 
             <div class="grid-x grid-margin-x">
                 <div class="cell large-6 align-self-middle small-order-2 large-order-1">
-                    <h1>Be comfortable. Be confident. Be beautiful. Be you.</h1>
+                    <h1>Be comfortable. Be confident.<br/>Be beautiful. Be you.</h1>
                     <div class="hero_caption_text">
                         <p>ElleBe Medical Aesthetics in Scottsdale, Arizona is dedicated to providing clients with a comfortable atmosphere to obtain individualized cosmetic and aesthetic procedures.</p>
                     </div>
@@ -23,13 +23,13 @@
         </div>
     </div>
 </section>
-<section class="about_section">
+<section class="about_section padding_v_40">
     <div class="grid-container">
         <div class="grid-x grid-margin-x cols2-s4">
-            <div class="cell large-8 large-order-2">
+            <div class="cell large-6 xlarge-8 large-order-2">
                 <figure class="col-image"><img src="<?php echo MBN_ASSETS_URI ?>/img/img_faces.png" alt=""></figure>
             </div>
-            <div class="cell large-4 large-order-1 align-self-middle col-copy ">
+            <div class="cell large-6 xlarge-4 large-order-1 align-self-middle col-copy ">
                 <div class="section_title">
                     <h2>About</h2>
                 </div>
@@ -69,11 +69,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="btn_read_more"><button class="button">Read More</div>
             </div>
         </div>  
     </div>    
 </section>
-<section class="certifications_section desktop_only">
+<section class="certifications_section padding_v_40 desktop_only">
     <div class="grid-container">
         <div class="grid-x grid-margin-x cols2-s4">
             <div class="cell large-12">
@@ -102,7 +103,8 @@
             </div>
         </div>        
 </section>
-<section class="services_section text_center">
+<section class="services_section text_center padding_v_40">
+    <figure class="floating_img img_lady_1"><img src="<?php echo MBN_ASSETS_URI ?>/img/img_lady_1.png" alt="" class="" /></figure>
     <div class="grid-container">
         <div class="grid-x grid-margin-x cols2-s4">
             <div class="cell large-12">
@@ -160,6 +162,46 @@
                                     </div>
                                 </div>
                             </div>
+                            
+                            <div class="services_info_contents">
+                                <div class="item botox">
+                                    <div class="services_content">
+                                        <h3>Botox/Dysport</h3>
+                                        <p>Botox and Dysport work to treat and prevent fine lines and wrinkles.</p>
+                                    </div>
+                                </div>
+                                <div class="item pdo">
+                                    <div class="services_content">
+                                        <h3>PDO Thread Lift</h3>
+                                        <p>PDO threads are made of polydioxanone and are used to lift and tighten sagging skin tissue.</p>
+                                    </div>
+                                </div>
+                                <div class="item dermafiller">
+                                    <div class="services_content">
+                                        <h3>Dermal filler </h3>
+                                        <p>Fillers can be hydrating and are used to improve wrinkles and folds</p>
+                                    </div>
+                                </div>
+                                <div class="item prf">
+                                    <div class="services_content">
+                                        <h3>PRF </h3>
+                                        <p>Platelet Rich Fibrin is obtained by drawing a patient’s blood and processing it in order to be used for treatment.</p>
+                                    </div>
+                                </div>
+                                <div class="item microneedling">
+                                    <div class="services_content">
+                                        <h3>Microneedling</h3>
+                                        <p>Fillers can be hydrating and are used to improve wrinkles and folds</p>
+                                    </div>
+                                </div>
+                                <div class="item kybella">
+                                    <div class="services_content">
+                                        <h3>Dermal filler </h3>
+                                        <p>Microneedling is a popular treatment that provides multiple skin benefits.</p>
+                                    </div>
+                                </div>
+                            </div>                            
+                            <div class="btn_read_more"><button class="button">Learn More</div>
                         </div>
                     </div>
                 </div>
@@ -167,7 +209,22 @@
         </div>
     </div>
 </section>
-
-
+<section class="contact_section padding_v_40">
+    <figure class="floating_img img_lady_2"><img src="<?php echo MBN_ASSETS_URI ?>/img/img_lady_2.png" alt="" class="" /></figure>
+    <figure class="floating_img img_flower"><img src="<?php echo MBN_ASSETS_URI ?>/img/img_flower.png" alt="" class="" /></figure>
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x cols2-s4 contact_wrap">
+            <div class="cell large-8 medium-12 small-12">
+                <figure class=""><img src="<?php echo MBN_ASSETS_URI ?>/img/img_ladies.jpg" alt="" class="" /></figure>
+            </div>
+            <div class="cell large-4 medium-12 small-12">
+                <div class="contact_box">
+                    <h2 class="text_center">Get in touch with us</h2>
+                    <?= do_shortcode('[gravityform id="1" title="false" description="false" ajax="false"]') ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <?php 
     get_footer(); 

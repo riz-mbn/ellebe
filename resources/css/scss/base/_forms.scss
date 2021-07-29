@@ -18,11 +18,11 @@ textarea,
 select {
     color: lighten($color-black, 7%);
     border:0;
-    border: 1px solid darken($color-white, 12%);
+    border: 1px solid $color-primary;
     height: $field-height;
     padding:15px 20px;
     font-size:16px;
-    font-family: $body-font-family;
+    font-family: $heading-font-family;
     margin: 0 0 15px;
     -webkit-border-radius:0;
     -moz-border-radius:0;
@@ -335,4 +335,52 @@ ul.gform_fields  {
             }
         }
     }
+}
+
+
+
+.gform_wrapper {
+    .ginput_container_name {
+
+        span {
+            display: inline-block;
+            vertical-align: top;
+            padding-right: 16px;
+            margin-right: -4px;
+            width: 50%;
+        }
+    }
+    
+    button {
+        font-family: $heading-font-family;
+        color: $color-black;
+        text-transform: capitalize;
+        border-color: $color-black;
+        border-radius: 0;
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    @include media (min-width, 641px){
+        .ginput_container_name {
+            width: calc(100% + 15px);
+        }
+
+        .gfield {
+            padding-right: 16px;
+        }
+
+    }
+}
+
+.gform_validation_errors {
+    h2 {
+        font-size: 14px;
+    }
+}
+
+.validation_message {
+    font-size: 14px;
+    color: $color-primary;
+    font-family: $heading-font-family;
 }

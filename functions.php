@@ -135,7 +135,7 @@ remove_action('admin_print_styles', 'print_emoji_styles');
 **/
 function mbn_register_sidebars(){
     // footer menus
-    for($i=1;$i<=5;$i++){
+    for($i=1;$i<=4;$i++){
         register_sidebar(array(
             'name'          => __('Footer Column '.$i),
             'id'            => 'footer-col-'.$i,
@@ -145,8 +145,20 @@ function mbn_register_sidebars(){
             'after_title'   => false,
         ));
     }
+    
+	register_sidebar(
+		array (
+			'name' => __( 'Footer Bottom', 'your-theme-domain' ),
+			'id' => 'footer-bottom',
+			'description' => __( 'footer_bottom', 'mbn' ),
+			'before_widget' => false,
+			'after_widget' => false,
+			'before_title' => false,
+			'after_title' => false,
+		)
+	);
 }
-//add_action('widgets_init', 'mbn_register_sidebars');
+add_action('widgets_init', 'mbn_register_sidebars');
 
 
 /**
@@ -164,3 +176,7 @@ require MBN_DIR_PATH.'/includes/shortcodes.php';
 require MBN_DIR_PATH.'/includes/public-hooks.php';
 require MBN_DIR_PATH.'/includes/admin-hooks.php';
 
+add_filter( 'gform_submit_button', 'form_submit_button', 10, 2 );
+function form_submit_button( $button, $form ) {
+    return "<button class='button hollow' id='gform_submit_button_{$form['id']}'>{$form['button']['text']}</button>";
+}
