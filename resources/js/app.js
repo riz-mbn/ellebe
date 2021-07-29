@@ -72,7 +72,7 @@
                       arrow: true,
                       infinite: true,
                       speed: 300,
-                      slidesToShow: 4,
+                      slidesToShow: 6,
                       slidesToScroll: 1,
                       variableWidth: true,
                       asNavFor: '.services_info_contents',
@@ -80,25 +80,18 @@
                         {
                           breakpoint: 1200,
                           settings: {
-                            slidesToShow: 4,
+                            slidesToShow: 5,
                             slidesToScroll: 1
                           }
                         },
-                        {
-                          breakpoint: 1024,
-                          settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 1
+                          {
+                            breakpoint: 375,
+                            settings: {
+                              slidesToShow: 5,
+                              slidesToScroll: 1
+                            }
                           }
-                        },
-                        {
-                          breakpoint: 768,
-                          settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 1
-                          }
-                        }
-                      ]                      
+                        ]                    
                     });
                     $('.services_info_contents').slick({
                         dots: false,

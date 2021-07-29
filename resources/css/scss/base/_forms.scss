@@ -349,7 +349,8 @@ ul.gform_fields  {
             margin-right: -4px;
             width: 50%;
 
-            @include media (max-width, 1023px){
+            @include media (max-width, 768px){
+                padding-right: 0 !important;
                 display: block;
                 width: 100%;
             }
@@ -366,13 +367,13 @@ ul.gform_fields  {
         font-size: 18px;
     }
 
-    @include media (min-width, 1024px){
+    @include media (min-width, 769px){
         .ginput_container_name {
             width: calc(100% + 15px);
         }
 
         .gfield {
-            padding-right: 16px;
+            padding-right: 0;
         }
 
     }

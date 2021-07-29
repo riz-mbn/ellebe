@@ -13,21 +13,21 @@
                         endif; 
                         ?>
                     </div>
-                    <div class="cell medium-6 large-3 xlarge-3 col-item">
+                    <div class="cell small-6 medium-6 large-3 xlarge-3 col-item">
                         <?php 
                         if ( is_active_sidebar( 'footer-col-2' ) ) :
                             dynamic_sidebar( 'footer-col-2' );
                         endif; 
                         ?>
                     </div>
-                    <div class="cell medium-6 large-3 xlarge-3 col-item"> 
+                    <div class="cell small-6 medium-6 large-3 xlarge-3 col-item"> 
                         <?php 
                         if ( is_active_sidebar( 'footer-col-3' ) ) :
                             dynamic_sidebar( 'footer-col-3' );
                         endif; 
                         ?>
                     </div>
-                    <div class="cell medium-6 large-3 xlarge-3 col-item">     
+                    <div class="cell small-6 medium-6 large-3 xlarge-3 col-item">     
                         <?php 
                         if ( is_active_sidebar( 'footer-col-4' ) ) :
                             dynamic_sidebar( 'footer-col-4' );
