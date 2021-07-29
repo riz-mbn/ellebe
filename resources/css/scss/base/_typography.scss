@@ -10,9 +10,10 @@
 body{
     font-family: $body-font-family;
     font-size: $body-font-size;
-    color: $color-grey;
+    color: $color-black;
     // font-weight: 300;
     overflow-x: hidden;
+    line-height: 1.7;
 }
 
 
@@ -27,7 +28,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6{
-    font-weight: bold;
+    font-weight: 400;
     font-family: $heading-font-family;
     line-height:1.4;
     margin-bottom: 15px;

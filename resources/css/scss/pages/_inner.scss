@@ -1,0 +1,34 @@
+.wp-block-group__inner-container,
+.wp-block-cover__inner-container {
+	max-width: 1410px !important;
+	padding-left:35px;
+	padding-right: 35px; 
+	margin-left: auto;
+	margin-right: auto;
+}
+.wp-block-group__inner-container {
+	padding-left:0;
+	padding-right:0;
+}
+
+.wp-block-columns{
+
+    &.grid-x {
+        width: auto;
+        max-width: none;
+        margin-top: 0;
+        margin-bottom: 0;
+    
+        > * {
+            flex-basis: auto !important;
+        }       
+        
+    }
+    .wp-block-group__inner-container {
+        padding-left:0;
+        padding-right:0;
+    }
+    
+
+
+}

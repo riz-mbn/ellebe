@@ -21,6 +21,69 @@
     font-weight: 700;
 }
 
+//custom
+.desktop_only {
+	display: block;
+
+	@include media (max-width, 1023px) {
+		display: none;
+	}
+}
+
+.mobile_only {
+	display: none;
+
+	@include media (max-width, 1023px) {
+		display: block;
+	}
+}
+
+.margin_hauto {
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.margin_left_0 {
+	margin-left: 0;
+}
+
+.margin_right_0 {
+	margin-right: 0;
+}
+
+.padding_left_0 {
+	padding-left: 0;
+}
+
+.padding_right_0 {
+	padding-right: 0;
+}
+
+.text_center{
+	text-align: center !important;
+}
+
+.text_columns {
+    display: flex;
+	column-gap: 5%;
+
+    .text_cols2 {
+        width: 50%;
+    }
+
+    .text_cols3 {
+        width: 33.33%;
+    }
+
+    .text_cols4 {
+        width: 25%;
+    }
+
+    .text_cols5 {
+        width: 20%;
+    }
+
+}
 
 
 //Custom foundation 
