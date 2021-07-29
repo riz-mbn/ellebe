@@ -22,14 +22,26 @@
     }
 
     .footer_columns {
+
         &.mobile_only {
-            @include media(max-width,768px){
+            display:none;
+
+            @include media(max-width,480px){
+                display:block;
                 .wp-block-column {
                     flex-basis: 50% !important;
                 }
-
             }
         }
+
+         &.desktop_only {
+            display:block;
+            
+            @include media(max-width,480px){
+                display:none;
+            }
+         }
+
     }
 
     .footer_logo {

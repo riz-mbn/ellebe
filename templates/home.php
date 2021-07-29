@@ -112,7 +112,7 @@
                     <h2 class="sec_title">Services</h2>
                     <p class="sec_subtitle">We pride ourselves in providing a range of aesthetic services at ElleBe.<br/>
                     You will always feel warm and welcome while in our care.</p>
-                    <a class="button hollow" class="/services">Learn more</a>
+                    <a class="button hollow desktop_only" href="/services">Learn more</a>
                 </div>
                 <div class="section_content">
                     <div class="services_info">
