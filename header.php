@@ -19,7 +19,7 @@
                 <div class="grid-container">
                     <a class="navlogo" href="<?php echo get_home_url(); ?>">
                         <figure>
-                            <img src="<?php echo MBN_ASSETS_URI ?>/img/Ellebe_logo.png" alt="">
+                            <img src="<?php echo MBN_ASSETS_URI ?>/img/ElleBe_logo.png" alt="">
                         </figure>
                     </a>
                     <span class="navicon hide-for-large" data-toggle="header">mobile menu</span>
