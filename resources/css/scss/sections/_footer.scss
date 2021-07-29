@@ -30,7 +30,7 @@
             @include media(max-width,480px){
                 display:block;
                 .wp-block-column {
-                    flex-basis: 50% !important;
+                    //flex-basis: 50% !important;
                 }
             }
         }
