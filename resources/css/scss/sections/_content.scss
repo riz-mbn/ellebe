@@ -132,7 +132,7 @@
 }
 
 .founder_section {
-    padding: 0;
+    padding: 0 !important;
 
     .col-copy {
 
@@ -163,7 +163,7 @@
         }
     }
     @include media(max-width, 1023px){
-        padding: 40px 0;
+        padding: 40px 0 !important;
     }
 }
 
