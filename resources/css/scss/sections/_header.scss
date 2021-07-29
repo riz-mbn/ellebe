@@ -116,14 +116,16 @@ header {
 			.navmenu {
 				display: flex; 
 				justify-content: flex-start;
+				transition: all 0.3s ease;
 
 				a {
+					border-radius: 3px;
 					font-size: 14px;
 					font-weight: 400;
 					text-transform: uppercase;
 					padding: 18px 40px;
 					line-height: 1.1;
-					color: $color-primary;
+					color: #807366;
 
 					&:hover {
 						color: $color-primary;
@@ -224,6 +226,8 @@ header {
 			}
 
 			@include media(max-width, 1023px) {
+				min-height: 135px;
+
 				.mobmenu {
 					position: fixed;
 					top: -100vh;
@@ -370,6 +374,7 @@ header {
 			}
 
 			@include media (max-width, 1600px){				
+				padding-top: 5%;		
 				padding-bottom: 5%;
 			}
 
@@ -382,14 +387,26 @@ header {
 					width: 100%;	
 				}
 			}
+			@include media (max-width, 1023px){		
+				h1 {
+					background: linear-gradient(117.48deg, #B89E6C 20.85%, #D1C3B5 90.52%);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+			}
 
 			@include media (max-width, 768px){		
 				h1 {
 					font-size: 30px;
 				}
+			}
+
+			
+			@include media (max-width, 1023px){
 				.grid-x {
 					min-height: 100%;
 				}
+
 			}
 
 		}

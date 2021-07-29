@@ -209,7 +209,7 @@
         </div>
     </div>
 </section>
-<section class="contact_section padding_v_40">
+<section id="contact" class="contact_section padding_v_40">
     <figure class="floating_img img_lady_2"><img src="<?php echo MBN_ASSETS_URI ?>/img/img_lady_2.png" alt="" class="" /></figure>
     <figure class="floating_img img_flower"><img src="<?php echo MBN_ASSETS_URI ?>/img/img_flower.png" alt="" class="" /></figure>
     <div class="grid-container">
