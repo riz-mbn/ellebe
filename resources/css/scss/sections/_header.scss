@@ -293,6 +293,7 @@ header {
 								background: linear-gradient(117.48deg, #B89E6C 20.85%, #D1C3B5 90.52%);
 								-webkit-background-clip: text;
 								-webkit-text-fill-color: transparent;
+								-webkit-tap-highlight-color: transparent;
 
 								&:before {
 									position: absolute; 
@@ -300,6 +301,15 @@ header {
 									top:50%; 
 									margin-top:-22px; 
 								}
+								
+								&:focus,
+								&:hover,
+								&:active,
+								&:focus-visible {
+									outline: none;
+									color: $color-black;
+								}
+								
 							}
 							ul.submenu {
 								margin: 0;
@@ -321,7 +331,16 @@ header {
 										background: transparent;
 										background: none;
 										-webkit-text-fill-color: $color-black;	
-										padding: 7px 35px;							
+										padding: 7px 35px;			
+										-webkit-tap-highlight-color: transparent;								
+										
+										&:focus,
+										&:hover,
+										&:active,
+										&:focus-visible {
+											outline: none;
+											color: $color-primary;
+										}
 									}
 								}
 							}
