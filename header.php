@@ -50,7 +50,6 @@
         </div>            
     </header>    
     <button class="btn_floating"><a class="button" href="https://ellebe.myaestheticrecord.com/book/appointments" target="_blank">Schedule Services</a></button>
-    <button data-scroll="up" class="btn_scroll_up"><span>UP</span></button>
     <main id="content" class="content">
         <?php 
              //get_template_part( 'templates/page-head' );
