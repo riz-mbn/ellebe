@@ -538,10 +538,12 @@ a.btn-back {
         }
         
         &:before {
+            right: 18px;
             transform: rotate(130deg);
         }
 
         &:after {
+            left: 18px;
             transform: rotate(230deg);
         }
     }
