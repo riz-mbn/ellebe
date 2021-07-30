@@ -4,17 +4,15 @@
 ?>
 
 <section class="hero hero-s3 services">
-    <div class="hero-block">
-        <figure class="bg"><img src="<?php echo MBN_ASSETS_URI ?>/img/bgs/img_services_hdr.jpeg" alt=""></figure>
-        <div class="hero-caption">
-            <div class="grid-container"> 
-                <div class="grid-x grid-margin-x">
-                    <div class="cell large-7 align-self-middle small-order-2 large-order-1">
-                        <h1>Be comfortable. Be confident.<br/>Be beautiful. Be you.</h1>
-                    </div>
-                    <div class="cell small-10 small-offset-3 large-5 large-offset-0 align-self-middle small-order-1 large-order-2">                    
-                        <figure class="text-center"><img src="<?php echo MBN_ASSETS_URI ?>/img/img_services_lindsay.png" alt=""></figure>
-                    </div>
+    <figure class="bg"><img src="<?php echo MBN_ASSETS_URI ?>/img/bgs/img_services_hdr.jpeg" alt=""></figure>
+    <div class="hero-caption">
+        <div class="grid-container"> 
+            <div class="grid-x grid-margin-x">
+                <div class="cell xlarge-6 large-7 align-self-middle small-order-2 large-order-1">
+                    <h1>Be comfortable. Be confident.<br/>Be beautiful. Be you.</h1>
+                </div>
+                <div class="cell small-10 small-offset-3 xlarge-6 large-5 large-offset-0 align-self-middle small-order-1 large-order-2">                    
+                    <figure class="text-center"><img src="<?php echo MBN_ASSETS_URI ?>/img/img_services_lindsay.png" alt=""></figure>
                 </div>
             </div>
         </div>
@@ -32,6 +30,7 @@
         </div>
     </div>
 </section>
+
 <section id="botox" class="botox_section padding_v_40">
     <div class="grid-container">
         <div class="grid-x grid-margin-x cols2-s4">

@@ -37,7 +37,7 @@
                                 </ul>
                             </li>
                             <li><a href="<?php echo home_url("/#contact");?>" data-smooth-scroll>Contact</a></li>
-                            <li class="nav-cta"><a href="/contact-us/">SCHEDULE SERVICES</a></li>
+                            <li class="nav-cta"><a href="https://ellebe.myaestheticrecord.com/book/appointments">SCHEDULE SERVICES</a></li>
                         </ul>
                     </nav>
                     <nav class="mobmenu hide-for-large">     

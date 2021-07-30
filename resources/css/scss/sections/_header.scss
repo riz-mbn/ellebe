@@ -341,7 +341,7 @@ header {
 											outline: none;
 											color: $color-primary;
 										}
-										
+
 									}
 								}
 							}
@@ -380,7 +380,7 @@ header {
 
 .hero {
 	&.hero-s3 {
-		min-height:450px;
+		min-height:100%;
 		margin-top: -265px;
 		display: flex;
 		flex-wrap: wrap;
@@ -390,13 +390,34 @@ header {
 
 		&.home {
 			
-			min-height: 786px;
+			min-height: 786px;		
+			
+			@media (max-width: 1600px) and (min-width:1024px){	
+				.hero-caption {
+
+					padding-top: 35%;		
+					padding-bottom: 5%;
+	
+				}			
+			}
 		}
 
 		&.services {
+			align-content: normal;
+			flex-direction: column;
+			flex-wrap: wrap;
+
 			.hero-caption {
 				.grid-x {
-					align-items: flex-end;
+					align-content: flex-end;
+					min-height: 100%;
+					margin-top: 100px;
+				}
+				h1 {
+					font-size: 40px;
+				}
+				figure {
+					margin-bottom: 0 !important;
 				}
 			}
 
@@ -418,6 +439,42 @@ header {
 							font-size: 14px;
 							font-weight: 600;
 						}
+					}
+				}
+			}
+						
+			@media (max-width: 1600px) and (min-width:1024px){	
+				.hero-caption {
+					padding-top: 5%;	
+	
+				}	
+				
+				.subnav {
+					width: 80%;
+				}
+			}
+				
+			@include media (max-width, 1023px) {
+				.cell {
+					width: 100%;
+					margin: 0 auto;
+					
+					&:first-child {
+						display: none;
+					}
+				}
+				figure.bg {
+					position: absolute;
+					z-index: -1;
+
+					&:before {
+						display: none;
+					}
+				}
+				
+				.hero-caption {
+					.grid-x {
+						margin-top: 0;
 					}
 				}
 			}
@@ -473,14 +530,6 @@ header {
 
 			}
 
-			
-			@media (max-width: 1600px) and (min-width:1024px){				
-				padding-top: 35%;		
-				padding-bottom: 5%;
-			}
-
-
-			
 			@include media (max-width, 1381px){		
 				h1 {
 					font-size: 40px;
