@@ -5,6 +5,9 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 :focus {outline:0 !important;}
 
 body{
