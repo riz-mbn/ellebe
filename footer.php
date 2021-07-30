@@ -61,11 +61,13 @@
         </div>
         <div class="footer_bottom">
             <div class="grid-container">
-                <?php 
-                if ( is_active_sidebar( 'footer-bottom' ) ) :
-                    dynamic_sidebar( 'footer-bottom' );
-                endif; 
-                ?>
+                <div class="footer_copyright">
+                    Ellebe Medical Aesthetics ©2021.<span> | </span>
+                </div>
+                <div class="footer_links">
+                    <a href="<?php echo home_url('/privacy-policy');?>">Privacy Policy</a><span> | </span>
+                    <a href="<?php echo home_url('/terms-of-use');?>">Terms of Use</a></div>
+                </div>
             </div> 
         </div>
     </footer>

@@ -82,12 +82,38 @@
         color: #F9F9F9;
         padding: 40px 0;
         text-align: center;
-        font-size: 12px;
+        font-weight: 300;
+        font-size: 14px;
+
+        .footer_copyright,
+        .footer_links {
+            display: inline-block;
+
+            span {
+                padding: 0 10px;
+            }
+        }
+
          a{             
             color: #F9F9F9;
          }
          p {
              margin-bottom: 0;
+         }
+         
+         @include media(max-width,1023px){
+                
+            .footer_copyright,
+            .footer_links {
+                display: block;
+            }
+            
+            .footer_copyright {
+
+                span {
+                    display: none;
+                }
+            }
          }
     }
 
