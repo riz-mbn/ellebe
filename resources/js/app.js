@@ -33,7 +33,7 @@
                     $('.filter_sticky').removeClass("active");
                 }
 
-                var offset = 0, button_up;
+                var button_up;
                 var sticky = false;
                 var top = $(window).scrollTop();
                     
@@ -59,8 +59,17 @@
                         } else {
                             return button.fadeOut('slow');
                         }
-                    })();
+                    })();                   
+
             });
+
+            
+            //Click event to scroll to top
+            $('.btn_scroll_up').click(function(){
+                $('html, body').animate({scrollTop : 0},800);
+                return false;
+            });
+
 
             $(window).resize(function(){
                 var $windowWidth = $(window).width();
