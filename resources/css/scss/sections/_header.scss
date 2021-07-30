@@ -25,6 +25,66 @@ body{
 			}
 		}	
 	}
+	&.home {
+		.home_header{
+			display: block;
+		}
+		
+		.services_header{
+			display: none;
+		}
+	}
+	&:not(.home){
+		
+		.home_header{
+			display: none;
+		}
+
+		
+		.hero {
+
+			&.hero-s3 {
+				&.services_hero {
+					margin-top: 0;
+				}
+
+			}
+
+		}
+		
+		.services_header{
+			transition: all 0.3s ease;
+			display: block;
+
+			.hsnav-s5 {				
+				left: 0;
+				right: 0;
+				position: absolute;
+
+				&.is_sticky{
+					position: fixed;
+					width: 100%;
+					top: 0;
+					left: 0;
+					right: 0;
+					min-height: 20% !important;
+					transition: all 0.3s ease;
+				}
+			}
+		}
+
+		.services_hero {
+			transition: all 0.3s ease;
+			&.is_sticky {
+				position: fixed;
+				width: 100%;
+				top: 0;
+				left: 0;
+				right: 0;
+				transition: all 0.3s ease;
+			}
+		}
+	}
 }
 
 /* Header Sticky Nav Style 5 */
@@ -380,7 +440,7 @@ header {
 
 .hero {
 	&.hero-s3 {
-		min-height:100%;
+		min-height:500px;
 		margin-top: -265px;
 		display: flex;
 		flex-wrap: wrap;
@@ -402,7 +462,7 @@ header {
 			}
 		}
 
-		&.services {
+		&.services_hero {
 			align-content: normal;
 			flex-direction: column;
 			flex-wrap: wrap;
@@ -411,10 +471,12 @@ header {
 				.grid-x {
 					align-content: flex-end;
 					min-height: 100%;
-					margin-top: 100px;
 				}
 				h1 {
 					font-size: 40px;
+					@include media (max-width,1240px){						
+    					padding-top: 130px;
+					}
 				}
 				figure {
 					margin-bottom: 0 !important;
@@ -426,7 +488,7 @@ header {
 				box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 				background: $color-white;
 				z-index: 1;
-				width: 55%;
+				width:60%;
 				margin: 0 auto;
 
 				.menu {
