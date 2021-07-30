@@ -41,7 +41,7 @@
                                 'theme_location' => 'mobile-menu',
                                 'menu'       => '',
                                 'container'  => '',
-                                'items_wrap' => '<ul class="menu accordion-menu" data-multi-open="false" data-accordion-menu data-submenu-toggle="true">%3$s</ul>' 
+                                'items_wrap' => '<ul class="menu">%3$s</ul>' 
                             ));
                         ?> 
                     </nav>

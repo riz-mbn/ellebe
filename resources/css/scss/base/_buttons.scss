@@ -521,7 +521,7 @@ a.btn-back {
     right: 0;
     z-index: 99999;
     background-color: rgba(128, 92, 60, 0.8);
-    padding: 10px 20px;
+    padding: 15px 20px;
     border-radius: 10px 10px 0 0;
     font-size: 0;
     cursor:pointer;
@@ -531,24 +531,18 @@ a.btn-back {
         &:after {
             content: "";
             position: absolute;
-            border-top: 3px solid $color-white;
-            height: 3px;
-        }
-        
-        &:before {
-            transform: rotate(-45deg);
+            border-top: 2px solid $color-white;
             border-bottom: 0;
             width: 10px;
             box-shadow: none;
-            left: 14px;
-            top: 24px;
+        }
+        
+        &:before {
+            transform: rotate(130deg);
         }
 
         &:after {
-            left: 14px;
-            top: 24px;
-            transform: rotate(45deg);
+            transform: rotate(230deg);
         }
-
     }
 }
