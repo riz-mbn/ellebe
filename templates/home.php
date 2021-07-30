@@ -3,7 +3,7 @@
     get_header();
 ?>
 
-<section class="hero hero-s3">
+<section class="hero hero-s3 home">
     <figure class="bg"><img src="<?php echo MBN_ASSETS_URI ?>/img/bgs/home-header.jpg" alt=""></figure>
     <div class="hero-caption">
         <div class="grid-container"> 

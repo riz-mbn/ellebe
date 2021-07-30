@@ -136,16 +136,16 @@ remove_action('admin_print_styles', 'print_emoji_styles');
 **/
 function mbn_register_sidebars(){
     // footer menus
-    for($i=1;$i<=4;$i++){
-        register_sidebar(array(
-            'name'          => __('Footer Column '.$i),
-            'id'            => 'footer-col-'.$i,
-            'before_widget' => false,
-            'after_widget'  => false,
-            'before_title'  => false,
-            'after_title'   => false,
-        ));
-    }
+    // for($i=1;$i<=4;$i++){
+    //     register_sidebar(array(
+    //         'name'          => __('Footer Column '.$i),
+    //         'id'            => 'footer-col-'.$i,
+    //         'before_widget' => false,
+    //         'after_widget'  => false,
+    //         'before_title'  => false,
+    //         'after_title'   => false,
+    //     ));
+    // }
     
 	register_sidebar(
 		array (
@@ -160,7 +160,6 @@ function mbn_register_sidebars(){
 	);
 }
 add_action('widgets_init', 'mbn_register_sidebars');
-
 
 /**
  * Allow SVG

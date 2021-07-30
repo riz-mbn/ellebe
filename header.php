@@ -24,26 +24,38 @@
                     </a>
                     <span class="navicon hide-for-large" data-toggle="header">mobile menu</span>
                     <nav class="navmenu show-for-large">                        
-                        <?php
-                            wp_nav_menu( array( 
-                                'theme_location' => 'main-menu',
-                                'depth'          => 1,
-                                'menu'         => '',
-                                'container'    => 'ul',
-                                'items_wrap' => '<ul class="menu align-right dropdown" data-dropdown-menu>%3$s</ul>' ,
-                                'menu_class'   => 'menu align-right dropdown',
-                            ));
-                        ?>  
+                        <ul class="menu align-right dropdown" data-dropdown-menu data-smooth-scroll>
+                            <li><a href="<?php echo home_url();?>">Home</a></li>
+                            <li><a href="<?php echo home_url("/services/");?>">Services</a>
+                                <ul data-smooth-scroll>
+                                    <li><a href="<?php echo home_url('/services/#botox');?>">Botox/Dysport</a></li>
+                                    <li><a href="<?php echo home_url('/services/#dermafiller');?>">Dermal filler (Juvederm/Restylane)</a></li>
+                                    <li><a href="<?php echo home_url('/services/#pdo');?>">PDO Thread Lift</a></li>
+                                    <li><a href="<?php echo home_url('/services/#prf');?>">PRF</a></li>
+                                    <li><a href="<?php echo home_url('/services/#microneedling');?>">Microneedling</a></li>
+                                    <li><a href="<?php echo home_url('/services/#kybella');?>">Kybella</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="<?php echo home_url("/#contact");?>" data-smooth-scroll>Contact</a></li>
+                            <li class="nav-cta"><a href="/contact-us/">SCHEDULE SERVICES</a></li>
+                        </ul>
                     </nav>
                     <nav class="mobmenu hide-for-large">     
-                        <?php
-                            wp_nav_menu( array( 
-                                'theme_location' => 'mobile-menu',
-                                'menu'       => '',
-                                'container'  => '',
-                                'items_wrap' => '<ul class="menu">%3$s</ul>' 
-                            ));
-                        ?> 
+                         <ul class="menu" data-smooth-scroll>
+                            <li class="menu_item"><a href="<?php echo home_url();?>">Home</a></li>
+                            <li class="menu_item"><a href="<?php echo home_url("/services/");?>">Services</a>
+                                <ul class="submenu">
+                                    <li class="menu_item"><a href="<?php echo home_url('/services/#botox');?>">Botox/Dysport</a></li>
+                                    <li class="menu_item"><a href="<?php echo home_url('/services/#dermafiller');?>">Dermal filler (Juvederm/Restylane)</a></li>
+                                    <li class="menu_item"><a href="<?php echo home_url('/services/#pdo');?>">PDO Thread Lift</a></li>
+                                    <li class="menu_item"><a href="<?php echo home_url('/services/#prf');?>">PRF</a></li>
+                                    <li class="menu_item"><a href="<?php echo home_url('/services/#microneedling');?>">Microneedling</a></li>
+                                    <li class="menu_item"><a href="<?php echo home_url('/services/#kybella');?>">Kybella</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu_item"><a href="<?php echo home_url("/#contact");?>">Contact</a></li>
+                            <li class="menu_item nav-cta"><a href="/contact-us/">(480) 685 7380</a></li>
+                        </ul>
                     </nav>
                 </div>
             </div>
