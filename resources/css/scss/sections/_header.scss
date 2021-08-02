@@ -34,23 +34,7 @@ body{
 			display: none;
 		}
 	}
-	&:not(.home){
-		
-		.home_header{
-			display: none;
-		}
-
-		
-		.hero {
-
-			&.hero-s3 {
-				&.services_hero {
-					margin-top: 0;
-				}
-
-			}
-
-		}
+	&.page-template-services{		
 		
 		.services_header{
 			transition: all 0.3s ease;
@@ -68,20 +52,18 @@ body{
 					left: 0;
 					right: 0;
 					min-height: 20% !important;
-					transition: all 0.3s ease;
+					transition: all 0.3s ease-in-out;
 				}
 			}
 		}
 
 		.services_hero {
-			transition: all 0.3s ease;
 			&.is_sticky {
 				position: fixed;
 				width: 100%;
 				top: 0;
 				left: 0;
 				right: 0;
-				transition: all 0.3s ease;
 			}
 		}
 	}
@@ -106,12 +88,16 @@ header {
 		
 		&.sticky {
 			position: absolute;
-			position: fixed;
 			left: 0;
 			right: 0;
 			top: 0;
 		}
-		&.is-stuck {
+		&.services_sticky.is-stuck  {
+
+			background: transparent;
+			box-shadow: none;
+		}
+		&:not(.services_sticky).is-stuck{
 			position: fixed;
 			background: $color-white;
 			box-shadow: 0 3px 6px 0 rgba($color-black, 0.16);
@@ -463,15 +449,12 @@ header {
 		}
 
 		&.services_hero {
+			margin-top: -265px !important;
 			align-content: normal;
 			flex-direction: column;
 			flex-wrap: wrap;
 
 			.hero-caption {
-				.grid-x {
-					align-content: flex-end;
-					min-height: 100%;
-				}
 				h1 {
 					font-size: 40px;
 					@include media (max-width,1240px){						
@@ -504,6 +487,56 @@ header {
 					}
 				}
 			}
+
+			&.is_sticky {
+				margin-top: 0;
+			}
+
+			
+			&.is-stuck {
+				position: fixed;
+				width: 100%;
+				top: 0;
+				left: 0;
+				right: 0;
+				min-height: 350px;
+				z-index: 1;
+				margin-top: 0 !important;
+
+				.hero-caption {
+					transition: all 0.5s ease-in-out;
+					height: 350px;
+
+					.grid-container {
+						max-width: 1140px;
+						transition: all 0.3s ease-in-out;
+					}
+
+					.col-image {
+
+						figure {
+							width: 80%;							
+							transition: all 0.5s ease-in-out;
+						}
+					}
+
+					.col-copy{
+
+						.inner {
+							margin-left: 90px;
+							transition: all 0.5s ease-in-out;
+
+							@include media (max-width,1112px) {
+								h1 {
+									font-size: 35px;
+								}
+							}
+						}
+					}
+
+				}
+			}
+			
 						
 			@media (max-width: 1600px) and (min-width:1024px){	
 				.hero-caption {

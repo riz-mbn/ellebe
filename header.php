@@ -11,10 +11,22 @@
 
 </head>
 <body <?php body_class() ?>>
+<?php
 
+if ( is_page_template('templates/services.php') ){
+    $header_class = 'services_header';
+    $sticky_class = 'services_sticky';
+}
+else {
+    $header_class= 'home_header';
+    $sticky_class = '';
+}
+
+
+?>
 <div id="wrapper"> 
-    <header id="header" class="home_header" data-sticky-container data-toggler=".show-menu">
-        <div class="hsnav-s5 sticky" data-sticky data-options="marginTop:0">
+    <header id="header" class="<?php echo esc_attr($header_class); ?>" data-sticky-container data-toggler=".show-menu">
+        <div class="hsnav-s5 sticky <?php echo esc_attr($sticky_class); ?>" data-sticky data-options="marginTop:0">
             <div class="navbar">
                 <div class="grid-container">
                     <a class="navlogo" href="<?php echo get_home_url(); ?>">
@@ -61,54 +73,7 @@
             </div>
         </div>            
     </header>    
-    <header id="header" class="services_header">
-        <div class="hsnav-s5 services_sticky">
-            <div class="navbar">
-                <div class="grid-container">
-                    <a class="navlogo" href="<?php echo get_home_url(); ?>">
-                        <figure>
-                            <img src="<?php echo MBN_ASSETS_URI ?>/img/ElleBe_logo.png" alt="">
-                        </figure>
-                    </a>
-                    <span class="navicon hide-for-large" data-toggle="header">mobile menu</span>
-                    <nav class="navmenu show-for-large">                        
-                        <ul class="menu align-right dropdown" data-dropdown-menu data-smooth-scroll>
-                            <li><a href="<?php echo home_url();?>">Home</a></li>
-                            <li><a href="<?php echo home_url("/services/");?>">Services</a>
-                                <ul data-smooth-scroll>
-                                    <li><a href="<?php echo home_url('/services/#botox');?>">Botox/Dysport</a></li>
-                                    <li><a href="<?php echo home_url('/services/#dermafiller');?>">Dermal filler (Juvederm/Restylane)</a></li>
-                                    <li><a href="<?php echo home_url('/services/#pdo');?>">PDO Thread Lift</a></li>
-                                    <li><a href="<?php echo home_url('/services/#prf');?>">PRF</a></li>
-                                    <li><a href="<?php echo home_url('/services/#microneedling');?>">Microneedling</a></li>
-                                    <li><a href="<?php echo home_url('/services/#kybella');?>">Kybella</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="<?php echo esc_url('#contact');?>" data-smooth-scroll>Contact</a></li>
-                            <li class="nav-cta"><a href="https://ellebe.myaestheticrecord.com/book/appointments">SCHEDULE SERVICES</a></li>
-                        </ul>
-                    </nav>
-                    <nav class="mobmenu hide-for-large">     
-                         <ul class="menu" data-smooth-scroll>
-                            <li class="menu_item"><a href="<?php echo home_url();?>">Home</a></li>
-                            <li class="menu_item"><a href="<?php echo home_url("/services/");?>">Services</a>
-                                <ul class="submenu">
-                                    <li class="menu_item"><a href="<?php echo home_url('/services/#botox');?>">Botox/Dysport</a></li>
-                                    <li class="menu_item"><a href="<?php echo home_url('/services/#dermafiller');?>">Dermal filler (Juvederm/Restylane)</a></li>
-                                    <li class="menu_item"><a href="<?php echo home_url('/services/#pdo');?>">PDO Thread Lift</a></li>
-                                    <li class="menu_item"><a href="<?php echo home_url('/services/#prf');?>">PRF</a></li>
-                                    <li class="menu_item"><a href="<?php echo home_url('/services/#microneedling');?>">Microneedling</a></li>
-                                    <li class="menu_item"><a href="<?php echo home_url('/services/#kybella');?>">Kybella</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu_item"><a href="<?php echo home_url("/#contact");?>">Contact</a></li>
-                            <li class="menu_item nav-cta"><a href="/contact-us/">(480) 685 7380</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>            
-    </header>    
+     
     <button class="btn_floating"><a class="button" href="https://ellebe.myaestheticrecord.com/book/appointments" target="_blank">Schedule Services</a></button>
     <button data-scroll="up" class="btn_scroll_up"><span>UP</span></button>
     <main id="content" class="content">
