@@ -2,7 +2,7 @@
 
 <section id="sec-404" class="sec-404 section">
     <div class="grid-container">
-        <div class="text-block">
+        <div class="text-block text_center">
             <h1>Page Not Found.</h1>
             <p>The page you requested cannot be found.</p>
 
