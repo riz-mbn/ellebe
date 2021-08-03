@@ -80,10 +80,10 @@
             });            
 
 
-            $(window).resize(function(){
                 var $windowWidth = $(window).width();
 
                 if ($windowWidth <= 1023) {
+                    
                     $('.services_nav').slick({                        
                         dots: false,
                         arrow: false,
@@ -143,7 +143,6 @@
                         asNavFor: '.services_info_items',                 
                       });
                   }
-            });
 
                     
             //smooth scroll

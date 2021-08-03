@@ -2,13 +2,14 @@
 body{
 
 	&.admin-bar {
+
 		#wrapper{
 			//margin-top: 145px;
-			.hsnav-s5{
+			// .hsnav-s5{
 				
-				top: 30px !important;
+			// 	top: 30px !important;
 
-			}
+			// }
 			.hsnav-s5 {
 				&.is-stuck {
 
@@ -18,9 +19,9 @@ body{
 
 				@include media(max-width, 782px){
 					top: 0 !important;
-					&.is-stuck {
+					 &.is-stuck {
 	
-						top: 0  !important;
+					 	top: 0  !important;
 	
 					}
 	
@@ -29,8 +30,9 @@ body{
 
 			@include media(max-width,1023px){
 				.hero-s3 {
-					
-					top: 30px !important;
+					&.services_hero {
+						top: 30px !important;
+					}
 	
 				}
 
@@ -124,8 +126,9 @@ header {
 				background: #fff;				
 				
 				.navbar {
-					min-height: 115px;
+					min-height: 95px;
 					transition: all 0.3s ease;
+					min-height: 265px;
 
 					.navlogo {
 						figure {
@@ -142,7 +145,6 @@ header {
 			transition: all 0.3s ease;
 			
 			.navbar {
-				min-height: 115px;
 				transition: all 0.3s ease;
 
 				.navlogo {
@@ -160,14 +162,19 @@ header {
 	
 				}				
 
-				.grid-container {
-					
+				.grid-container {					
 					height: 87px;
 					display: flex;
 					flex-direction: row;
 					flex-wrap: nowrap;
 					align-items: center;
 					justify-content: space-between;
+				}
+
+				@include media(max-width,1023px){	
+					min-height: 95px;			
+					padding-top: 14px;
+					padding-bottom: 0;
 				}
 
 			}
@@ -177,7 +184,6 @@ header {
 			border-top:0;
 			position: relative;
 			padding: 14px 0;
-			min-height: 265px;
 			transition: all 0.3s ease;
 
 			.logo, .navlogo {
@@ -192,12 +198,9 @@ header {
 					transition: all 0.3s ease;
 
 					@media(max-width: 1023px) {		
-						width: 100px;
-					}
-					
-					@media(max-width: 375px) {		
 						width: 90px;
 					}
+					
 				}
 				
 			}
@@ -337,7 +340,7 @@ header {
 			
 
 			@include media(max-width, 1023px) {
-				min-height: 135px;
+				min-height: 115px;
 
 				.mobmenu {
 					position: fixed;
@@ -452,6 +455,10 @@ header {
 						display: block;
 						top:115px;
 					}
+					@at-root header.show-menu .hsnav-s5.is-stuck .mobmenu {
+						display: block;
+						top:95px;
+					}
 
 				}
 			}
@@ -485,6 +492,17 @@ header {
 					padding-bottom: 5%;
 	
 				}			
+			}
+			@include media(max-width, 600px) {
+				min-height: auto;
+			}
+			@include media(max-width, 1023px) {
+				.hero-caption {
+					.grid-x {
+						margin-top: 50px;
+						min-height: auto;
+					}
+				}
 			}
 		}
 
@@ -558,7 +576,7 @@ header {
 
 				.hero-caption {
 					transition: all 0.5s ease-in-out;
-					height: 350px;
+					height: 370px;
 
 					.grid-container {
 						max-width: 1140px;

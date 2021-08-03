@@ -36,16 +36,16 @@ else {
                     </a>
                     <span class="navicon hide-for-large" data-toggle="header">mobile menu</span>
                     <nav class="navmenu show-for-large">                        
-                        <ul class="menu align-right dropdown" data-dropdown-menu data-smooth-scroll>
+                        <ul class="menu align-right dropdown" data-dropdown-menu data-smooth-scroll data-offset="500">
                             <li><a href="<?php echo home_url();?>">Home</a></li>
                             <li><a href="<?php echo home_url("/services/");?>">Services</a>
-                                <ul data-smooth-scroll>
-                                    <li><a href="<?php echo home_url('/services/#botox');?>">Botox/Dysport</a></li>
-                                    <li><a href="<?php echo home_url('/services/#dermafiller');?>">Dermal filler (Juvederm/Restylane)</a></li>
-                                    <li><a href="<?php echo home_url('/services/#pdo');?>">PDO Thread Lift</a></li>
-                                    <li><a href="<?php echo home_url('/services/#prf');?>">PRF</a></li>
-                                    <li><a href="<?php echo home_url('/services/#microneedling');?>">Microneedling</a></li>
-                                    <li><a href="<?php echo home_url('/services/#kybella');?>">Kybella</a></li>
+                                <ul data-smooth-scroll data-offset="850">
+                                    <li><a href="<?php echo home_url().'/services/#botox' ?>">Botox/Dysport</a></li>
+                                    <li><a href="<?php echo home_url().'/services/#dermafiller';  ?>">Dermal filler (Juvederm/Restylane)</a></li>
+                                    <li><a href="<?php echo home_url().'/services/#pdo'; ?>">PDO Thread Lift</a></li>
+                                    <li><a href="<?php echo home_url().'/services/#prf'; ?>">PRF</a></li>
+                                    <li><a href="<?php echo home_url().'/services/#microneedling';?>">Microneedling</a></li>
+                                    <li><a href="<?php echo home_url().'/services/#kybella'; ?>">Kybella</a></li>
                                 </ul>
                             </li>
                             <li><a href="<?php echo esc_url('#contact');?>" data-smooth-scroll>Contact</a></li>
@@ -56,13 +56,13 @@ else {
                          <ul class="menu" data-smooth-scroll>
                             <li class="menu_item"><a href="<?php echo home_url();?>">Home</a></li>
                             <li class="menu_item"><a href="<?php echo home_url("/services/");?>">Services</a>
-                                <ul class="submenu">
-                                    <li class="menu_item"><a href="<?php echo home_url('/services/#botox');?>">Botox/Dysport</a></li>
-                                    <li class="menu_item"><a href="<?php echo home_url('/services/#dermafiller');?>">Dermal filler (Juvederm/Restylane)</a></li>
-                                    <li class="menu_item"><a href="<?php echo home_url('/services/#pdo');?>">PDO Thread Lift</a></li>
-                                    <li class="menu_item"><a href="<?php echo home_url('/services/#prf');?>">PRF</a></li>
-                                    <li class="menu_item"><a href="<?php echo home_url('/services/#microneedling');?>">Microneedling</a></li>
-                                    <li class="menu_item"><a href="<?php echo home_url('/services/#kybella');?>">Kybella</a></li>
+                                <ul class="submenu" data-smooth-scroll data-offset="850">
+                                    <li class="menu_item"><a href="<?php echo home_url().'/services/#botox' ?>">Botox/Dysport</a></li>
+                                    <li class="menu_item"><a href="<?php echo home_url().'/services/#dermafiller';  ?>">Dermal filler (Juvederm/Restylane)</a></li>
+                                    <li class="menu_item"><a href="<?php echo home_url().'/services/#pdo'; ?>">PDO Thread Lift</a></li>
+                                    <li class="menu_item"><a href="<?php echo home_url().'/services/#prf'; ?>">PRF</a></li>
+                                    <li class="menu_item"><a href="<?php echo home_url().'/services/#microneedling';?>">Microneedling</a></li>
+                                    <li class="menu_item"><a href="<?php echo home_url().'/services/#kybella'; ?>">Kybella</a></li>
                                 </ul>
                             </li>
                             <li class="menu_item"><a href="<?php echo home_url("#contact");?>">Contact</a></li>

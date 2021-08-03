@@ -45,7 +45,12 @@
     <div class="grid-container">
         <div class="grid-x grid-margin-x cols2-s4 large_section">
             <div class="cell large-4">
-                <figure class="col-image desktop_only"><img src="<?php echo MBN_ASSETS_URI ?>/img/img_lindsay-burk.png" alt=""></figure>
+                <figure class="col-image desktop_only"><img src="<?php echo MBN_ASSETS_URI ?>/img/img_lindsay-burk.png" alt="">            
+                    <div class="lindsay_title">
+                        <h3>Lindsay Burk</h3>
+                        <p>Physician Assistant and Clinical Director</p>
+                    </div>
+                </figure>
             </div>
             <div class="cell large-8 col-copy align-self-middle">                
                 <div class="section_title">
@@ -74,7 +79,7 @@
         </div>  
     </div>    
 </section>
-<section class="certifications_section padding_v_40 desktop_only">
+<section class="certifications_section desktop_only">
     <div class="grid-container">
         <div class="grid-x grid-margin-x cols2-s4">
             <div class="cell large-12">
@@ -103,7 +108,7 @@
             </div>
         </div>        
 </section>
-<section class="services_section text_center padding_v_40">
+<section class="services_section text_center">
     <figure class="floating_img img_lady_1"><img src="<?php echo MBN_ASSETS_URI ?>/img/img_lady_1.png" alt="" class="" /></figure>
     <div class="grid-container">
         <div class="grid-x grid-margin-x cols2-s4">
@@ -114,7 +119,7 @@
                         <p>We pride ourselves in providing a range of aesthetic services at ElleBe.</p>
                         <p>You will always feel warm and welcome while in our care.</p>
                     </div>
-                    <a class="button hollow learn_more_desktop" href="/services">Learn more</a>
+                    <a class="button hollow learn_more_desktop" href="<?php echo home_url("/services/");?>">Learn more</a>
                 </div>
                 <div class="section_content">
                     <div class="services_info">
@@ -203,7 +208,7 @@
                                     </div>
                                 </div>
                             </div>                            
-                            <div class="btn_read_more"><button class="button">Learn More</div>
+                            <div class="btn_read_more"><a class="button " href="<?php echo home_url("/services/");?>">Learn more</a></div>                            
                         </div>
                     </div>
                 </div>

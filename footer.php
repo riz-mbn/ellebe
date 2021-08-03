@@ -6,37 +6,40 @@
         <div class="footer_top">
             <div class="grid-container">
                 <div class="grid-x ">
-                    <div class="cell medium-6 large-3 xlarge-3 col-item footer_col">    
+                    <div class="cell medium-12 large-3 xlarge-3 col-item footer_col">    
                         <a class="footer_logo" href="<?php echo get_home_url(); ?>">
                             <figure>
                                 <img src="<?php echo MBN_ASSETS_URI ?>/img/ElleBe_logo.png" alt="">
                             </figure>
                         </a>
                     </div>
-                    <div class="cell small-6 medium-6 large-3 xlarge-3 col-item footer_col">
-                        <a class="title" href="<?php echo home_url("/services/");?>"><p>Services</p></a>                        
-                        <div class="inner">
-                            <div class="col">
+                    <div class="cell small-12 medium-6 large-1 xlarge-2 col-item footer_col desktop_only">
+                        <a class="title " href="<?php echo home_url();?>"><p>Home</p></a>     
+                    </div>
+                    <div class="cell small-12 medium-6 large-2 xlarge-2 col-item footer_col ">           
+                        <a class="title" href="<?php echo home_url("/services/");?>"><p>Services</p></a>    
+                        <div class="grid-x">
+                            <div class="small-6 medium-6 large-12">
                                 <a href="<?php echo home_url("/services/#botox");?>"><p>Botox/Dysport</p></a>
                                 <a href="<?php echo home_url("/services/#dermafiller");?>"><p>Dermal Filler</p></a>
                                 <a href="<?php echo home_url("/services/#prf");?>"><p>PRF</p></a>
                             </div>
-                            <div class="col">
+                            <div class="small-6 medium-6 large-12">
                                 <a href="<?php echo home_url("/services/#kybella");?>"><p>Kybella</a>
                                 <a href="<?php echo home_url("/services/#pdo");?>"><p>PDO Thread Lift</p></a>
                                 <a href="<?php echo home_url("/services/#microneedling");?>"><p>Microneedling</p></a>
                             </div>
                         </div>
                     </div>
-                    <div class="cell small-6 medium-6 large-3 xlarge-3 col-item footer_col"> 
+                    <div class="cell small-12 medium-6 large-3 xlarge-2 col-item footer_col"> 
                         <p class="title">Business Hours</p>
-                        <div class="inner">
-                            <div class="col"><p>Monday to Friday</p></div>
-                            <div class="col"><p>9:00 a.m. - 5:00 p.m.</p></div>
+                        <div class="grid-x">
+                            <div class="small-6 medium-6 large-12"><p>Monday to Friday</p></div>
+                            <div class="small-6 medium-6 large-12"><p>9:00 a.m. - 5:00 p.m.</p></div>
                         </div>
-                        <div class="inner">
-                            <div class="col"><p>Saturday</p></div>
-                            <div class="col"><p>10:00 a.m. - 3:00 p.m.</p></div>
+                        <div class="grid-x">
+                            <div class="small-6 medium-6 large-12"><p>Saturday</p></div>
+                            <div class="small-6 medium-6 large-12"><p>10:00 a.m. - 3:00 p.m.</p></div>
                         </div>
                     </div>
                     <div class="cell small-12 medium-12 large-3 xlarge-3 col-item footer_col">                            

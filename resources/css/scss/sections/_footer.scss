@@ -11,6 +11,7 @@
             color: $color-dark;         
             line-height: 1.6;
             margin-bottom: 10px;
+            font-size: 14px;
         }
 
         .social_icons {
@@ -23,19 +24,12 @@
     }
 
     .col-item {
-        @include media(max-width,768px){
+        @include media(max-width,1023px){
             margin-bottom: 20px;
         }
 
         &.footer_col {
 
-            .footer_logo {
-                figure {
-
-                    width: 60%;
-                    margin: 0 auto;
-                }
-            }
             .title {
                 font-weight: 600;
                 font-size: 16px;
@@ -57,7 +51,7 @@
                 .footer_logo {
                     figure {
     
-                        width: 40%;
+                        width: 175px;
                         padding-bottom: 40px;
                     }
                 }
@@ -67,13 +61,7 @@
 
     .footer_logo {
         figure {
-            @media (max-width: 1023px) and (min-width: 768px){
-                margin: 0 !important;
-            }
-            @include media(max-width, 480px){
-                width: 30%;
-                margin: 0 auto;
-            }
+            margin: 0 auto;
         }
     }
 
