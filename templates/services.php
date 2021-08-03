@@ -47,95 +47,126 @@
     </div>
     <div class="services">            
         <div class="grid-container"> 
-            <div id="botox" class="services botox_section padding_v_40">
+            <div id="botox" class="services_item botox_section padding_v_40">
                 <div class="grid-x grid-margin-x cols2-s1">
-                    <div class="cell large-6 large-order-2 col-copy align-self-middle">
+                    <div class="cell large-6 large-order-1 col-copy align-self-middle">
                         <div class="section_title">
                             <h2>Botox</h2>
                         </div>
-                        <div class="section_content">
+                        <div class="section_content desktop_only">
                             <p>Botox and Dysport work to treat and prevent fine lines and wrinkles. They are most commonly used for the furrow lines in between the brows, horizontal lines to the forehead, and crow’s feet. The medication is injected into the muscle to affect the movement that causes the wrinkles. Results can last 3-4 months on average. </p>
                             <p>Neuromodulators are also used for off-label use including lines on the nose, neck lines and bands, frowning, gummy smiles, chin dimples, lip flips, hyperhidrosis (excessive sweating), and jawline slimming. </p>
                         </div>                
                     </div>
-                    <div class="cell large-6 large-order-1">
+                    <div class="cell large-6 large-order-2">
                         <figure class="col-image"><img src="<?php echo MBN_ASSETS_URI ?>/img/img_serv_botox.png" alt=""></figure>
+                        <div class="col-copy mobile_only">
+                            <div class="section_content">
+                                <p>Botox and Dysport work to treat and prevent fine lines and wrinkles. They are most commonly used for the furrow lines in between the brows, horizontal lines to the forehead, and crow’s feet. The medication is injected into the muscle to affect the movement that causes the wrinkles. Results can last 3-4 months on average. </p>
+                                <p>Neuromodulators are also used for off-label use including lines on the nose, neck lines and bands, frowning, gummy smiles, chin dimples, lip flips, hyperhidrosis (excessive sweating), and jawline slimming. </p>
+                            </div>                
+                        </div>
                     </div>
                 </div>
             </div>
-            <div id="dermafiller" class="services dermafiller_section">
+            <div id="dermafiller" class="services_item dermafiller_section padding_v_40">
                 <div class="grid-x grid-margin-x cols2-s1">
-                    <div class="cell large-6 large-order-1 col-copy align-self-middle">
+                    <div class="cell large-6 large-order-2 col-copy align-self-middle">
                         <div class="section_title">
                             <h2>Dermal filler</h2>
                             <h4>Juvederm/Restylane</h4>
                         </div>
-                        <div class="section_content">
+                        <div class="section_content desktop_only">
                             <p>Most dermal fillers are made of hyaluronic acid. Fillers can be hydrating and are used to improve wrinkles and folds or to add or replace volume loss to various areas of the face. Most results are instant and can last anywhere from 6 months to two years depending on the amount and type of product used or the area being injected. </p>
                         </div>                
                     </div>
                     <div class="cell large-6 large-order-1">
                         <figure class="col-image"><img src="<?php echo MBN_ASSETS_URI ?>/img/img_serv_dermafiller.png" alt=""></figure>
+                        <div class="col-copy mobile_only">
+                            <div class="section_content">
+                                <p>Most dermal fillers are made of hyaluronic acid. Fillers can be hydrating and are used to improve wrinkles and folds or to add or replace volume loss to various areas of the face. Most results are instant and can last anywhere from 6 months to two years depending on the amount and type of product used or the area being injected. </p>
+                            </div>                
+                        </div>
                     </div>
                 </div>  
             </div>
-            <div id="pdo" class="services pdo_section padding_v_40">
+            <div id="pdo" class="services_item pdo_section padding_v_40">
                 <div class="grid-x grid-margin-x cols2-s1">
                     <div class="cell large-6 large-order-1 col-copy align-self-middle">
                         <div class="section_title">
                             <h2>PDO Thread Lift</h2>
                         </div>
-                        <div class="section_content">
+                        <div class="section_content desktop_only">
                             <p>PDO threads are made of polydioxanone and are used to lift and tighten sagging skin tissue. The treatments are safe and effective with minimal side effects and downtime. They can provide an instant lift, stimulate collagen production, and tighten skin. These are most commonly used in the face and neck. </p>
                         </div>                
                     </div>
                     <div class="cell large-6 large-order-2">
                         <figure class="col-image"><img src="<?php echo MBN_ASSETS_URI ?>/img/img_serv_pdo.png" alt=""></figure>
+                        <div class="col-copy mobile_only">
+                            <div class="section_content">
+                                <p>PDO threads are made of polydioxanone and are used to lift and tighten sagging skin tissue. The treatments are safe and effective with minimal side effects and downtime. They can provide an instant lift, stimulate collagen production, and tighten skin. These are most commonly used in the face and neck. </p>
+                            </div>                
+                        </div>
                     </div> 
                 </div>
             </div>
-            <div id="prf" class="services prf_section">
+            <div id="prf" class="services_item prf_section padding_v_40">
                 <div class="grid-x grid-margin-x cols2-s1">
                     <div class="cell large-6 large-order-2 col-copy align-self-middle">
                         <div class="section_title">
                             <h2>PRF</h2>
                         </div>
-                        <div class="section_content">
+                        <div class="section_content desktop_only">
                             <p>Platelet Rich Fibrin is obtained by drawing a patient’s blood and processing it in order to be used for treatment. It consists of a high concentration of platelets which contain growth factors. These help to stimulate collagen production and helps with healing and tissue repair of aging skin. It is also used to stimulate hair growth and helps to reduce scarring. It can be used with microneedling or as an injection. PRF is a more natural approach to combat the effects of aging, hair loss, and volume loss. </p>
                         </div>                
                     </div>
                     <div class="cell large-6 large-order-1">
                         <figure class="col-image"><img src="<?php echo MBN_ASSETS_URI ?>/img/img_serv_prf.png" alt=""></figure>
+                        <div class="col-copy mobile_only">
+                            <div class="section_content">
+                                <p>Platelet Rich Fibrin is obtained by drawing a patient’s blood and processing it in order to be used for treatment. It consists of a high concentration of platelets which contain growth factors. These help to stimulate collagen production and helps with healing and tissue repair of aging skin. It is also used to stimulate hair growth and helps to reduce scarring. It can be used with microneedling or as an injection. PRF is a more natural approach to combat the effects of aging, hair loss, and volume loss. </p>
+                            </div>                
+                        </div>
                     </div>
                 </div>
             </div>
-            <div id="kybella" class="services kybella_section padding_v_40">
+            <div id="kybella" class="services_item kybella_section padding_v_40">
                 <div class="grid-x grid-margin-x cols2-s1">
                     <div class="cell large-6 large-order-1 col-copy align-self-middle">
                         <div class="section_title">
                             <h2>Kybella</h2>
                         </div>
-                        <div class="section_content">
+                        <div class="section_content desktop_only">
                             <p>Kybella consists of deoxycholic acid which helps to destroy fat cells. It is FDA approved to improve the appearance of a double chin. Treatment is fast and permanent with minimal downtime. It may require multiple treatments in order to achieve desired results.</p>
                         </div>                
                     </div>
                     <div class="cell large-6 large-order-2">
                         <figure class="col-image"><img src="<?php echo MBN_ASSETS_URI ?>/img/img_serv_kybella.png" alt=""></figure>
+                        <div class="col-copy mobile_only">
+                            <div class="section_content">
+                                <p>Kybella consists of deoxycholic acid which helps to destroy fat cells. It is FDA approved to improve the appearance of a double chin. Treatment is fast and permanent with minimal downtime. It may require multiple treatments in order to achieve desired results.</p>
+                            </div>                
+                        </div>
                     </div>
                 </div>
             </div>
-            <div id="microneedling" class="services microneedling_section">
+            <div id="microneedling" class="services_item microneedling_section padding_v_40">
                 <div class="grid-x grid-margin-x cols2-s1">
                     <div class="cell large-6 large-order-2 col-copy align-self-middle">
                         <div class="section_title">
                             <h2>Microneedling</h2>
                         </div>
-                        <div class="section_content">
+                        <div class="section_content desktop_only">
                             <p>Microneedling is a popular treatment that provides multiple skin benefits. This treatment involves tiny sterilized needles that help to stimulate collagen production for skin tightening, improved texture, pore size, acne scars, and fine lines and wrinkles. This procedure helps to make your skin look younger and healthier. There is minimal downtime and is usually done every 4-6 weeks for optimal results.</p>
                         </div>                
                     </div>
                     <div class="cell large-6 large-order-1">
                         <figure class="col-image"><img src="<?php echo MBN_ASSETS_URI ?>/img/img_serv_micro.png" alt=""></figure>
+                        <div class="col-copy mobile_only">
+                            <div class="section_content">
+                                <p>Microneedling is a popular treatment that provides multiple skin benefits. This treatment involves tiny sterilized needles that help to stimulate collagen production for skin tightening, improved texture, pore size, acne scars, and fine lines and wrinkles. This procedure helps to make your skin look younger and healthier. There is minimal downtime and is usually done every 4-6 weeks for optimal results.</p>
+                            </div>    
+                        </div>
                     </div> 
                 </div>
             </div>

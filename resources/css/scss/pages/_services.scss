@@ -1,16 +1,16 @@
+
+.sticky-container:not(.home_header) {
+
+    @include media(max-width, 1023px){
+        height: auto !important;
+    }
+
+}
 .services_content {
     // top: 500px;
     // left: 0;
     // right: 0;
     // position: fixed;
-
-    .sticky_container {
-
-        @include media(max-width, 1023px){
-            height: auto !important;
-        }
-
-    }
         
     .services_nav {
         display: none;
@@ -37,7 +37,7 @@
                 span{
                     color: #847A6A;
                     font-size: 14px;
-                    font-weight: 400;
+                    font-weight: 600;
                 }
 
             }
@@ -54,7 +54,7 @@
         }
 
         &.is_sticky {
-            top: 145px;
+            top: 115px;
         }
 
         @include media(max-width, 1023px){
@@ -79,6 +79,22 @@
         .grid-container {
             max-width: 950px;
         }
+        @include media (max-width, 1023px){
+
+            .services_item {
+                .col-image {
+                    img {
+                        width: 70%;
+                    }
+                }
+                &.padding_v_40 {
+                    padding-top: 0;
+                    padding-bottom:0;
+                }
+            }
+
+        }
+
     }
 
     .section_title {

@@ -18,6 +18,12 @@ body{
 
 				@include media(max-width, 782px){
 					top: 0 !important;
+					&.is-stuck {
+	
+						top: 0  !important;
+	
+					}
+	
 				}				
 			}
 
@@ -560,7 +566,6 @@ header {
 					}
 
 					.col-image {
-
 						figure {
 							width: 80%;							
 							transition: all 0.5s ease-in-out;
@@ -568,7 +573,6 @@ header {
 					}
 
 					.col-copy{
-
 						.inner {
 							margin-left: 90px;
 							transition: all 0.5s ease-in-out;
