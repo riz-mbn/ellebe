@@ -77,20 +77,7 @@
             $('.btn_scroll_up').click(function(){
                 $('html, body').animate({scrollTop : 0},800);
                 return false;
-            });
-
-            //smooth scroll
-            $('a[href^="#"]').on('click',function (e) {
-                e.preventDefault();
-                var target = this.hash;
-                var $target = $(target);
-                $('html, body').stop().animate({
-                    'scrollTop': $target.offset().top-300
-                }, 900, 'swing', function () {
-                    //window.location.hash = target;
-                });
-            });
-            
+            });            
 
 
             $(window).resize(function(){
@@ -114,7 +101,7 @@
                         e.preventDefault();
                         var target = $(this).data('anchor');
                         
-                        $('#' + target).fadeIn('slow').siblings('.services').fadeOut('slow');
+                        $('#' + target).fadeIn('slow').siblings('.services_item').fadeOut('slow');
                     
                       });
                 }

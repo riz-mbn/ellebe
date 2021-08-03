@@ -593,13 +593,35 @@ header {
 					display: none;
 				}
 
+				@media (max-width: 1600px) and (min-width:1024px){	
+					.hero-caption {
+	
+						.grid-x {
+							min-height: 450px;
+						}
+					}
+				}
+
 			}
 						
 			@media (max-width: 1600px) and (min-width:1024px){	
-				
+				.hero-caption {
+					.grid-container {
+						max-width: 1140px;
+						transition: all 0.3s ease-in-out;
+					}
+
+					.col-copy{
+						.inner {
+							margin-left: 90px;
+							transition: all 0.5s ease-in-out;
+						}
+					}
+				}
 				.subnav {
 					width: 80%;
 				}
+
 			}
 				
 			@include media (max-width, 1023px) {

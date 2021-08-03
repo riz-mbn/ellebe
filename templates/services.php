@@ -23,7 +23,7 @@
     </div>
     <div class="subnav">
         <div class="grid-container">
-            <ul class="menu">
+            <ul class="menu" data-smooth-scroll data-offset="350">
                 <li class="menu_item"><a href="#botox">BOTOX</a></li>
                 <li class="menu_item"><a href="#dermafiller">DERMA FILLER</a></li>
                 <li class="menu_item"><a href="#pdo">PDO THREAD LIFT</a></li>

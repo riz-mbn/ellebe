@@ -65,8 +65,8 @@ else {
                                     <li class="menu_item"><a href="<?php echo home_url('/services/#kybella');?>">Kybella</a></li>
                                 </ul>
                             </li>
-                            <li class="menu_item"><a href="<?php echo home_url("/#contact");?>">Contact</a></li>
-                            <li class="menu_item nav-cta"><a href="/contact-us/">(480) 685 7380</a></li>
+                            <li class="menu_item"><a href="<?php echo home_url("#contact");?>">Contact</a></li>
+                            <li class="menu_item nav-cta"><a href="tel:4806857380">(480) 685 7380</a></li>
                         </ul>
                     </nav>
                 </div>
