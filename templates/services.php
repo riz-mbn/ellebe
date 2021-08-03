@@ -37,17 +37,17 @@
 
 
 <div class="services_content">
-    <div class="services_nav" data-smooth-scroll data-offset="350">
-        <div class="nav_item" data-anchor="botox" ><div><a href="#botox"><span>BOTOX</span></a></div></div>
-        <div class="nav_item" data-anchor="dermafiller"><div><a href="#dermafiller"><span>DERMA FILLER</span></a></div></div>
-        <div class="nav_item" data-anchor="pdo" ><div><a href="#pdo"><span>PDO THREAD LIFT</span></a></div></div>
-        <div class="nav_item" data-anchor="prf" ><div><a href="#prf"><span>PRF</span></a></div></div>
-        <div class="nav_item" data-anchor="kybella" ><div><a href="#kybella"><span>KYBELLA</span></a></div></div>
-        <div class="nav_item" data-anchor="microneedling" ><div><a href="#microneedling"><span>MICRONEEDLING</span></a></div></div>
+    <div class="services_nav">
+        <div class="nav_item" data-anchor="botox" ><div><span>BOTOX</span></div></div>
+        <div class="nav_item" data-anchor="dermafiller"><div><span>DERMA FILLER</span></div></div>
+        <div class="nav_item" data-anchor="pdo" ><div><span>PDO THREAD LIFT</span></div></div>
+        <div class="nav_item" data-anchor="prf" ><div><span>PRF</span></div></div>
+        <div class="nav_item" data-anchor="kybella" ><div><span>KYBELLA</span></div></div>
+        <div class="nav_item" data-anchor="microneedling" ><div><span>MICRONEEDLING</span></div></div>
     </div>
     <div class="services">            
-        <div class="grid-container"> 
-            <div id="botox" class="services_item botox_section padding_v_40">
+        <div id="botox" class="services_item botox_section padding_v_40">
+            <div class="grid-container"> 
                 <div class="grid-x grid-margin-x cols2-s1">
                     <div class="cell large-6 large-order-1 col-copy align-self-middle">
                         <div class="section_title">
@@ -65,6 +65,9 @@
                                 <p>Botox and Dysport work to treat and prevent fine lines and wrinkles. They are most commonly used for the furrow lines in between the brows, horizontal lines to the forehead, and crow’s feet. The medication is injected into the muscle to affect the movement that causes the wrinkles. Results can last 3-4 months on average. </p>
                                 <p>Neuromodulators are also used for off-label use including lines on the nose, neck lines and bands, frowning, gummy smiles, chin dimples, lip flips, hyperhidrosis (excessive sweating), and jawline slimming. </p>
                             </div>                
+                        </div>
+                        <div class="buttons cta-group desktop_only">
+                            <a href="https://ellebe.myaestheticrecord.com/book/appointments" class="button primary"><?php echo esc_html('Schedule Services'); ?> </a>
                         </div>
                     </div>
                 </div>

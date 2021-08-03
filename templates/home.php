@@ -14,7 +14,7 @@
                         <p>ElleBe Medical Aesthetics in Scottsdale, Arizona is dedicated to providing clients with a comfortable atmosphere to obtain individualized cosmetic and aesthetic procedures.</p>
                     </div>
                     <div class="buttons cta-group">
-                        <a href="#" class="button primary icon_button"><?php echo esc_html('Schedule Services'); ?> </a>
+                        <a href="https://ellebe.myaestheticrecord.com/book/appointments" class="button primary icon_button"><?php echo esc_html('Schedule Services'); ?> </a>
                     </div>
                 </div>
                 <div class="cell small-6 small-offset-3 large-6 large-offset-0 align-self-middle small-order-1 large-order-2">
