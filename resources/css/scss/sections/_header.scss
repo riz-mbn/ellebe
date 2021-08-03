@@ -4,8 +4,7 @@ body{
 	&.admin-bar {
 		#wrapper{
 			//margin-top: 145px;
-			.hsnav-s5,
-			.hero-s3 {
+			.hsnav-s5{
 				
 				top: 30px !important;
 
@@ -24,6 +23,16 @@ body{
 					}
 				}				
 			}
+
+			@include media(max-width,1023px){
+				.hero-s3 {
+					
+					top: 30px !important;
+	
+				}
+
+			}
+			
 		}	
 	}
 	&.home {
