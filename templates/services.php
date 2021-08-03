@@ -69,7 +69,10 @@
                     </div>
                 </div>
             </div>
-            <div id="dermafiller" class="services_item dermafiller_section padding_v_40">
+        </div>
+        <div id="dermafiller" class="services_item dermafiller_section padding_v_40">
+            <figure class="floating_img img_lady_3"><img src="<?php echo MBN_ASSETS_URI ?>/img/img_lady_3.png" alt="" class="" /></figure>
+            <div class="grid-container"> 
                 <div class="grid-x grid-margin-x cols2-s1">
                     <div class="cell large-6 large-order-2 col-copy align-self-middle">
                         <div class="section_title">
@@ -90,7 +93,9 @@
                     </div>
                 </div>  
             </div>
-            <div id="pdo" class="services_item pdo_section padding_v_40">
+        </div>
+        <div id="pdo" class="services_item pdo_section padding_v_40">
+            <div class="grid-container"> 
                 <div class="grid-x grid-margin-x cols2-s1">
                     <div class="cell large-6 large-order-1 col-copy align-self-middle">
                         <div class="section_title">
@@ -110,7 +115,10 @@
                     </div> 
                 </div>
             </div>
-            <div id="prf" class="services_item prf_section padding_v_40">
+        </div>
+        <div id="prf" class="services_item prf_section padding_v_40">
+            <figure class="floating_img img_lady_4"><img src="<?php echo MBN_ASSETS_URI ?>/img/img_lady_4.png" alt="" class="" /></figure>
+            <div class="grid-container"> 
                 <div class="grid-x grid-margin-x cols2-s1">
                     <div class="cell large-6 large-order-2 col-copy align-self-middle">
                         <div class="section_title">
@@ -130,7 +138,9 @@
                     </div>
                 </div>
             </div>
-            <div id="kybella" class="services_item kybella_section padding_v_40">
+        </div>
+        <div id="kybella" class="services_item kybella_section padding_v_40">
+            <div class="grid-container"> 
                 <div class="grid-x grid-margin-x cols2-s1">
                     <div class="cell large-6 large-order-1 col-copy align-self-middle">
                         <div class="section_title">
@@ -150,7 +160,10 @@
                     </div>
                 </div>
             </div>
-            <div id="microneedling" class="services_item microneedling_section padding_v_40">
+        </div>
+        <div id="microneedling" class="services_item microneedling_section padding_v_40">
+            <figure class="floating_img img_lady_5"><img src="<?php echo MBN_ASSETS_URI ?>/img/img_lady_5.png" alt="" class="" /></figure>
+            <div class="grid-container"> 
                 <div class="grid-x grid-margin-x cols2-s1">
                     <div class="cell large-6 large-order-2 col-copy align-self-middle">
                         <div class="section_title">

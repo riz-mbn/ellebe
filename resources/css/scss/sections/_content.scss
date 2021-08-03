@@ -156,6 +156,7 @@
 figure {
         
     &.floating_img {
+        position: absolute;
 
         &.img_lady_1 {
             right: 0;
@@ -165,6 +166,26 @@ figure {
             right: 0;
             top: 20%;
             z-index: -1;
+        }
+        &.img_lady_3 {
+            right: 0;
+            top: -30%;
+            z-index: -1;
+        }
+        &.img_lady_4 {
+            left: 0;
+            top: -40%;
+            z-index: -1;
+        }
+
+        &.img_lady_5 {
+            right: 0;
+            top: -30%;
+            z-index: -1;
+        }
+
+        @include media(max-width,1440px){
+            display: none;
         }
         
     }

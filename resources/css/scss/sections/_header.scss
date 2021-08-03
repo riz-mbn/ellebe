@@ -123,18 +123,10 @@ header {
 			box-shadow: none;
 			
 			@include media (max-width, 1023px) {
-				background: #fff;				
-				
+				background: #fff;						
 				.navbar {
 					min-height: 95px;
 					transition: all 0.3s ease;
-					min-height: 265px;
-
-					.navlogo {
-						figure {
-							width: 70px;
-						}
-					}
 				}
 			}
 		}
@@ -198,7 +190,7 @@ header {
 					transition: all 0.3s ease;
 
 					@media(max-width: 1023px) {		
-						width: 90px;
+						width: 70px;
 					}
 					
 				}
@@ -340,7 +332,7 @@ header {
 			
 
 			@include media(max-width, 1023px) {
-				min-height: 115px;
+				min-height: 90px;
 
 				.mobmenu {
 					position: fixed;
@@ -453,10 +445,6 @@ header {
 					
 					@at-root header.show-menu .hsnav-s5 .mobmenu {
 						display: block;
-						top:115px;
-					}
-					@at-root header.show-menu .hsnav-s5.is-stuck .mobmenu {
-						display: block;
 						top:95px;
 					}
 
@@ -466,6 +454,7 @@ header {
 
 		@include media(max-width,1023px){
 			top: 130px;
+			background: $color-white;
 		}
 
 	}
@@ -559,7 +548,7 @@ header {
 				}
 				.hero-caption {
 					.col-copy{
-						padding-top: 5%
+						padding-top: 10%
 					}
 				}
 			}
@@ -576,7 +565,7 @@ header {
 
 				.hero-caption {
 					transition: all 0.5s ease-in-out;
-					height: 370px;
+					height: 350px;
 
 					.grid-container {
 						max-width: 1140px;
@@ -603,6 +592,11 @@ header {
 						}
 					}
 
+					.grid-x {				
+						min-height: 100%;
+						padding-top: 8%;
+					}
+
 				}
 				
 				@include media (max-width, 1023px) {
@@ -615,7 +609,8 @@ header {
 					.hero-caption {
 	
 						.grid-x {
-							min-height: 450px;
+							min-height: 350px;
+							align-content: flex-end;
 						}
 					}
 				}
@@ -664,7 +659,7 @@ header {
 				}
 				
 				.hero-caption {
-					width: 50%;
+					width: 80%;
 					margin: 0 auto;
 					.grid-x {
 						margin-top: 0;
@@ -727,6 +722,7 @@ header {
 				
 
 			}
+
 
 			@include media (max-width, 1381px){		
 				h1 {

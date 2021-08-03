@@ -93,7 +93,8 @@
                         variableWidth: true,
                         prevArrow: false,
                         nextArrow: false,
-                        infinite: false,
+                        infinite: true,
+                        draggable: true,
                     });
 
                     $('.services_nav.slick-slider .nav_item').on('click', function(e) {
@@ -117,6 +118,7 @@
                       slidesToScroll: 1,
                       variableWidth: true,
                       focusOnSelect: true,
+                      draggable: true,
                       asNavFor: '.services_info_contents',
                       responsive: [
                         {
