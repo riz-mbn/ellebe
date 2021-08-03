@@ -95,10 +95,32 @@
 
             $(window).resize(function(){
                 var $windowWidth = $(window).width();
-                console.log($windowWidth);
+
+                if ($windowWidth <= 1023) {
+                    $('.services_nav').slick({                        
+                        dots: false,
+                        arrow: false,
+                        speed: 300,
+                        slidesToShow: 5,
+                        slidesToScroll: 1,
+                        variableWidth: true,
+                        prevArrow: false,
+                        nextArrow: false,
+                    });
+
+                    $('.services_nav.slick-slider .nav_item').on('click', function(e) {
+            
+                        e.preventDefault();
+                        var target = $(this).data('anchor');
+                        
+                        $('#' + target).fadeIn('slow').siblings('.services').fadeOut('slow');
+                    
+                      });
+                }
+
                 if ($windowWidth <= 1400) {
                     
-                    $('.services_nav').slick({
+                    $('.services_info_items').slick({
                       dots: false,
                       arrow: true,
                       infinite: true,
@@ -107,7 +129,7 @@
                       slidesToScroll: 1,
                       variableWidth: true,
                       focusOnSelect: true,
-                      asNavFor: '.services',
+                      asNavFor: '.services_info_contents',
                       responsive: [
                         {
                           breakpoint: 1200,
@@ -125,12 +147,12 @@
                           }
                         ]                    
                     });
-                    $('.services').slick({
+                    $('.services_info_contents').slick({
                         dots: false,
                         arrow: false,
                         infinite: true,
                         speed: 300,
-                        asNavFor: '.services_nav',                 
+                        asNavFor: '.services_info_items',                 
                       });
                   }
             });
