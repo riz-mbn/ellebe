@@ -3,10 +3,17 @@
     // left: 0;
     // right: 0;
     // position: fixed;
+
+    .sticky_container {
+
+        @include media(max-width, 1023px){
+            height: auto !important;
+        }
+
+    }
         
     .services_nav {
         display: none;
-        padding: 0;
         justify-content: space-evenly;
         background: $color-white;
         z-index: 1;
@@ -45,11 +52,19 @@
             }
             
         }
+
+        &.is_sticky {
+            top: 145px;
+        }
+
         @include media(max-width, 1023px){
             display: flex;
             width: 100%;
-            padding-left: 0;
             justify-content: normal;
+        }
+
+        @include media(max-width, 768px){
+            padding-left: 0!important;
         }
         
                             

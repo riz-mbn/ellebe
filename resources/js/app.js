@@ -51,12 +51,12 @@
                 }                
                     
                 if ( $(".sticky-container").offset().top < top ) {
-                    $('.services_sticky').addClass('is_sticky');
+                    $('.services_sticky, .services_nav').addClass('is_sticky');
                     sticky = true;
 
                 } else {
 
-                        $('.services_sticky').removeClass('is_sticky');
+                        $('.services_sticky, .services_nav').removeClass('is_sticky');
 
                 }
                 /* Button Scroll Up */
@@ -106,6 +106,7 @@
                         variableWidth: true,
                         prevArrow: false,
                         nextArrow: false,
+                        infinite: false,
                     });
 
                     $('.services_nav.slick-slider .nav_item').on('click', function(e) {

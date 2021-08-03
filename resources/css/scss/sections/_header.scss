@@ -17,10 +17,7 @@ body{
 				}
 
 				@include media(max-width, 782px){
-					top: 46px !important;
-					&.is-stuck{
-						top: 0px!important;
-					}
+					top: 0 !important;
 				}				
 			}
 
@@ -116,8 +113,20 @@ header {
 
 			background: transparent;
 			box-shadow: none;
+			
 			@include media (max-width, 1023px) {
-				background: #fff;
+				background: #fff;				
+				
+				.navbar {
+					min-height: 115px;
+					transition: all 0.3s ease;
+
+					.navlogo {
+						figure {
+							width: 70px;
+						}
+					}
+				}
 			}
 		}
 		&:not(.services_sticky).is-stuck{
@@ -318,6 +327,8 @@ header {
 				}
 
 			}
+
+			
 
 			@include media(max-width, 1023px) {
 				min-height: 135px;
@@ -522,7 +533,11 @@ header {
 				.grid-x {
 					min-height: 100%;
 				}
-
+				.hero-caption {
+					.col-copy{
+						padding-top: 5%
+					}
+				}
 			}
 			
 			&.is-stuck {
