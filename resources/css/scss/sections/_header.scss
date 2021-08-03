@@ -4,10 +4,13 @@ body{
 	&.admin-bar {
 		#wrapper{
 			//margin-top: 145px;
-			.hsnav-s5 {
+			.hsnav-s5,
+			.hero-s3 {
 				
 				top: 30px !important;
 
+			}
+			.hsnav-s5 {
 				&.is-stuck {
 
 					top: 32px !important;
@@ -19,9 +22,7 @@ body{
 					&.is-stuck{
 						top: 0px!important;
 					}
-				}
-
-				
+				}				
 			}
 		}	
 	}
@@ -51,8 +52,12 @@ body{
 					top: 0;
 					left: 0;
 					right: 0;
-					min-height: 20% !important;
 					transition: all 0.3s ease-in-out;
+				}
+				@include media (max-width, 1023px){
+	
+					position: unset;
+					min-height: auto !important;
 				}
 			}
 		}
@@ -66,8 +71,6 @@ body{
 				right: 0;
 			}
 			@include media (max-width, 1023px){
-				position: unset;
-				margin-top: 0 !important;
 
 				.hero-caption {
 					transition: all 0.5s ease-in-out;
@@ -104,6 +107,9 @@ header {
 
 			background: transparent;
 			box-shadow: none;
+			@include media (max-width, 1023px) {
+				background: #fff;
+			}
 		}
 		&:not(.services_sticky).is-stuck{
 			position: fixed;
@@ -544,6 +550,13 @@ header {
 					}
 
 				}
+				
+				@include media (max-width, 1023px) {
+				
+					margin-top: 135px !important;
+					display: none;
+				}
+
 			}
 			.services_nav {
 				display: none;
@@ -561,6 +574,9 @@ header {
 			}
 				
 			@include media (max-width, 1023px) {
+				position: unset;
+				margin-top: 0 !important;
+
 				.cell {
 					width: 100%;
 					margin: 0 auto;

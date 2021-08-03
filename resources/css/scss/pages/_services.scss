@@ -30,7 +30,9 @@
 
     
 }
-
-.services_hero {
+@include media(max-width, 1023px) {
+    .sticky-container {
+        display: none;
+    }
     
 }
