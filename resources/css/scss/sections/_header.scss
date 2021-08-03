@@ -65,6 +65,14 @@ body{
 				left: 0;
 				right: 0;
 			}
+			@include media (max-width, 1023px){
+				position: unset;
+				margin-top: 0 !important;
+
+				.hero-caption {
+					transition: all 0.5s ease-in-out;
+				}
+			}
 		}
 	}
 }
@@ -486,6 +494,7 @@ header {
 						}
 					}
 				}
+				
 			}
 
 			&.is_sticky {
@@ -536,7 +545,9 @@ header {
 
 				}
 			}
-			
+			.services_nav {
+				display: none;
+			}
 						
 			@media (max-width: 1600px) and (min-width:1024px){	
 				.hero-caption {
@@ -576,6 +587,9 @@ header {
 				
 				.subnav {
 					display: none;
+				}
+				.services_nav {
+					display: block;
 				}
 			}
 		}

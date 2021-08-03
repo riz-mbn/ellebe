@@ -37,24 +37,14 @@
 
 
 <div class="services_content">
-    <!-- <div class="services_nav_wrapper">        
-        <div class="services_nav">
-            <div class="nav_item"><div><a href="#botox"><span>BOTOX</span></a></div></div>
-            <div class="nav_item"><div><a href="#dermafiller"><span>DERMA FILLER</span></a></div></div>
-            <div class="nav_item"><div><a href="#pdo"><span>PDO THREAD LIFT</span></a></div></div>
-            <div class="nav_item"><div><a href="#prf"><span>PRF</span></a></div></div>
-            <div class="nav_item"><div><a href="#kybella"><span>KYBELLA</span></a></div></div>
-            <div class="nav_item"><div><a href="#microneedling"><span>MICRONEEDLING</span></a></div></div>
-        </div>
-        <div class="services_nav is_slick">
-            <div class="nav_item" data-anchor="botox" ><div><span>BOTOX</span></div></div>
-            <div class="nav_item" data-anchor="dermafiller"><div><span>DERMA FILLER</span></div></div>
-            <div class="nav_item" data-anchor="pdo" ><div><span>PDO THREAD LIFT</span></div></div>
-            <div class="nav_item" data-anchor="prf" ><div><span>PRF</span></div></div>
-            <div class="nav_item" data-anchor="kybella" ><div><span><a href="#kybella">KYBELLA</a></span></div></div>
-            <div class="nav_item" data-anchor="microneedling" ><div><span><a href="#microneedling">MICRONEEDLING</a></span></div></div>
-        </div>
-    </div>     -->
+    <div class="services_nav">
+        <div class="nav_item" data-anchor="botox" ><div><span>BOTOX</span></div></div>
+        <div class="nav_item" data-anchor="dermafiller"><div><span>DERMA FILLER</span></div></div>
+        <div class="nav_item" data-anchor="pdo" ><div><span>PDO THREAD LIFT</span></div></div>
+        <div class="nav_item" data-anchor="prf" ><div><span>PRF</span></div></div>
+        <div class="nav_item" data-anchor="kybella" ><div><span><a href="#kybella">KYBELLA</a></span></div></div>
+        <div class="nav_item" data-anchor="microneedling" ><div><span><a href="#microneedling">MICRONEEDLING</a></span></div></div>
+    </div>
     <div class="services">            
         <div class="grid-container"> 
             <div id="botox" class="services botox_section padding_v_40">

@@ -98,7 +98,7 @@
                 console.log($windowWidth);
                 if ($windowWidth <= 1400) {
                     
-                    $('.services_info_items').slick({
+                    $('.services_nav').slick({
                       dots: false,
                       arrow: true,
                       infinite: true,
@@ -107,7 +107,7 @@
                       slidesToScroll: 1,
                       variableWidth: true,
                       focusOnSelect: true,
-                      asNavFor: '.services_info_contents',
+                      asNavFor: '.services',
                       responsive: [
                         {
                           breakpoint: 1200,
@@ -125,12 +125,12 @@
                           }
                         ]                    
                     });
-                    $('.services_info_contents').slick({
+                    $('.services').slick({
                         dots: false,
                         arrow: false,
                         infinite: true,
                         speed: 300,
-                        asNavFor: '.services_info_items',                 
+                        asNavFor: '.services_nav',                 
                       });
                   }
             });
