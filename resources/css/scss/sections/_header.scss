@@ -140,9 +140,11 @@ header {
 				transition: all 0.3s ease;
 
 				.navlogo {
+
 					figure {
 						width: 70px;
 					}
+
 				}
 
 				.navmenu {					
@@ -169,6 +171,16 @@ header {
 					padding-bottom: 0;
 				}
 
+				@include media(min-width,1024px){	
+					span.navtitle {
+						display: block;
+						font-size: 20px;
+						color: $color-black;
+						font-family: $heading-font-family;
+						margin-left: 30px;
+						margin-bottom: 0;
+					}
+				}
 			}
 		}
 
@@ -193,6 +205,9 @@ header {
 						width: 70px;
 					}
 					
+				}
+				span.navtitle {
+					display: none;
 				}
 				
 			}
@@ -462,335 +477,7 @@ header {
 	}
 }
 
-.hero {
-	&.hero-s3 {
-		min-height:500px;
-		margin-top: -265px;
-		display: flex;
-		flex-wrap: wrap;
-		align-content: center;
-		flex-direction: column;
-		justify-content: flex-end;
-
-		&.home {
-			
-			min-height: 786px;		
-			
-			@media (max-width: 1600px) and (min-width:1024px){	
-				.hero-caption {
-
-					padding-top: 0%;		
-					padding-bottom: 5%;
-	
-				}			
-			}
-			@include media(max-width, 600px) {
-				min-height: auto;
-			}
-			@include media(max-width, 1023px) {
-				.hero-caption {
-					.grid-x {
-						margin-top: 50px;
-						min-height: auto;
-					}
-				}
-			}
-		}
-
-		&.services_hero {
-			margin-top: -265px !important;
-			align-content: normal;
-			flex-direction: column;
-			flex-wrap: wrap;
-
-			.hero-caption {
-				h1 {
-					font-size: 40px;
-
-					@media (max-width: 1280px) and (min-width:1024px){
-						font-size: 35px;
-					}
-				}
-				figure {
-					margin-bottom: 0 !important;
-
-				}
-				.grid-x {
-					
-					align-content: flex-end;
-				}
-			}
-
-			.subnav {
-				padding: 20px;
-				box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-				background: $color-white;
-				z-index: 1;
-				width:60%;
-				margin: 0 auto;
-
-				.menu {
-					display: flex;
-					justify-content: space-evenly;
-
-					li.menu_item {
-						a{
-							color: $color-primary;
-							font-size: 14px;
-							font-weight: 600;
-							-webkit-tap-highlight-color: transparent;
-						}
-					}
-				}
-				
-			}
-
-			&.is_sticky {
-				margin-top: 0;
-			}
-
-			&:not(.is-stuck) {					
-
-				.grid-x {
-					min-height: 100%;
-				}
-				.hero-caption {
-					.col-copy{
-						padding-top: 10%;
-						@include media (min-width, 1601px){
-							margin-left: 0;
-						}
-					}
-				}
-
-			}
-			
-			&.is-stuck {
-				position: fixed;
-				width: 100%;
-				top: 0;
-				left: 0;
-				right: 0;
-				min-height: 350px;
-				z-index: 1;
-				margin-top: 0 !important;
-
-				.hero-caption {
-					transition: all 0.5s ease-in-out;
-					height: 300px;
-					overflow: hidden;
-
-					.grid-container {
-						max-width: 1170px;
-						transition: all 0.3s ease-in-out;
-					}
-
-					.col-image {
-						figure {						
-							transition: all 0.5s ease-in-out;
-						}
-					}
-
-					.col-copy{
-						.inner {
-							transition: all 0.5s ease-in-out;
-
-							@include media (max-width,1112px) {
-								h1 {
-									font-size: 35px;
-								}
-							}
-						}
-					}
-
-					.grid-x {				
-						min-height: 100%;
-						padding-top: 3%;
-						align-content: flex-end;
-					}
-
-				}
-				
-				@include media (max-width, 1023px) {
-				
-					margin-top: 135px !important;
-					display: none;
-				}
-
-				@media (max-width: 1600px) and (min-width:1024px){	
-					.hero-caption {
-	
-						.grid-x {
-							min-height: 350px;
-						}
-					}
-				}
-
-				@media (max-width: 1300px) {
-					.hero-caption {
-						.col-copy{
-							.inner {
-								margin-left: 40px;
-							}
-						}
-					}
-				}
-
-				@media (max-width: 1200px) and (min-width:1024px){	
-					.hero-caption {
-						.col-copy{
-							.inner {
-								margin-left: 120px !important;
-								transition: all 0.5s ease-in-out;
-							}
-						}
-					}
-				}
-
-			}
-						
-			@media (max-width: 1600px) and (min-width:1024px){	
-				.hero-caption {
-					.grid-container {
-						max-width: 1140px !important;
-						transition: all 0.3s ease-in-out;
-					}
-
-				}
-				.subnav {
-					width: 85%;
-				}
-
-			}
-				
-			@include media (max-width, 1023px) {
-				position: unset;
-				margin-top: 0 !important;
-
-				.cell {
-					width: 100%;
-					margin: 0 auto;
-					
-					&:first-child {
-						display: none;
-					}
-				}
-				figure.bg {
-					position: absolute;
-					z-index: -1;
-
-					&:before {
-						display: none;
-					}
-				}
-				
-				.hero-caption {
-					width: 80%;
-					margin: 0 auto;
-					.grid-x {
-						margin-top: 0;
-					}
-				}
-				
-				
-				.subnav {
-					display: none;
-				}
-			}
-		}
-		
-		figure {
-			&.bg {
-				&:before{
-					content: '';
-					bottom: -1px;
-					z-index: 1;
-					background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDBweCIgdmlld0JveD0iMCAwIDEyODAgMTQwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9IiNmZmZmZmYiPjxwYXRoIGQ9Ik0xMjgwIDE0MFYwUzk5My40NiAxNDAgNjQwIDEzOSAwIDAgMCAwdjE0MHoiLz48L2c+PC9zdmc+);
-					background-size: 100% 100px;
-					height: 100px;			
-					display: block;
-					background-repeat: no-repeat;
-					position: absolute;
-					pointer-events: none;
-					width: 100%;
-					left: 0;
-					right: 0;
-					
-					@include media (max-width, 480px) {						
-						background-size: 150% 100px;
-						background-position: center;
-					}
-					
-					@include media (max-width, 375px) {						
-						background-size: 200% 100px;
-						background-position: center;
-					}
-				}
-			}
-		}
-
-		.hero-caption {
-			
-			h1 {
-				font-size: 50px;
-				line-height: 1.3;
-    			color: $color-black;
-			}
-
-			.hero_caption_text {
-				width: 80%;
-				padding-top: 20px;
-
-				p {
-					font-size: 22px;
-					line-height:32px;
-				}
-				
-
-			}
-
-
-			@include media (max-width, 1381px){		
-				h1 {
-					font-size: 40px;
-				}
-				.hero_caption_text {
-					width: 100%;	
-				}
-			}
-			@include media (max-width, 1023px){		
-				h1 {
-					background: linear-gradient(117.48deg, #B89E6C 20.85%, #D1C3B5 90.52%);
-					-webkit-background-clip: text;
-					-webkit-text-fill-color: transparent;
-				}
-			}
-
-			@include media (max-width, 768px){		
-				h1 {
-					font-size: 25px;
-				}
-				p{
-					font-size: 14px !important;
-					line-height: 1.7 !important;
-				}
-			}
-
-			
-
-		}
-
-		@include media (max-width, 1023px){
-			margin-top: 0;
-			display: block;
-			min-height: 100%;
-
-			.bg {
-				position: relative;
-			}
-		}
-		
-	}
+.hero {	
 
 	&.hero-s6{
 		margin-top: -265px;

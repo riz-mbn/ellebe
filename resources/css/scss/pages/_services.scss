@@ -35,7 +35,11 @@
 							-webkit-tap-highlight-color: transparent;
 						}
 					}
-				}				
+				}	
+                
+                &.is_sticky {
+                    position:fixed;
+                }		
 			}
 
 			.hero-caption{
@@ -114,6 +118,46 @@
                 }
 
             }
+            
+			@include media (max-width, 768px) {
+                height: 100%;
+
+                .hero-caption {
+
+                    h1 {
+                        font-size: 30px !important;
+                    }
+                    .col-copy {
+                        padding-top: 0;
+                    }
+                }
+            }
+
+            @include media (max-width, 520px) {
+
+                .hero-caption {
+                    h1 {
+                        font-size: 24px !important;
+                    }
+                }
+            }
+
+            @include media (max-width, 375px) {
+
+                .hero-caption {
+                    h1 {
+                        font-size: 16px !important;
+                    }
+                }
+            }
+            @include media (max-width, 320px) {
+
+                .hero-caption {
+                    h1 {
+                        font-size: 14px !important;
+                    }
+                }
+            }
 		}
 
     }
@@ -142,7 +186,10 @@
         box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.16);
         transition: all 0.5s ease-in-out;
         box-sizing: border-box;
-        position: fixed;
+
+        &.is_sticky {
+            position: fixed;
+        }
 
         .nav_item {
             padding: 0 20px;
@@ -207,9 +254,8 @@
         }
         .services_item {
             position: relative;
-            margin-top: -40px;
+            padding-top: 40px;
         }
-
         
         @include media (max-width, 1023px){
 
@@ -227,8 +273,9 @@
             }     
             
             &.is_sticky {
-                .services_item.clicked {
-                    padding-top: 240px !important;
+
+                .services_item {
+                    padding-top: 100px !important;
                 }
             }   
 

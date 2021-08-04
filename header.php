@@ -34,6 +34,8 @@ else {
                         <figure>
                             <img src="<?php echo MBN_ASSETS_URI ?>/img/ElleBe_logo.png" alt="">
                         </figure>
+                        <span class="navtitle desktop_only">Be comfortable. Be confident.<br/>
+                        Be beautiful. Be you.</span>
                     </a>
                     <span class="navicon hide-for-large" data-toggle="header">mobile menu</span>
                     <nav class="navmenu show-for-large">                        

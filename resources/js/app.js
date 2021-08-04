@@ -54,13 +54,13 @@
 
                 }                
                     
-                if ( $(".sticky-container").offset().top < top ) {
-                    $('.services_sticky, .services_nav, .services').addClass('is_sticky');
+                if ( $('.services_page').offset().top < top ) {
+                    $('.subnav, .services_nav, .services').addClass('is_sticky');
                     sticky = true;
 
                 } else {
 
-                        $('.services_sticky, .services_nav, .services').removeClass('is_sticky');
+                        $('.subnav, .services_nav, .services').removeClass('is_sticky');
 
                 }
                 /* Button Scroll Up */
@@ -81,20 +81,6 @@
                 $('html, body').animate({scrollTop : 0},800);
                 return false;
             });            
-
-            // //smooth scroll
-            // $('.home_page .menu_item a[href^="#"]').on('click',function (e) {
-            //     e.preventDefault();
-            //     var target = this.hash;
-            //     var $target = $(target);
-            //     var offset = $( window ).height() / 2;
-
-            //     $('html, body').stop().animate({
-            //         'scrollTop': $target.offset().top - offset
-            //     }, 1000, 'swing', function () {
-            //         window.location.hash = target;
-            //     });
-            // });
 
             $('a[href*="#"]')
             // Remove links that don't actually link to anything
@@ -163,21 +149,15 @@
 
                              $('html, body').stop().animate({
                                 'scrollTop': $target.offset().top - 40
-                            }, function() {
+                            }, 'swing', function() {
 
                                 // Callback after animation
                                 // Must change focus!
                                 window.location.hash = target;
                                 
                             });
-
-                            // $('#' + target +'.clicked').removeClass('clicked');
-                            //  $('#' + target).addClass('clicked');
-                        //    $('html, body').animate({scrollTop : 0},800);
-                        //      $('#' + target).fadeIn('slow').siblings('.services_item').fadeOut('slow');
-                        //     $('#' + target).addClass('clicked').siblings('.services_item').removeClass('clicked');
                         
-                           });
+                        });
                         
                      });
                 }
