@@ -37,9 +37,17 @@
 					}
 				}	
                 
+                &:not(.is_sticky) {
+                    position: relative;
+                }
+                
                 &.is_sticky {
                     position:fixed;
-                }		
+                    top: 145px;
+                    left: 0;
+                    right: 0;
+                    bottom: auto;
+                }	
 			}
 
 			.hero-caption{

@@ -54,13 +54,13 @@
 
                 }                
                     
-                if ( $('.services_page').offset().top < top ) {
+                if ( $('.sticky-container').offset().top < top ) {
                     $('.subnav, .services_nav, .services').addClass('is_sticky');
                     sticky = true;
 
                 } else {
 
-                        $('.subnav, .services_nav, .services').removeClass('is_sticky');
+                    $('.subnav, .services_nav, .services').removeClass('is_sticky');
 
                 }
                 /* Button Scroll Up */
@@ -95,6 +95,7 @@
                     var target = $(this.hash);
                     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 
+                    console.log( target.offset().top  );
                     // Does a scroll target exist?
                     if (target.length) {
 
