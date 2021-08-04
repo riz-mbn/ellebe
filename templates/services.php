@@ -24,12 +24,12 @@
     <div class="subnav">
         <div class="grid-container">
             <ul class="menu" data-smooth-scroll data-offset="350">
-                <li class="menu_item"><a href="#botox">BOTOX</a></li>
-                <li class="menu_item"><a href="#dermafiller">DERMA FILLER</a></li>
-                <li class="menu_item"><a href="#pdo">PDO THREAD LIFT</a></li>
-                <li class="menu_item"><a href="#prf">PRF</a></li>
-                <li class="menu_item"><a href="#kybella">KYBELLA</a></li>
-                <li class="menu_item"><a href="#microneedling">MICRONEEDLING</a></li>
+                <li class="menu_item"><a href="<?php echo home_url().'/services/#botox' ?>">BOTOX</a></li>
+                <li class="menu_item"><a href="<?php echo home_url().'/services/#dermafiller' ?>">DERMA FILLER</a></li>
+                <li class="menu_item"><a href="<?php echo home_url().'/services/#pdo' ?>">PDO THREAD LIFT</a></li>
+                <li class="menu_item"><a href="<?php echo home_url().'/services/#prf' ?>">PRF</a></li>
+                <li class="menu_item"><a href="<?php echo home_url().'/services/#kybella' ?>">KYBELLA</a></li>
+                <li class="menu_item"><a href="<?php echo home_url().'/services/#microneedling' ?>">MICRONEEDLING</a></li>
             </ul>
         </div>
     </div>

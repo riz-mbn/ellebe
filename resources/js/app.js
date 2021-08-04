@@ -24,6 +24,10 @@
                 $('#header').removeClass('show-menu');
             });
 
+            $('.mobmenu .menu li.menu_item a').click(function(){
+                $('.navicon').click();
+            });
+
             $(window).scroll(function() {
                 var getTop = $('.courses_results').offset().top;
                 if ($(this).scrollTop() > getTop){  
@@ -79,6 +83,20 @@
                 return false;
             });            
 
+            $('.menu_item a').each(function(){
+                //smooth scroll
+                $(this).on('click',function (e) {
+                    e.preventDefault();
+                    var target = this.hash;
+                    var $target = $(target);
+
+                    $('html, body').stop().animate({
+                        'scrollTop': $target.offset().top - 350
+                    }, 900, 'swing', function () {
+                        // window.location.hash = target;
+                    });
+                 });
+            });
 
                 var $windowWidth = $(window).width();
 
@@ -97,7 +115,7 @@
                         draggable: true,
                     });
 
-                    $('.services_nav.slick-slider .nav_item').each(function(){
+                    $('.services_nav.slick-slider .nav_item, .mobmenu .menu li.menu_item').each(function(){
 
                         $('.services_item:first-child').siblings('.services_item').hide();
 
