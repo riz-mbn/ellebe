@@ -98,9 +98,9 @@
 
             $('a[href*="#"]')
             // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
             .click(function(event) {
-
-                alert('clicked!!');
                 // On-page links
                 if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
                 && location.hostname == this.hostname) {
@@ -151,25 +151,35 @@
                         draggable: true,
                     });
 
-                    // $('.services_nav.slick-slider .nav_item, .services_page .mobmenu .scroll_link').each(function(){
+                    $('.services_nav.slick-slider .nav_item').each(function(){
 
-                    //     //$('.services_item:first-child').siblings('.services_item').hide();
+                    //$('.services_item:first-child').siblings('.services_item').hide();
 
-                    //     $(this).on('click', function(e) {
-                    //         e.preventDefault();
+                         $(this).on('click', function(e) {
+                            e.preventDefault();
             
-                    //         var target = $(this).data('anchor');
+                            var target = $(this).data('anchor'); 
+                            var $target = $(target);                           
 
-                    //         $('#' + target +'.clicked').removeClass('clicked');
-                    //         $('#' + target).addClass('clicked');
-                            
-                    //         $('html, body').animate({scrollTop : 0},800);
-                    //         $('#' + target).fadeIn('slow').siblings('.services_item').fadeOut('slow');
-                    //         $('#' + target).addClass('clicked').siblings('.services_item').removeClass('clicked');
+                             $('html, body').stop().animate({
+                                'scrollTop': $target.offset().top
+                            }, 1000, function() {
+
+                                // Callback after animation
+                                // Must change focus!
+                                window.location.hash = target;
+                                
+                            });
+
+                            // $('#' + target +'.clicked').removeClass('clicked');
+                            //  $('#' + target).addClass('clicked');
+                        //    $('html, body').animate({scrollTop : 0},800);
+                        //      $('#' + target).fadeIn('slow').siblings('.services_item').fadeOut('slow');
+                        //     $('#' + target).addClass('clicked').siblings('.services_item').removeClass('clicked');
                         
-                    //       });
+                           });
                         
-                    // });
+                     });
                 }
 
                 if ($windowWidth <= 1400) {
