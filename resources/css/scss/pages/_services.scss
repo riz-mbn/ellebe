@@ -56,6 +56,10 @@
         &.is_sticky {
             top: 95px;
         }
+
+        .slick-prev {
+            left: 0 !important;
+        }
                  
         @media (max-width: 1023px) and (min-width:783px){			
             
@@ -69,11 +73,7 @@
             width: 100%;
             justify-content: normal;
         }
-
-        @include media(max-width, 768px){
-            padding-left: 0!important;
-        }
-                            
+        
         @media (max-width: 1600px) and (min-width:1024px){			
             width: 80%;
         }

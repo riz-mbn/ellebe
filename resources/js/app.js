@@ -104,13 +104,11 @@
                     
                     $('.services_nav').slick({                        
                         dots: false,
-                        arrow: false,
+                        arrow: true,
                         speed: 300,
                         slidesToShow: 5,
                         slidesToScroll: 1,
                         variableWidth: true,
-                        prevArrow: false,
-                        nextArrow: false,
                         infinite: true,
                         draggable: true,
                     });
