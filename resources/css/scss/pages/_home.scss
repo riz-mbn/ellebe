@@ -1,3 +1,19 @@
+.hero {
+    &.hero-s6{
+        
+		//home page template
+		&.home_page {
+
+
+			@include media (min-width, 1721px) {	
+				.hero-caption {
+					padding: 0;
+				}
+			}
+		}
+
+    }
+}
 
 .home_content {
     position:relative;

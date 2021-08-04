@@ -1,20 +1,20 @@
 <?php 
-    /* Template Name: Services template */
+    /* Template Name: Services Page template */
     get_header();
 ?>
 
-<section class="hero hero-s3 services_hero services_sticky"  data-sticky data-options="marginTop:0">
+<section class="hero hero-s6 services_page">
     <figure class="bg"><img src="<?php echo MBN_ASSETS_URI ?>/img/bgs/img_services_hdr.jpeg" alt=""></figure>
     <div class="hero-caption">
         <div class="grid-container"> 
             <div class="grid-x grid-margin-x">
-                <div class="cell large-6 medium-offset-1 align-self-middle small-order-2 large-order-1 col-copy">
+                <div class="cell large-6 small-6 medium-7 align-self-middle large-order-1 col-copy">
                     <div class="inner">
                         <h1>Be comfortable. Be confident.<br/>Be beautiful. Be you.</h1>
                     </div>
                 </div>
-                <div class="cell small-10 small-offset-3 large-5 large-offset-0 align-self-middle small-order-1 large-order-2 col-image">     
-                    <div class="inner">               
+                <div class="cell small-6 medium-5 large-6 large-offset-0 align-self-middle large-order-2 col-image">
+                    <div class="inner">
                         <figure class="text-center"><img src="<?php echo MBN_ASSETS_URI ?>/img/img_services_lindsay.png" alt=""></figure>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
     </div>
     <div class="subnav">
         <div class="grid-container">
-            <ul class="menu" data-smooth-scroll data-offset="350">
+            <ul class="menu">
                 <li class="menu_item"><a href="<?php echo home_url().'/services/#botox' ?>">BOTOX</a></li>
                 <li class="menu_item"><a href="<?php echo home_url().'/services/#dermafiller' ?>">DERMA FILLER</a></li>
                 <li class="menu_item"><a href="<?php echo home_url().'/services/#pdo' ?>">PDO THREAD LIFT</a></li>
@@ -34,8 +34,6 @@
         </div>
     </div>
 </section>
-
-
 <div class="services_content">
     <div class="services_nav">
         <div class="nav_item" data-anchor="botox" ><div><span>BOTOX</span></div></div>

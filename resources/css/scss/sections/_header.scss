@@ -205,9 +205,9 @@ header {
 				a {
 					border-radius: 3px;
 					font-size: 14px;
-					font-weight: 600;
+					font-weight: 600 !important;
 					text-transform: uppercase;
-					padding: 18px 40px;
+					padding: 18px 30px;
 					line-height: 1.1;
 					color: #807366;
 
@@ -270,7 +270,6 @@ header {
 					a {
 						background: $color-primary;
 						color: $color-white;
-						font-weight: bold;
 					}
 				}
 
@@ -795,6 +794,7 @@ header {
 
 	&.hero-s6{
 		margin-top: -265px;
+		min-height: 700px;
 
 		.hero-caption {
 			min-height: 300px;
@@ -802,7 +802,7 @@ header {
 			p {
 				color: $color-black;
 			}
-		}
+		}	
 
 		figure {
 			&.bg {
@@ -836,6 +836,7 @@ header {
 				}
 			}
 		}
+	
 
 		@include media (max-width, 1023px){
 			margin-top: 0;
@@ -857,9 +858,12 @@ header {
 				}
 			}
 		}
-		@include media (min-width, 1024px) {			
-			padding-top: 15% !important;
-			padding-bottom: 5% !important;
+		@include media (min-width, 1024px) {
+			&.home_page {
+				padding-top: 15% !important;
+				padding-bottom: 5% !important;
+			}	
+			
 		}
 
 		@media (max-width: 1720px) and (min-width: 1440px){
@@ -873,11 +877,5 @@ header {
 				padding: 140px 0 80px;
 			}
 		}	
-
-		@include media (min-width, 1721px) {	
-			.hero-caption {
-				padding: 0;
-			}
-		}
 	}
 }

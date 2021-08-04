@@ -76,28 +76,66 @@
 
             });
 
-            
             //Click event to scroll to top
             $('.btn_scroll_up').click(function(){
                 $('html, body').animate({scrollTop : 0},800);
                 return false;
             });            
 
-            $('.menu_item a').each(function(){
-                //smooth scroll
-                $(this).on('click',function (e) {
-                    e.preventDefault();
-                    var target = this.hash;
-                    var $target = $(target);
+            // //smooth scroll
+            // $('.home_page .menu_item a[href^="#"]').on('click',function (e) {
+            //     e.preventDefault();
+            //     var target = this.hash;
+            //     var $target = $(target);
+            //     var offset = $( window ).height() / 2;
 
-                    $('html, body').stop().animate({
-                        'scrollTop': $target.offset().top - 350
-                    }, 900, 'swing', function () {
-                        // window.location.hash = target;
-                    });
-                 });
+            //     $('html, body').stop().animate({
+            //         'scrollTop': $target.offset().top - offset
+            //     }, 1000, 'swing', function () {
+            //         window.location.hash = target;
+            //     });
+            // });
+
+            $('a[href*="#"]')
+            // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function(event) {
+                // On-page links
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+                && location.hostname == this.hostname) {
+
+                    // Figure out element to scroll to
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
+                    // Does a scroll target exist?
+                    if (target.length) {
+
+                        // Only prevent default if animation is actually gonna happen
+                        event.preventDefault();
+
+                        $('html, body').animate({
+                        scrollTop: target.offset().top
+                        }, function() {
+
+                        // Callback after animation
+                        // Must change focus!
+                        var $target = $(target);
+
+                        $target.focus();
+                        if ($target.is(":focus")) { // Checking if the target was focused
+                            return false;
+                        } else {
+                            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                            $target.focus(); // Set focus again
+                        };
+                        
+                        });
+                    }
+                }
             });
-
+            
                 var $windowWidth = $(window).width();
 
                 if ($windowWidth <= 1023) {
@@ -113,22 +151,25 @@
                         draggable: true,
                     });
 
-                    $('.services_nav.slick-slider .nav_item, .mobmenu .menu li.menu_item').each(function(){
+                    // $('.services_nav.slick-slider .nav_item, .services_page .mobmenu .scroll_link').each(function(){
 
-                        $('.services_item:first-child').siblings('.services_item').hide();
+                    //     //$('.services_item:first-child').siblings('.services_item').hide();
 
-                        $(this).on('click', function(e) {
+                    //     $(this).on('click', function(e) {
+                    //         e.preventDefault();
             
-                            e.preventDefault();
-                            var target = $(this).data('anchor');
+                    //         var target = $(this).data('anchor');
+
+                    //         $('#' + target +'.clicked').removeClass('clicked');
+                    //         $('#' + target).addClass('clicked');
                             
-                            $('html, body').animate({scrollTop : 0},800);
-                            $('#' + target).fadeIn('slow').siblings('.services_item').fadeOut('slow');
+                    //         $('html, body').animate({scrollTop : 0},800);
+                    //         $('#' + target).fadeIn('slow').siblings('.services_item').fadeOut('slow');
+                    //         $('#' + target).addClass('clicked').siblings('.services_item').removeClass('clicked');
                         
-                                return false;
-                          });
+                    //       });
                         
-                    });
+                    // });
                 }
 
                 if ($windowWidth <= 1400) {
