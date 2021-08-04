@@ -207,6 +207,7 @@
         }
         .services_item {
             position: relative;
+            margin-top: -40px;
         }
 
         
@@ -217,6 +218,11 @@
                     img {
                         width: 70%;
                     }
+                }
+
+                .grid-x {
+                    padding: 0 !important;
+                    margin: 0 !important;
                 }
             }     
             

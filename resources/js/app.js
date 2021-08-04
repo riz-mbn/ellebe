@@ -162,8 +162,8 @@
                             var $target = $(target);                           
 
                              $('html, body').stop().animate({
-                                'scrollTop': $target.offset().top
-                            }, 1000, function() {
+                                'scrollTop': $target.offset().top - 40
+                            }, function() {
 
                                 // Callback after animation
                                 // Must change focus!
