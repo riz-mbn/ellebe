@@ -8,7 +8,7 @@
     <div class="hero-caption">
         <div class="grid-container"> 
             <div class="grid-x grid-margin-x">
-                <div class="cell large-6 large-offset-1 align-self-middle small-order-2 large-order-1 col-copy">
+                <div class="cell large-6 medium-offset-1 align-self-middle small-order-2 large-order-1 col-copy">
                     <div class="inner">
                         <h1>Be comfortable. Be confident.<br/>Be beautiful. Be you.</h1>
                     </div>

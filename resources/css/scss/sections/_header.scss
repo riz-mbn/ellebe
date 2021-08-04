@@ -557,9 +557,13 @@ header {
 				}
 				.hero-caption {
 					.col-copy{
-						padding-top: 10%
+						padding-top: 10%;
+						@include media (min-width, 1601px){
+							margin-left: 0;
+						}
 					}
 				}
+
 			}
 			
 			&.is-stuck {
