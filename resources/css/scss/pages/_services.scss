@@ -56,6 +56,13 @@
         &.is_sticky {
             top: 95px;
         }
+                 
+        @media (max-width: 1023px) and (min-width:783px){			
+            
+            &.is_sticky {
+                top: 115px;
+            }
+        }
 
         @include media(max-width, 1023px){
             display: flex;
@@ -81,6 +88,7 @@
         .services_item {
             position: relative;
         }
+
         
         @include media (max-width, 1023px){
 
@@ -90,11 +98,13 @@
                         width: 70%;
                     }
                 }
-                &.padding_v_40 {
-                    padding-top: 0;
-                    padding-bottom:0;
+            }     
+            
+            &.is_sticky {
+                .services_item {
+                    padding-top: 240px !important;
                 }
-            }
+            }   
 
         }
 
