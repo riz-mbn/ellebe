@@ -66,7 +66,7 @@
                                 <p>Neuromodulators are also used for off-label use including lines on the nose, neck lines and bands, frowning, gummy smiles, chin dimples, lip flips, hyperhidrosis (excessive sweating), and jawline slimming. </p>
                             </div>                
                         </div>
-                        <div class="buttons cta-group desktop_only">
+                        <div class="buttons cta-group mobile_only">
                             <a href="https://ellebe.myaestheticrecord.com/book/appointments" class="button primary"><?php echo esc_html('Schedule Services'); ?> </a>
                         </div>
                     </div>
