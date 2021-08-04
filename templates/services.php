@@ -36,12 +36,12 @@
 </section>
 <div class="services_content">
     <div class="services_nav">
-        <div class="nav_item" data-anchor="botox" ><div><span>BOTOX</span></div></div>
-        <div class="nav_item" data-anchor="dermafiller"><div><span>DERMA FILLER</span></div></div>
-        <div class="nav_item" data-anchor="pdo" ><div><span>PDO THREAD LIFT</span></div></div>
-        <div class="nav_item" data-anchor="prf" ><div><span>PRF</span></div></div>
-        <div class="nav_item" data-anchor="kybella" ><div><span>KYBELLA</span></div></div>
-        <div class="nav_item" data-anchor="microneedling" ><div><span>MICRONEEDLING</span></div></div>
+        <div class="nav_item" data-anchor="botox" ><div><a href="<?php echo home_url().'/services/#botox' ?>"><span>BOTOX</span></a></div></div>
+        <div class="nav_item" data-anchor="dermafiller"><div><a href="<?php echo home_url().'/services/#botox' ?>"><span>DERMA FILLER</span></a></div></div>
+        <div class="nav_item" data-anchor="pdo" ><div><a href="<?php echo home_url().'/services/#botox' ?>"><span>PDO THREAD LIFT</span></a></div></div>
+        <div class="nav_item" data-anchor="prf" ><div><a href="<?php echo home_url().'/services/#botox' ?>"><span>PRF</span></a></div></div>
+        <div class="nav_item" data-anchor="kybella" ><div><a href="<?php echo home_url().'/services/#botox' ?>"><span>KYBELLA</span></a></div></div>
+        <div class="nav_item" data-anchor="microneedling" ><div><a href="<?php echo home_url().'/services/#botox' ?>"><span>MICRONEEDLING</span></a></div></div>
     </div>
     <div class="services">            
         <div id="botox" class="services_item botox_section padding_v_40">

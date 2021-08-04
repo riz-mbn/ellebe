@@ -71,7 +71,7 @@
                     padding: 140px 0 80px;
                     
                     h1 {
-                        font-size: 35px;
+                        font-size: 35px !important;
                     }
                 }
 
@@ -80,7 +80,8 @@
 				}
 			}
 			@include media (max-width, 1023px) {
-                min-height: 100%;
+                min-height: 100% !important;
+                height: 100%;
 
                 figure {
                     &.bg{
@@ -95,6 +96,7 @@
 				}
 
                 .hero-caption {
+                    padding: 90px 0 0;	
                     h1 {
                         -webkit-text-fill-color: $color-black;
                         margin-bottom: 0 !important;
@@ -102,6 +104,12 @@
                     }
                     .col-copy {
                         padding-top: 40px;
+                    }
+                    .col-image {
+    
+                        figure {	
+                            width: 100% !important;
+                        }
                     }
                 }
 
@@ -183,7 +191,7 @@
         @include media(max-width, 1023px){
             display: flex;
             width: 100%;
-            justify-content: normal;
+            justify-content: normal;	
         }
 
         @media (max-width: 1600px) and (min-width:1024px){			
