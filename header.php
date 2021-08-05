@@ -86,7 +86,7 @@ else {
         <div class="preloader">
             <div class="position-center-center">
                 <figure>
-                    <img src="<?php echo MBN_ASSETS_URI ?>/img/ElleBe_logo.png" alt="" width="150">
+                    <img src="<?php echo MBN_ASSETS_URI ?>/img/preloader.png" alt="" width="150">
                 </figure>
                 <div class="loading">
                     <div class="ball"></div>
