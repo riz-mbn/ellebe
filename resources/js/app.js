@@ -5,8 +5,6 @@
             app.customDropdown();
         },	
         onLoad: function(){
-            //preloader            
-            $('#preloader').fadeOut('slow');
 
             $(document).foundation();
             app.utils();
@@ -16,6 +14,9 @@
 		utils: function(){
 
 
+            //preloader            
+            $('#preloader').fadeOut('slow');
+            
             $('.navbar .btn-user').click(function(){
                 $('#header').toggleClass('show-account');
                 $('#header').removeClass('show-classes');
