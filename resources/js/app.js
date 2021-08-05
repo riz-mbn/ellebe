@@ -6,8 +6,8 @@
         },	
         onLoad: function(){
             //preloader            
-            $('#preloader').delay(500).fadeOut('slow');
-            
+            $('#preloader').fadeOut('slow');
+
             $(document).foundation();
             app.utils();
         },
