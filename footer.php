@@ -47,17 +47,17 @@
                         <p>7077 E. Bell Rd, Suite 200-310 Scottsdale, AZ 85254</p>
                         <a href="mailto:info@ellebemedspa.com"></p>info@ellebemedspa.com</p></a>
                         <div class="social_icons">
-                            <a href="<?php echo esc_url('https://www.facebook.com/ElleBe-Medical-Aesthetics-101151665599430'); ?>">
+                            <a href="<?php echo esc_url('https://www.facebook.com/ElleBe-Medical-Aesthetics-101151665599430'); ?>" target="_blank">
                                 <figure>
                                     <img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-fb.png" alt="">
                                 </figure>
                             </a>
-                            <a href="<?php echo esc_url('https://www.instagram.com/lindsay_aestheticpa/'); ?>">
+                            <a href="<?php echo esc_url('https://www.instagram.com/lindsay_aestheticpa/'); ?>" target="_blank">
                                 <figure>
                                     <img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-ig.png" alt="">
                                 </figure>
                             </a>
-                            <a href="<?php echo esc_url('https://www.yelp.com/biz/ellebe-medical-aesthetics-scottsdale'); ?>">
+                            <a href="<?php echo esc_url('https://www.yelp.com/biz/ellebe-medical-aesthetics-scottsdale'); ?>" target="_blank">
                                 <figure>
                                     <img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-yelp.png" alt="">
                                 </figure>
