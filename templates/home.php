@@ -126,48 +126,48 @@
                         <div class="services_info_main">
                             <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img_services.png" alt=""></figure>
                             <div class="services_info_items">
-                                <div class="item botox">
+                                <a href="<?php echo home_url().'/services/#botox' ?>" class="item botox">
                                     <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img_botox.png" alt=""></figure>
                                     <div class="services_content">
                                         <h3>Botox/Dysport</h3>
                                         <p>Botox and Dysport work to treat and prevent fine lines and wrinkles.</p>
                                     </div>
-                                </div>
-                                <div class="item pdo">
+                                </a>
+                                <a href="<?php echo home_url().'/services/#pdo' ?>" class="item pdo">
                                     <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img_pdo.png" alt=""></figure>
                                     <div class="services_content">
                                         <h3>PDO Thread Lift</h3>
                                         <p>PDO threads are made of polydioxanone and are used to lift and tighten sagging skin tissue.</p>
                                     </div>
-                                </div>
-                                <div class="item dermafiller">
+                                </a>
+                                <a href="<?php echo home_url().'/services/#dermafiller' ?>" class="item dermafiller">
                                     <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img_dermafiller.png" alt=""></figure>
                                     <div class="services_content">
                                         <h3>Dermal filler </h3>
                                         <p>Fillers can be hydrating and are used to improve wrinkles and folds</p>
                                     </div>
-                                </div>
-                                <div class="item prf">
+                                </a>
+                                <a href="<?php echo home_url().'/services/#prf' ?>" class="item prf">
                                     <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img_prf.png" alt=""></figure>
                                     <div class="services_content">
                                         <h3>PRF </h3>
                                         <p>Platelet Rich Fibrin is obtained by drawing a patient’s blood and processing it in order to be used for treatment.</p>
                                     </div>
-                                </div>
-                                <div class="item microneedling">
+                                </a>
+                                <a href="<?php echo home_url().'/services/#microneedling' ?>" class="item microneedling">
                                     <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img_microneedling.png" alt=""></figure>
                                     <div class="services_content">
                                         <h3>Microneedling</h3>
                                         <p>Fillers can be hydrating and are used to improve wrinkles and folds</p>
                                     </div>
-                                </div>
-                                <div class="item kybella">
+                                </a>
+                                <a href="<?php echo home_url().'/services/#kybella' ?>" class="item kybella">
                                     <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img_kybella.png" alt=""></figure>
                                     <div class="services_content">
                                         <h3>Kybella </h3>
                                         <p>Kybella consists of deoxycholic acid which helps to destroy fat cells.</p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             
                             <div class="services_info_contents">
