@@ -111,10 +111,10 @@
 
                         
                     var $windowWidth = $(window).width();
-                    if ($windowWidth <= 1023) {         
+                    if ($windowWidth > 1023) {         
                         offset = 150;
                     }
-                    else if ($windowWidth > 1023){
+                    else if ($windowWidth <= 1023){
                         offset = 0;
                     }
 
