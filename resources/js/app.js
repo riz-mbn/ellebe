@@ -62,14 +62,12 @@
 
                     $('.services_nav, .services').removeClass('is_sticky');
 
-                }      
-
-                
+                }                      
                 var getTop = $('.sticky-container').offset().top;
                             
                 var scrollTop = $(window).scrollTop();
-                if ( scrollTop > 420) {
-                    
+                if ( scrollTop > 200) {
+
                     $('.subnav').addClass('is_sticky');
                     sticky = true;
 
