@@ -436,7 +436,11 @@ header {
 											outline: none;
 											color: $color-primary;
 										}
-
+										&.button {
+											background: $color-primary;
+											color: $color-white;
+											width: 150px;
+										}
 									}
 								}
 							}
@@ -542,7 +546,23 @@ header {
 					background: linear-gradient(117.48deg, #B89E6C 20.85%, #D1C3B5 90.52%);
 					-webkit-background-clip: text;
 					-webkit-text-fill-color: transparent;
+				} 
+				p{
+					font-size: 14px;
 				}
+				
+				.buttons {
+					a {
+						border-radius: 0;
+						font-size: 12px;
+						min-width: auto;
+
+						&:before {
+							display: none;
+						}
+					}
+				}
+				
 			}
 
 			figure {
@@ -555,6 +575,38 @@ header {
 			&.home_page {
 				padding-top: 15% !important;
 				padding-bottom: 5% !important;
+			}	
+				
+			
+		}
+
+		@include media (max-width, 1024px) {
+				
+			.hero-caption {
+				
+				h1 {
+					font-size: 35px;
+				}
+
+				p{
+					font-size: 18px;
+				}
+			}	
+			
+		}
+
+		@include media (max-width, 480px) {
+				
+			.hero-caption {
+				
+				h1 {
+					font-size: 20px;
+				}
+
+				p{
+					font-size: 14px;
+				}
+
 			}	
 			
 		}

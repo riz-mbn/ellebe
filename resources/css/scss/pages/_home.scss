@@ -4,11 +4,14 @@
 		//home page template
 		&.home_page {
 
-
 			@include media (min-width, 1721px) {	
 				.hero-caption {
 					padding: 0;
 				}
+			}
+
+			@include media (max-width,480px) {	
+                min-height: auto;
 			}
 		}
 
@@ -44,6 +47,12 @@
                 margin-bottom: 0;
 
             }
+        }
+    }
+
+    @include media (max-width, 480px){
+        h2 {
+            font-size: 20px;
         }
     }
 }
@@ -452,7 +461,7 @@
 
                             &:not(.slick-current) {
                                 figure {
-                                    width: 70%;
+                                    width: 60%;
                                     margin: 0 auto;
                                 
                                     img {                                    
@@ -479,6 +488,7 @@
 
                     .item {
                         position: unset;
+                        width: 200px;
 
                         figure {
                             &:before,
@@ -487,6 +497,12 @@
                             }
                         }
 
+                    }
+                    .slick-slide {
+
+                        &.item {
+                            width: 200px;
+                        }
                     }
                 }
             }
@@ -516,6 +532,84 @@
                     display: block;
                 }
 
+            }
+
+             @include media (max-width, 1200px){
+                .services_info_items {
+                    &.slick-slider {
+
+                        .slick-slide {
+
+                            &.item {
+                                width: 170px;
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            @include media (max-width, 1024px){
+                .services_info_items {
+                    margin-top: -80px;
+                    &.slick-slider {
+
+                        .slick-slide {
+
+                            &.item {
+                                width: 150px;
+                            }
+                        }
+                    }
+               }
+           }
+
+            @include media (max-width, 768px){
+                .services_info_items {
+                    margin-top: -60px;
+
+                    &.slick-slider {
+
+                        .slick-slide {
+
+                            &.item {
+                                width: 110px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include media (max-width, 480px){
+                .services_info_items {
+                    margin-top: -30px;
+
+                    &.slick-slider {
+
+                        .slick-slide {
+
+                            &.item {
+                                width: 55px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include media (max-width, 375px){
+                .services_info_items {
+                    margin-top: -30px;
+
+                    &.slick-slider {
+
+                        .slick-slide {
+
+                            &.item {
+                                width: 47px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
