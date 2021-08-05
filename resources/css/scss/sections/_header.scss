@@ -381,7 +381,7 @@ header {
 								line-height: 1.7; 
 								font-weight: 400; 
 								text-transform: capitalize; 
-								padding:16px 35px; 
+								padding:16px 10px; 
 								position: relative;
 								font-family: $heading-font-family;
 
@@ -426,7 +426,7 @@ header {
 										background: transparent;
 										background: none;
 										-webkit-text-fill-color: $color-black;	
-										padding: 7px 35px;			
+										padding: 7px 10px;			
 										-webkit-tap-highlight-color: transparent;								
 										
 										&:focus,
@@ -438,8 +438,12 @@ header {
 										}
 										&.button {
 											background: $color-primary;
-											color: $color-white;
-											width: 150px;
+											-webkit-text-fill-color: $color-white;
+											width: 180px;
+											text-align: center;
+											min-width: 100px;
+											border-radius: 0;
+											text-transform: uppercase;
 										}
 									}
 								}
@@ -533,7 +537,31 @@ header {
 				}
 			}
 		}
+
+		@include media (max-width, 1440px){
+			.hero-caption {
+				h1 {
+					font-size: 45px;
+				}
+			}
+		}
 	
+
+		@include media (max-width, 1279px){
+			.hero-caption {
+				h1 {
+					font-size: 40px;
+				}
+			}
+		}
+	
+		@include media (max-width, 1147px){
+			.hero-caption {
+				h1 {
+					font-size: 35px;
+				}
+			}
+		}	
 
 		@include media (max-width, 1023px){
 			margin-top: 0;
