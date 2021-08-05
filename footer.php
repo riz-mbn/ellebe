@@ -35,17 +35,17 @@
                         <p class="title">Business Hours</p>
                         <div class="grid-x">
                             <div class="small-6 medium-6 large-12"><p>Monday to Friday</p></div>
-                            <div class="small-6 medium-6 large-12"><p>9:00 a.m. - 5:00 p.m.</p></div>
+                            <div class="small-6 medium-6 large-12"><p>9:00 a.m. - 6:00 p.m.</p></div>
                         </div>
                         <div class="grid-x">
                             <div class="small-6 medium-6 large-12"><p>Saturday</p></div>
-                            <div class="small-6 medium-6 large-12"><p>10:00 a.m. - 3:00 p.m.</p></div>
+                            <div class="small-6 medium-6 large-12"><p>9:00 a.m. - 1:00 p.m.</p></div>
                         </div>
                     </div>
                     <div class="cell small-12 medium-12 large-3 xlarge-3 col-item footer_col">                            
                         <a class="title" href="<?php echo esc_url('tel:4806857380'); ?>"><p>Call 480-685-7380</p></a>
                         <p>7077 E. Bell Rd, Suite 200-310 Scottsdale, AZ 85254</p>
-                        <a href="info@ellebemedspa.com"></p>info@ellebemedspa.com</p></a>
+                        <a href="mailto:info@ellebemedspa.com"></p>info@ellebemedspa.com</p></a>
                         <div class="social_icons">
                             <a href="<?php echo esc_url('https://www.facebook.com/ElleBe-Medical-Aesthetics-101151665599430'); ?>">
                                 <figure>
@@ -57,11 +57,16 @@
                                     <img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-ig.png" alt="">
                                 </figure>
                             </a>
+                            <a href="<?php echo esc_url('https://www.yelp.com/biz/ellebe-medical-aesthetics-scottsdale'); ?>">
+                                <figure>
+                                    <img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-yelp.png" alt="">
+                                </figure>
+                            </a>
                         </div>
                     </div>
                 </div>       
             </div>       
-        </div>
+        </div>        
         <div class="footer_bottom">
             <div class="grid-container">
                 <div class="footer_copyright">

@@ -68,6 +68,9 @@ else {
                                     <li class="menu_item scroll_link" data-anchor="microneedling"><a href="<?php echo home_url().'/services/#microneedling';?>">Microneedling</a></li>
                                 </ul>
                             </li>
+                            <li class="buttons cta-group">
+                                <a href="https://ellebe.myaestheticrecord.com/book/appointments" class="button primary icon_button"><?php echo esc_html('Schedule Services'); ?> </a>
+                            </li>
                             <li class="menu_item scroll_link"><a href="<?php echo home_url("#contact");?>">Contact</a></li>
                             <li class="menu_item nav-cta"><a href="tel:4806857380">(480) 685 7380</a></li>
                         </ul>
