@@ -14,7 +14,6 @@
             }
 
 			.subnav {
-				padding: 20px;
 				box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 				background: $color-white;
 				z-index: 1;
@@ -28,12 +27,21 @@
 					justify-content: space-evenly;
 
 					li.menu_item {
+                        padding: 0 20px;
 						a {
+                            padding: 25px 0;
 							color: $color-primary;
 							font-size: 14px;
 							font-weight: 600;
 							-webkit-tap-highlight-color: transparent;
 						}
+
+                        &.is_active {
+                            a {
+                                border-bottom: 3px solid #847A6A;
+                                box-sizing: border-box; 
+                            }
+                        }
 					}
 				}	
                 
@@ -217,10 +225,12 @@
 
             }
             &.slick-slide {
+                &.slick-current,
                 &:active,
                 &:hover {
                     div {
                         border-bottom: 3px solid #847A6A;
+                        box-sizing: border-box; 
                     }
                 }
 
@@ -239,7 +249,7 @@
         @media (max-width: 1023px) and (min-width:783px){			
             
             &.is_sticky {
-                top: 115px;
+                top: 130px;
             }
         }
 
@@ -270,7 +280,7 @@
             .services_item {
                 .col-image {
                     img {
-                        width: 70%;
+                        width: 40%;
                     }
                 }
 
@@ -310,6 +320,16 @@
 
         .col-image {
             margin-right: 40px;
+        }
+    }
+
+    @include media (min-width, 1023px) {
+        
+        .cols2-s1 {
+
+            .col-image {
+                width: 100%;
+            }
         }
     }
 
