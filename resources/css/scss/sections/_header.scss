@@ -4,12 +4,16 @@ body{
 	&.admin-bar {
 
 		#wrapper{
-			//margin-top: 145px;
-			// .hsnav-s5{
-				
-			// 	top: 30px !important;
+			
+			.hero-s6 {
 
-			// }
+				.subnav{
+					&.sticky {
+						top: 145px;
+					}
+				}
+			}
+			
 			.hsnav-s5 {
 				&.is-stuck {
 

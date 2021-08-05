@@ -1,3 +1,6 @@
+
+
+
 .hero {
     &.hero-s6{        
 		
@@ -51,10 +54,19 @@
                 
                 &.is_sticky {
                     position:fixed;
-                    top: 145px;
+                    top: 115px;
                     left: 0;
                     right: 0;
                     bottom: auto;
+
+                    .menu {
+
+                        li.menu_item {
+                            a {
+                                padding: 12px 0 11px;
+                            }
+                        }
+                    }
                 }	
 			}
 
