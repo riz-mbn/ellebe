@@ -16,7 +16,7 @@
 
             //preloader            
             $('#preloader').fadeOut('slow');
-            
+
             $('.navbar .btn-user').click(function(){
                 $('#header').toggleClass('show-account');
                 $('#header').removeClass('show-classes');
@@ -89,46 +89,26 @@
             });            
 
             //smooth scroll on anchor links
-            $('a[href*="#"]')
-            // Remove links that don't actually link to anything
-            .not('[href="#"]')
-            .not('[href="#0"]')
-            .click(function(event) {
-                // On-page links
-                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-                && location.hostname == this.hostname) {
+            $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                  var target = $(this.hash);
+                  var $windowWidth = $(window).width();
+                  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 
-                    // Figure out element to scroll to
-                    var target = $(this.hash);
-                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                  var offset = 0;
 
-                    console.log( target.offset().top  );
-                    // Does a scroll target exist?
-                    if (target.length) {
-
-                        // Only prevent default if animation is actually gonna happen
-                        event.preventDefault();
-
-                        $('html, body').animate({
-                        scrollTop: target.offset().top - 100
-                        }, function() {
-
-                        // Callback after animation
-                        // Must change focus!
-                        var $target = $(target);
-
-                        $target.focus();
-                        if ($target.is(":focus")) { // Checking if the target was focused
-                            return false;
-                        } else {
-                            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-                            $target.focus(); // Set focus again
-                        };
-                        
-                        });
+                    if ($windowWidth < 1023) {
+                        offset = 160;
                     }
+
+                  if (target.length) {
+                    $('html,body').animate({
+                      scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                  }
                 }
-            });
+              });
             
             //active item on submenu services
             $('.subnav .menu .menu_item').each(function(){
@@ -139,7 +119,8 @@
                 menu_item.on('click', function(e) {
                     e.preventDefault();
                     $(this).addClass('is_active').siblings('.menu_item').removeClass('is_active');  
-    
+          
+                    return false;                    
                 });
             });
 
@@ -155,17 +136,29 @@
                     variableWidth: true,
                     infinite: true,
                     draggable: true,
+                    focusOnSelect: true                    
                 });
 
                 $('.services_nav.slick-slider .nav_item').each(function(){
-                        $(this).on('click', function(e) {
+                    var nav_item = $(this);
+                    if (nav_item.is(":first-child")) {
+                        nav_item.addClass('is_active');
+                    }
+                    
+                    nav_item.on('click', function(e) {
+
                         e.preventDefault();
+
                         var target = $(this).data('anchor'); 
-                        var $target = $(target);                  
-                            $('html, body').stop().animate({
-                            'scrollTop': $target.offset().top - 40
+                        var $target = $(target);      
+
+                        $(this).addClass('is_active').siblings('.nav_item').removeClass('is_active');     
+
+                        $('html, body').stop().animate({
+                        'scrollTop': $target.offset().top - 160
                         }, function() {
-                            window.location.hash = target;                            
+                            window.location.hash = target;       
+                            return false;                     
                         });
                     
                     });

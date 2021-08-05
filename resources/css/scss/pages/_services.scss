@@ -199,10 +199,6 @@
 
 }
 .services_content {
-    // top: 500px;
-    // left: 0;
-    // right: 0;
-    // position: fixed;
         
     .services_nav {
         display: none;
@@ -237,7 +233,7 @@
 
             }
             &.slick-slide {
-                &.slick-current,
+                &.is_active,
                 &:active,
                 &:hover {
                     div {
@@ -268,7 +264,8 @@
         @include media(max-width, 1023px){
             display: flex;
             width: 100%;
-            justify-content: normal;	
+            justify-content: normal;
+            overflow: hidden;
         }
 
         @media (max-width: 1600px) and (min-width:1024px){			
@@ -312,7 +309,7 @@
             &.is_sticky {
 
                 .services_item {
-                    padding-top: 100px !important;
+                    padding-top: 160px  !important;
                 }
             }  
             

@@ -25,6 +25,20 @@ else {
 }
 
 ?>
+<div id="preloader">
+    <div class="preloader">
+        <div class="position-center-center">
+            <figure>
+                <img src="<?php echo MBN_ASSETS_URI ?>/img/preloader.png" alt="" width="150">
+            </figure>
+            <div class="loading">
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+            </div>
+        </div>
+    </div>
+</div>
 <div id="wrapper"> 
     <header id="header" class="<?php //echo esc_attr($header_class); ?>" data-sticky-container data-toggler=".show-menu">
         <div class="hsnav-s5 sticky <?php //echo esc_attr($sticky_class); ?>" data-sticky data-options="marginTop:0">
@@ -82,21 +96,6 @@ else {
      
     <button class="btn_floating"><a class="button" href="https://ellebe.myaestheticrecord.com/book/appointments" target="_blank">Schedule Services</a></button>
     <button data-scroll="up" class="btn_scroll_up"><span>UP</span></button>
-    <div id="preloader">
-        <div class="preloader">
-            <div class="position-center-center">
-                <figure>
-                    <img src="<?php echo MBN_ASSETS_URI ?>/img/preloader.png" alt="" width="150">
-                </figure>
-                <div class="loading">
-                    <div class="ball"></div>
-                    <div class="ball"></div>
-                    <div class="ball"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <main id="content" class="content">
         <?php 
              //get_template_part( 'templates/page-head' );
