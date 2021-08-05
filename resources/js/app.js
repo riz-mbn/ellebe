@@ -64,9 +64,10 @@
 
                 }                      
                 var getTop = $('.sticky-container').offset().top;
+
                             
                 var scrollTop = $(window).scrollTop();
-                if ( scrollTop > 200) {
+                if ( scrollTop > 180) {
 
                     $('.subnav').addClass('is_sticky');
                     sticky = true;
