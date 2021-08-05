@@ -61,8 +61,8 @@ else {
                                     <li class="menu_item scroll_link"><a href="<?php echo home_url().'/services/#dermafiller';  ?>">Dermal filler (Juvederm/Restylane)</a></li>
                                     <li class="menu_item scroll_link"><a href="<?php echo home_url().'/services/#pdo'; ?>">PDO Thread Lift</a></li>
                                     <li class="menu_item scroll_link"><a href="<?php echo home_url().'/services/#prf'; ?>">PRF</a></li>
-                                    <li class="menu_item scroll_link"><a href="<?php echo home_url().'/services/#microneedling';?>">Microneedling</a></li>
                                     <li class="menu_item scroll_link"><a href="<?php echo home_url().'/services/#kybella'; ?>">Kybella</a></li>
+                                    <li class="menu_item scroll_link"><a href="<?php echo home_url().'/services/#microneedling';?>">Microneedling</a></li>
                                 </ul>
                             </li>
                             <li class="menu_item"><a href="<?php echo esc_url('#contact');?>" data-smooth-scroll>Contact</a></li>
@@ -85,7 +85,7 @@ else {
                                     </li>
                                 </ul>
                             </li>
-                            <li class="menu_item scroll_link"><a href="<?php echo home_url("#contact");?>">Contact</a></li>
+                            <li class="menu_item scroll_link"><a href="<?php echo esc_url('#contact');?>">Contact</a></li>
                             <li class="menu_item nav-cta"><a href="tel:4806857380">(480) 685 7380</a></li>
                         </ul>
                     </nav>

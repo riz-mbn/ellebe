@@ -125,6 +125,7 @@ body{
 			}
 			
 			.hsnav-s5 {
+
 				&.is-stuck {
 
 					top: 32px !important;
@@ -240,6 +241,7 @@ header {
 		box-shadow: none;
 		max-width: none !important;
 		transition: all 0.3s ease;
+		top: 0px !important;
 		
 		&.sticky {
 			position: absolute;

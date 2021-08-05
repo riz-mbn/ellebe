@@ -169,6 +169,14 @@
                     }
                 }
             }
+            @include media (max-width, 414px) {
+
+                .hero-caption {
+                    h1 {
+                        font-size: 18px !important;
+                    }
+                }
+            }
 
             @include media (max-width, 375px) {
 
@@ -235,7 +243,8 @@
             &.slick-slide {
                 &.is_active,
                 &:active,
-                &:hover {
+                &:hover,
+                &:focus {
                     div {
                         border-bottom: 3px solid #847A6A;
                         box-sizing: border-box; 
@@ -305,14 +314,6 @@
                     margin: 0 !important;
                 }
             }     
-            
-            &.is_sticky {
-
-                .services_item {
-                    padding-top: 160px  !important;
-                }
-            }  
-            
         }
         @include media (max-width, 480px){
 

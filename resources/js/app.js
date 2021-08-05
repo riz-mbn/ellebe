@@ -16,6 +16,7 @@
 
             //preloader            
             $('#preloader').fadeOut('slow');
+            $('html, body').animate({scrollTop : 0});
 
             $('.navbar .btn-user').click(function(){
                 $('#header').toggleClass('show-account');
@@ -84,7 +85,7 @@
             });
             //Click event to scroll to top
             $('.btn_scroll_up').click(function(){
-                $('html, body').animate({scrollTop : 0},800);
+                $('html, body').animate({scrollTop : 0});
                 return false;
             });            
 
@@ -93,18 +94,34 @@
                 if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
                   var target = $(this.hash);
                   var $windowWidth = $(window).width();
-                  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-
+                  var name = this.hash.slice(1);
                   var offset = 0;
 
-                    if ($windowWidth < 1023) {
-                        offset = 160;
+                  target = target.length ? target : $('[name=' + name +']');
+
+                  $('.subnav .menu .menu_item, .services_nav .nav_item').each(function(){
+                    if( $(this).hasClass(name) ){
+                        $(this).addClass('is_active').siblings('.menu_item').removeClass('is_active'); 
+                    }
+                    else if ( name == $(this).attr('data-anchor') ){
+                        $(this).addClass('is_active').siblings('.nav_item').removeClass('is_active');  
+                    }
+                    
+                  });
+
+                        
+                    var $windowWidth = $(window).width();
+                    if ($windowWidth <= 1023) {         
+                        offset = 150;
+                    }
+                    else if ($windowWidth > 1023){
+                        offset = 0;
                     }
 
                   if (target.length) {
                     $('html,body').animate({
-                      scrollTop: target.offset().top
-                    }, 1000);
+                      scrollTop: target.offset().top - offset
+                    });
                     return false;
                   }
                 }

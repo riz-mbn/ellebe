@@ -150,6 +150,9 @@
         @include media (max-width, 480px){
             .contact_box {
                 padding:20px !important;
+
+                margin-left: 10px;
+                margin-right: 10px;
             }
         }
 

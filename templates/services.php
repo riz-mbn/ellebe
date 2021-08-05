@@ -24,12 +24,12 @@
     <div class="subnav">
         <div class="grid-container">
             <ul class="menu">
-                <li class="menu_item"><a href="<?php echo home_url().'/services/#botox' ?>">BOTOX</a></li>
-                <li class="menu_item"><a href="<?php echo home_url().'/services/#dermafiller' ?>">DERMA FILLER</a></li>
-                <li class="menu_item"><a href="<?php echo home_url().'/services/#pdo' ?>">PDO THREAD LIFT</a></li>
-                <li class="menu_item"><a href="<?php echo home_url().'/services/#prf' ?>">PRF</a></li>
-                <li class="menu_item"><a href="<?php echo home_url().'/services/#kybella' ?>">KYBELLA</a></li>
-                <li class="menu_item"><a href="<?php echo home_url().'/services/#microneedling' ?>">MICRONEEDLING</a></li>
+                <li class="menu_item botox" data-anchor="botox" ><a href="<?php echo home_url().'/services/#botox' ?>">BOTOX</a></li>
+                <li class="menu_item dermafiller" data-anchor="dermafiller" ><a href="<?php echo home_url().'/services/#dermafiller' ?>">DERMA FILLER</a></li>
+                <li class="menu_item pdo" data-anchor="pdo" ><a href="<?php echo home_url().'/services/#pdo' ?>">PDO THREAD LIFT</a></li>
+                <li class="menu_item prf" data-anchor="prf" ><a href="<?php echo home_url().'/services/#prf' ?>">PRF</a></li>
+                <li class="menu_item kybella" data-anchor="kybella" ><a href="<?php echo home_url().'/services/#kybella' ?>">KYBELLA</a></li>
+                <li class="menu_item microneedling" data-anchor="microneedling" ><a href="<?php echo home_url().'/services/#microneedling' ?>">MICRONEEDLING</a></li>
             </ul>
         </div>
     </div>
