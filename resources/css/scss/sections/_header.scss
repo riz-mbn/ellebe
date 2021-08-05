@@ -728,8 +728,18 @@ header {
 			figure {
 				&.bg {
 					position: relative;
-					padding-top: 90px;
 				}
+			}
+
+			&.home_page {
+
+				figure {
+					&.bg {
+						position: relative;
+						padding-top: 90px;
+					}
+				}
+
 			}
 		}
 		@include media (min-width, 1024px) {
