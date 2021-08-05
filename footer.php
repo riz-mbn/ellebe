@@ -45,7 +45,7 @@
                     <div class="cell small-12 medium-12 large-3 xlarge-3 col-item footer_col">                            
                         <a class="title" href="<?php echo esc_url('tel:4806857380'); ?>"><p>Call 480-685-7380</p></a>
                         <p>7077 E. Bell Rd, Suite 200-310 Scottsdale, AZ 85254</p>
-                        <a href="mailto:info@ellebemedspa.com"></p>info@ellebemedspa.com</p></a>
+                        </p>info@ellebemedspa.com</p>
                         <div class="social_icons">
                             <a href="<?php echo esc_url('https://www.facebook.com/ElleBe-Medical-Aesthetics-101151665599430'); ?>" target="_blank">
                                 <figure>

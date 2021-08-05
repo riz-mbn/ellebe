@@ -53,7 +53,18 @@ body{
 			display: none;
 		}
 	}
-	&.page-template-services{		
+	&.page-template-services{	
+
+		.hsnav-s5 {		
+
+			@include media (max-width, 1023px){
+
+				&.is-stuck {
+					box-shadow: none !important;
+				}
+				
+			}
+		}
 		
 		.services_header{
 			transition: all 0.3s ease;
@@ -72,10 +83,15 @@ body{
 					right: 0;
 					transition: all 0.3s ease-in-out;
 				}
+
 				@include media (max-width, 1023px){
 	
 					position: unset;
 					min-height: auto !important;
+					.is_stuck {
+						box-shadow: none;
+					}
+					
 				}
 			}
 		}
