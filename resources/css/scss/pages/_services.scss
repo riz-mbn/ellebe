@@ -314,10 +314,19 @@
                 .services_item {
                     padding-top: 100px !important;
                 }
-            }   
-
+            }  
+            
         }
+        @include media (max-width, 480px){
 
+            .services_item {
+                .col-image {
+                    img {
+                        width: 80%;
+                    }
+                }
+            }
+        }
     }
 
     .section_title {
