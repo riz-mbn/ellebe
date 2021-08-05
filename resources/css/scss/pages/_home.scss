@@ -83,6 +83,10 @@
         text-align: center;
         font-family: $heading-font-family;
         padding:20px 0;
+
+        @include media (max-width, 375px){
+            font-size: 22px;
+        }
     }
 }
 
