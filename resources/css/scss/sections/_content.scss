@@ -126,7 +126,10 @@
                 
                 .button {
                     font-size: 16px;
-                    width: 100%;             
+                    width: 100%;
+                    border-color: #000;
+                    color: #000;
+                    border-radius: 50px;         
                 }
             }
             
@@ -147,6 +150,20 @@
         @include media (max-width, 480px){
             .contact_box {
                 padding:20px !important;
+            }
+        }
+
+        @include media (max-width, 375px){
+            .contact_box {
+
+                margin-left: 10px;
+                margin-right: 10px;
+                
+                .button {
+                    padding:10px !important;
+                    font-size: 14px;   
+                    min-width: 100%;   
+                }
             }
         }
 
