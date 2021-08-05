@@ -82,6 +82,21 @@ else {
      
     <button class="btn_floating"><a class="button" href="https://ellebe.myaestheticrecord.com/book/appointments" target="_blank">Schedule Services</a></button>
     <button data-scroll="up" class="btn_scroll_up"><span>UP</span></button>
+    <div id="preloader">
+        <div class="preloader">
+            <div class="position-center-center">
+                <figure>
+                    <img src="<?php echo MBN_ASSETS_URI ?>/img/ElleBe_logo.png" alt="" width="150">
+                </figure>
+                <div class="loading">
+                    <div class="ball"></div>
+                    <div class="ball"></div>
+                    <div class="ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <main id="content" class="content">
         <?php 
              //get_template_part( 'templates/page-head' );

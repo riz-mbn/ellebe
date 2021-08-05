@@ -58,7 +58,7 @@
                 </div>
                 <div class="section_content">
                     <figure class="col-image margin_hauto mobile_only profile_photo"><img src="<?php echo MBN_ASSETS_URI ?>/img/Dr_Lindsay.png" alt=""></figure>
-                    <p><span class="dropcap">L</span>indsay Burk is a Physician Assistant and clinical director at ElleBe Medical Aesthetics. She is an Arizona native and recently returned to the state in order to bring her years of aesthetic experience back to the valley.</p>
+                    <p><span class="dropcap">L</span>indsay Burk is a Physician Assistant and Clinical Director at ElleBe Medical Aesthetics. She is an Arizona native and recently returned to the state in order to bring her years of aesthetic experience back to the valley.</p>
                     <p>Lindsay trained in San Francisco alongside world-renowned dermatologist, Dr. Patrick Bitter, who was the developer of the IPL photofacial and participated in FDA clinical trials for collagen therapy, dermal fillers, and neuromodulators.  In addition, she trained and worked in New York City with a board-certified plastic surgeon where she was highly sought after as an expert injector for elite clients. She has gained profound knowledge and an advanced skillset over the years and has had the opportunity to train other aesthetic injectors. </p>
 
                     <blockquote class="padding_left_0">"She believes that every person is beautiful and wants everyone to feel comfortable in their own skin"</blockquote>

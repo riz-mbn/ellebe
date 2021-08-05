@@ -11,7 +11,10 @@
 
 
 		utils: function(){
-            
+
+            //preloader            
+            $('#preloader').delay(500).fadeOut('slow');
+
             $('.navbar .btn-user').click(function(){
                 $('#header').toggleClass('show-account');
                 $('#header').removeClass('show-classes');
@@ -28,32 +31,22 @@
                 $('.navicon').click();
             });
 
-            $(window).scroll(function() {
-                var getTop = $('.courses_results').offset().top;
-                if ($(this).scrollTop() > getTop){  
-                    $('.filter_sticky').addClass("active");
-                }
-                else{
-                    $('.filter_sticky').removeClass("active");
-                }
-
+            $(window).scroll(function() {                
+                //stick on main menu
                 var button_up;
                 var sticky = false;
                 var top = $(window).scrollTop();
                     
                 if ( $(".sticky-container").offset().top < top ) {
-
                     $('.sticky').addClass('is-stuck');
                     $('.sticky').removeClass('is-anchored');
                     sticky = true;
-
                 } else {
-
                         $('.sticky').addClass('is-anchored');
                         $('.sticky').removeClass('is-stuck');
-
                 }                
                     
+                // sticky on submenu services and services on scroll mobile
                 if ( $('.sticky-container').offset().top < top ) {
                     $('.services_nav, .services').addClass('is_sticky');
                     sticky = true;
@@ -61,20 +54,6 @@
                 } else {
 
                     $('.services_nav, .services').removeClass('is_sticky');
-
-                }                      
-                var getTop = $('.sticky-container').offset().top;
-
-                            
-                var scrollTop = $(window).scrollTop();
-                if ( scrollTop > 180) {
-
-                    $('.subnav').addClass('is_sticky');
-                    sticky = true;
-
-                } else {
-
-                    $('.subnav').removeClass('is_sticky');
 
                 }
 
@@ -87,16 +66,27 @@
                     } else {
                         return button.fadeOut('slow');
                     }
-                })();                   
+                })();   
+            
+                //submenu services on scroll desktop
+                var getTop = $('.sticky-container').offset().top;                            
+                var scrollTop = $(window).scrollTop();
+                if ( scrollTop > 180) {
+                    $('.subnav').addClass('is_sticky');
+                    sticky = true;
+                } else {
+                    $('.subnav').removeClass('is_sticky');
+                }
+                    
 
             });
-
             //Click event to scroll to top
             $('.btn_scroll_up').click(function(){
                 $('html, body').animate({scrollTop : 0},800);
                 return false;
             });            
 
+            //smooth scroll on anchor links
             $('a[href*="#"]')
             // Remove links that don't actually link to anything
             .not('[href="#"]')
@@ -138,133 +128,110 @@
                 }
             });
             
-            
+            //active item on submenu services
             $('.subnav .menu .menu_item').each(function(){
-
                 var menu_item = $(this);
-
                 if (menu_item.is(":first-child")) {
                     menu_item.addClass('is_active');
                 }
-
                 menu_item.on('click', function(e) {
                     e.preventDefault();
                     $(this).addClass('is_active').siblings('.menu_item').removeClass('is_active');  
     
                 });
             });
-                var $windowWidth = $(window).width();
 
-                if ($windowWidth <= 1023) {
-                    
-                    $('.services_nav').slick({                        
-                        dots: false,
-                        arrow: true,
-                        speed: 300,
-                        slidesToShow: 5,
-                        slidesToScroll: 1,
-                        variableWidth: true,
-                        infinite: true,
-                        draggable: true,
-                    });
+            //submenu services slick on mobile
+            var $windowWidth = $(window).width();
+            if ($windowWidth <= 1023) {                
+                $('.services_nav').slick({                        
+                    dots: false,
+                    arrow: true,
+                    speed: 300,
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    variableWidth: true,
+                    infinite: true,
+                    draggable: true,
+                });
 
-                    $('.services_nav.slick-slider .nav_item').each(function(){
-
-                    //$('.services_item:first-child').siblings('.services_item').hide();
-
-                         $(this).on('click', function(e) {
-                            e.preventDefault();
-            
-                            var target = $(this).data('anchor'); 
-                            var $target = $(target);                           
-
-                             $('html, body').stop().animate({
-                                'scrollTop': $target.offset().top - 40
-                            }, function() {
-                                window.location.hash = target;
-                                
-                            });
-                        
+                $('.services_nav.slick-slider .nav_item').each(function(){
+                        $(this).on('click', function(e) {
+                        e.preventDefault();
+                        var target = $(this).data('anchor'); 
+                        var $target = $(target);                  
+                            $('html, body').stop().animate({
+                            'scrollTop': $target.offset().top - 40
+                        }, function() {
+                            window.location.hash = target;                            
                         });
-                        
-                     });
-                }
-
-                if ($windowWidth <= 1400) {
                     
-                    $('.services_info_items').slick({
-                      dots: false,
-                      arrow: true,
-                      infinite: true,
-                      speed: 300,
-                      slidesToShow: 5,
-                      slidesToScroll: 1,
-                      variableWidth: true,
-                      focusOnSelect: true,
-                      draggable: true,
-                      asNavFor: '.services_info_contents',
-                      responsive: [
+                    });
+                    
+                });
+            }
+
+            //enable slick services section on homepage mobile
+            if ($windowWidth <= 1400) {                
+                $('.services_info_items').slick({
+                    dots: false,
+                    arrow: true,
+                    infinite: true,
+                    speed: 300,
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    variableWidth: true,
+                    focusOnSelect: true,
+                    draggable: true,
+                    asNavFor: '.services_info_contents',
+                    responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 1
+                        }
+                    },
                         {
-                          breakpoint: 1200,
-                          settings: {
+                        breakpoint: 320,
+                        settings: {
                             slidesToShow: 5,
                             slidesToScroll: 1
-                          }
-                        },
-                          {
-                            breakpoint: 320,
-                            settings: {
-                              slidesToShow: 5,
-                              slidesToScroll: 1
-                            }
-                          }
-                        ]                    
-                    });
-                    $('.services_info_contents').slick({
-                        dots: false,
-                        arrow: false,
-                        infinite: true,
-                        speed: 300,
-                        asNavFor: '.services_info_items',                 
-                      });
-                  }
-
-                    
-
-            var $el, $ps, $up, totalHeight;
-
-            $(".col-copy .button").click(function() {
-                
-            totalHeight = 0
-
-            $el = $(this);
-            $p  = $el.parent();
-            $up = $p.parent();
-            $ps = $up.find("div:not('.btn_read_more')");
-            
-            // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
-            console.log($ps);
-            
-            $ps.each(function() {
-                totalHeight += $(this).outerHeight();
-            });
-                    
-            $up
-                .css({
-                // Set height to prevent instant jumpdown when max height is removed
-                "height": $up.height(),
-                "max-height": '100%'
-                })
-                .animate({
-                "height": '100%'
+                        }
+                        }
+                    ]                    
                 });
-            
-            // fade out read-more
-            $p.fadeOut();
-            
-            // prevent jump-down
-            return false;
-                
+                $('.services_info_contents').slick({
+                    dots: false,
+                    arrow: false,
+                    infinite: true,
+                    speed: 300,
+                    asNavFor: '.services_info_items',                 
+                });
+            }
+
+            //read more button on foundation section in homepage
+            var $el, $ps, $up, totalHeight;
+            $(".col-copy .button").click(function() {
+                totalHeight = 0
+                $el = $(this);
+                $p  = $el.parent();
+                $up = $p.parent();
+                $ps = $up.find("div:not('.btn_read_more')");            
+                $ps.each(function() {
+                    totalHeight += $(this).outerHeight();
+                });                    
+                $up.css({
+                    // Set height to prevent instant jumpdown when max height is removed
+                    "height": $up.height(),
+                    "max-height": '100%'
+                }).animate({
+                    "height": '100%'
+                });                    
+                // fade out read-more
+                $p.fadeOut();                
+                // prevent jump-down
+                return false;                    
             });
         },
 
@@ -278,13 +245,8 @@
             $('.custom_dropdown > li').click(function(){
                 $(this).toggleClass('hover');
             });
-
-            
         }
-        
-        
     }
-
 
     document.addEventListener('DOMContentLoaded', app.onReady);
     window.addEventListener('load', app.onLoad);
