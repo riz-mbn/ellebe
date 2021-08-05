@@ -65,7 +65,7 @@
                             </div>                
                         </div>
                         <div class="buttons cta-group mobile_only">
-                            <a href="https://ellebe.myaestheticrecord.com/book/appointments" class="button primary"><?php echo esc_html('Schedule Services'); ?> </a>
+                            <a href="https://ellebe.myaestheticrecord.com/book/appointments"  target="_blank"  class="button primary"><?php echo esc_html('Schedule Services'); ?> </a>
                         </div>
                     </div>
                 </div>

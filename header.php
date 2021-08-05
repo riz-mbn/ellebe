@@ -52,7 +52,7 @@ else {
                                 </ul>
                             </li>
                             <li class="menu_item"><a href="<?php echo esc_url('#contact');?>" data-smooth-scroll>Contact</a></li>
-                            <li class="nav-cta"><a href="https://ellebe.myaestheticrecord.com/book/appointments">SCHEDULE SERVICES</a></li>
+                            <li class="nav-cta"><a href="https://ellebe.myaestheticrecord.com/book/appointments" target="_blank" >SCHEDULE SERVICES</a></li>
                         </ul>
                     </nav>
                     <nav class="mobmenu hide-for-large">     
@@ -67,7 +67,7 @@ else {
                                     <li class="menu_item scroll_link" data-anchor="kybella"><a href="<?php echo home_url().'/services/#kybella'; ?>">Kybella</a></li>
                                     <li class="menu_item scroll_link" data-anchor="microneedling"><a href="<?php echo home_url().'/services/#microneedling';?>">Microneedling</a></li>
                                     <li class="menu_item">
-                                        <a href="https://ellebe.myaestheticrecord.com/book/appointments" class="button primary"><?php echo esc_html('Schedule Services'); ?> </a>
+                                        <a href="https://ellebe.myaestheticrecord.com/book/appointments"  target="_blank" class="button primary"><?php echo esc_html('Schedule Services'); ?> </a>
                                     </li>
                                 </ul>
                             </li>
