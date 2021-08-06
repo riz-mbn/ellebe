@@ -208,7 +208,7 @@
                                     </div>
                                 </div>
                             </div>                            
-                            <div class="btn_read_more"><a class="button " >Read more</a></div>                            
+                            <div class="btn_read_more"><a class="button " href="<?php echo home_url("/services/");?>">Learn more</a></div>                            
                         </div>
                     </div>
                 </div>
