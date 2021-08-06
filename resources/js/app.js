@@ -16,7 +16,6 @@
 
             //preloader            
             $('#preloader').fadeOut('slow');
-            $('html, body').animate({scrollTop : 0});
 
             $('.navbar .btn-user').click(function(){
                 $('#header').toggleClass('show-account');
