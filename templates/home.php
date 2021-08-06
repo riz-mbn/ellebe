@@ -4,7 +4,7 @@
 ?>
 
 <section class="hero hero-s6 home_page">
-    <figure class="bg"><img src="<?php echo MBN_ASSETS_URI ?>/img/bgs/home-header.jpg" alt=""></figure>
+    <figure class="bg"><img src="<?php echo MBN_ASSETS_URI ?>/img/bgs/home-banner.jpg" alt=""></figure>
     <div class="hero-caption">
         <div class="grid-container"> 
             <div class="grid-x grid-margin-x">
@@ -94,7 +94,7 @@
                         <div class="text_cols5 client_logo">
                             <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/logo_AIAM.png" alt=""></figure>
                         </div>
-                        <div class="text_cols5 ">
+                        <div class="text_cols5 client_logo">
                             <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/logo_galderma.png" alt=""></figure>
                         </div>
                         <div class="text_cols5 client_logo">
