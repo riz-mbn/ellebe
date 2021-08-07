@@ -130,8 +130,8 @@
             });           
             
             $('.services_nav .nav_item').click(function(){
-                $('.services_nav .nav_item.is_active').removeClass('is_active');
-                $(this).addClass('is_active');
+                $('.services_nav .nav_item.is_active').removeClass('is_active, slick-current');
+                $(this).addClass('is_active, slick-current');
             });            
                         
             //smooth scroll
