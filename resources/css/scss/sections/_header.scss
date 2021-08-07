@@ -668,6 +668,10 @@ header {
 						background-size: 200% 100px;
 						background-position: center;
 					}
+
+					@include media (min-width, 1921px) {	
+						bottom: -3px;
+					}					
 				}
 			}
 		}
@@ -748,9 +752,14 @@ header {
 			&.home_page {
 				padding-top: 15% !important;
 				padding-bottom: 5% !important;
-			}	
-				
-			
+			}
+		}
+		@include media (min-width, 1921px) {
+			&.home_page {
+				overflow: hidden;
+				padding-top: 0% !important;
+				padding-bottom: 50px !important;
+			}
 		}
 
 		@include media (max-width, 1024px) {

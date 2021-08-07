@@ -4,7 +4,7 @@
 ?>
 
 <section class="hero hero-s6 home_page">
-    <figure class="bg"><img src="<?php echo MBN_ASSETS_URI ?>/img/bgs/home-banner.jpg" alt=""></figure>
+    <figure class="bg"><img src="<?php echo MBN_ASSETS_URI ?>/img/bgs/home-banner-2.jpg" alt=""></figure>
     <div class="hero-caption">
         <div class="grid-container"> 
             <div class="grid-x grid-margin-x">
@@ -125,7 +125,7 @@
                     <div class="services_info">
                         <div class="services_info_main">
                             <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img_services.png" alt=""></figure>
-                            <div class="services_info_items">
+                            <div class="services_info_items" >
                                 <a href="<?php echo home_url().'/services/#botox' ?>" class="item botox">
                                     <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img_botox.png" alt=""></figure>
                                     <div class="services_content">

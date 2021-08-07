@@ -16,12 +16,16 @@
 
             @include media (min-width, 1921px){
                 background: #dedadb;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
 
                 figure.bg {
                     text-align: center;
                     img {
                         width: auto;
-                        max-width: 1410px;
+                        height: auto;
+                        max-width: 1920px;
                     }
                 }
             }

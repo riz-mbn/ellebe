@@ -57,12 +57,12 @@ else {
                             <li><a href="<?php echo home_url();?>">Home</a></li>
                             <li><a href="<?php echo home_url("/services/");?>">Services</a>
                                 <ul>
-                                    <li class="menu_item scroll_link"><a href="<?php echo home_url().'/services/#botox' ?>">Botox/Dysport</a></li>
-                                    <li class="menu_item scroll_link"><a href="<?php echo home_url().'/services/#dermafiller';  ?>">Dermal filler (Juvederm/Restylane)</a></li>
-                                    <li class="menu_item scroll_link"><a href="<?php echo home_url().'/services/#pdo'; ?>">PDO Thread Lift</a></li>
-                                    <li class="menu_item scroll_link"><a href="<?php echo home_url().'/services/#prf'; ?>">PRF</a></li>
-                                    <li class="menu_item scroll_link"><a href="<?php echo home_url().'/services/#kybella'; ?>">Kybella</a></li>
-                                    <li class="menu_item scroll_link"><a href="<?php echo home_url().'/services/#microneedling';?>">Microneedling</a></li>
+                                    <li class="menu_item scroll_link" data-anchor="botox"><a href="<?php echo home_url().'/services/#botox' ?>">Botox/Dysport</a></li>
+                                    <li class="menu_item scroll_link" data-anchor="dermafiller"><a href="<?php echo home_url().'/services/#dermafiller';  ?>">Dermal filler (Juvederm/Restylane)</a></li>
+                                    <li class="menu_item scroll_link" data-anchor="pdo"><a href="<?php echo home_url().'/services/#pdo'; ?>">PDO Thread Lift</a></li>
+                                    <li class="menu_item scroll_link" data-anchor="prf"><a href="<?php echo home_url().'/services/#prf'; ?>">PRF</a></li>
+                                    <li class="menu_item scroll_link" data-anchor="kybella"><a href="<?php echo home_url().'/services/#kybella'; ?>">Kybella</a></li>
+                                    <li class="menu_item scroll_link" data-anchor="microneedling"><a href="<?php echo home_url().'/services/#microneedling';?>">Microneedling</a></li>
                                 </ul>
                             </li>
                             <li class="menu_item"><a href="<?php echo esc_url('#contact');?>" data-smooth-scroll>Contact</a></li>

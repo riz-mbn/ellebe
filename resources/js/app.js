@@ -33,13 +33,14 @@
                 $('.navicon').click();
             });
 
+
             $(window).scroll(function() {                
                 //stick on main menu
                 var button_up;
                 var sticky = false;
                 var top = $(window).scrollTop();
                     
-                if ( $(".sticky-container").offset().top < top ) {
+                if ( top > 100 ) {
                     $('.sticky').addClass('is-stuck');
                     $('.sticky').removeClass('is-anchored');
                     sticky = true;
@@ -49,7 +50,7 @@
                 }                
                     
                 // sticky on submenu services and services on scroll mobile
-                if ( $('.sticky-container').offset().top < top ) {
+                if ( $(".sticky-container").offset().top < top ) {
                     $('.services_nav, .services').addClass('is_sticky');
                     sticky = true;
 
@@ -88,56 +89,76 @@
                 return false;
             });            
 
-            //smooth scroll on anchor links
-            $('a[href*=#]:not([href=#])').click(function() {
-                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-                  var target = $(this.hash);
-                  var $windowWidth = $(window).width();
-                  var name = this.hash.slice(1);
-                  var offset = 0;
+            
+            // *only* if we have anchor on the url
+            if(window.location.hash) {
 
-                  target = target.length ? target : $('[name=' + name +']');
+                var scroll = $(window.location.hash).offset().top - 200;
+                scroll  = scroll + 'px';
+                // smooth scroll to the anchor id
+                $('html, body').animate({
+                    scrollTop: scroll
+                });
 
-                  $('.subnav .menu .menu_item, .services_nav .nav_item').each(function(){
-                    if( $(this).hasClass(name) ){
+
+                var url  = window.location.hash;
+                var hash = url.substring(url.indexOf("#")+1);
+                $('.services_nav .nav_item.' + hash).addClass('is_active').siblings('.nav_item').removeClass('is_active');     
+                $('.subnav .menu .menu_item.' + hash).addClass('is_active').siblings('.menu_item').removeClass('is_active');     
+            }            
+            else {
+                
+                $('.services_nav .nav_item.botox').addClass('is_active');
+                $('.subnav .menu .menu_item.botox').addClass('is_active');
+            }
+                        
+            $('.submenu .menu_item').click(function(){
+
+                var anchor = $(this).attr('data-anchor');
+                $('.subnav .menu .menu_item.' + anchor).addClass('is_active').siblings('.menu_item').removeClass('is_active'); 
+                $('.services_nav .nav_item.' + anchor).addClass('is_active').siblings('.slick-slide').removeClass('is_active');  
+
+                if( !$('.services_nav .nav_item.' + anchor).hasClass('is_active') ) {
+                    $('.services_nav .nav_item.is_active').removeClass('is_active');
+                    $('.services_nav .nav_item.' + anchor).addClass('is_active');
+                }
+
+            });      
+
+            $('.subnav .menu .menu_item').click(function(){
+                $(this).addClass('is_active').siblings('.menu_item').removeClass('is_active'); 
+            });           
+            
+            $('.services_nav .nav_item').click(function(){
+                $('.services_nav .nav_item.is_active').removeClass('is_active');
+                $(this).addClass('is_active');
+            });            
+                        
+            //smooth scroll
+            $('a[href*=#]:not([href=#])').each(function(){
+                
+                $(this).click(function (e) {
+
+                    e.preventDefault();
+                    var target = this.hash;
+                    var $target = $(target);
+                    var name = this.hash.slice(1);
+                    var offset = 0;
+    
+                    target = target.length ? target : $('[name=' + name +']');
+    
+                    if(  name == $(this).attr('data-anchor') ){
                         $(this).addClass('is_active').siblings('.menu_item').removeClass('is_active'); 
-                    }
-                    else if ( name == $(this).attr('data-anchor') ){
-                        $(this).addClass('is_active').siblings('.nav_item').removeClass('is_active');  
+                        $(this).addClass('is_active').siblings('.nav_item').removeClass('is_active'); 
                     }
                     
-                  });
-
-                        
-                    var $windowWidth = $(window).width();
-                    if ($windowWidth > 1023) {         
-                        offset = 150;
-                    }
-                    else if ($windowWidth <= 1023){
-                        offset = 0;
-                    }
-
-                  if (target.length) {
-                    $('html,body').animate({
-                      scrollTop: target.offset().top - offset
+                    $('html, body').stop().animate({
+                        scrollTop: $target.offset().top - 200
+                    }, function () {
+                        window.location.hash = target;
                     });
-                    return false;
-                  }
-                }
-              });
-            
-            //active item on submenu services
-            $('.subnav .menu .menu_item').each(function(){
-                var menu_item = $(this);
-                if (menu_item.is(":first-child")) {
-                    menu_item.addClass('is_active');
-                }
-                menu_item.on('click', function(e) {
-                    e.preventDefault();
-                    $(this).addClass('is_active').siblings('.menu_item').removeClass('is_active');  
-          
-                    return false;                    
                 });
+
             });
 
             //submenu services slick on mobile
@@ -160,7 +181,6 @@
                     if (nav_item.is(":first-child")) {
                         nav_item.addClass('is_active');
                     }
-                    
                     nav_item.on('click', function(e) {
 
                         e.preventDefault();
