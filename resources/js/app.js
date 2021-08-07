@@ -135,30 +135,27 @@
             });            
                         
             //smooth scroll
-            $('a[href*=#]:not([href=#])').each(function(){
-                
-                $(this).click(function (e) {
-
-                    e.preventDefault();
-                    var target = this.hash;
-                    var $target = $(target);
-                    var name = this.hash.slice(1);
-                    var offset = 0;
+            $('a[href^="#"]').click(function (e) {
+                e.preventDefault();
+                var target = this.hash;
+                var $target = $(target);
+                var name = this.hash.slice(1);
+                var offset = 0;
     
-                    target = target.length ? target : $('[name=' + name +']');
+                target = target.length ? target : $('[name=' + name +']');
     
-                    if(  name == $(this).attr('data-anchor') ){
-                        $(this).addClass('is_active').siblings('.menu_item').removeClass('is_active'); 
-                        $(this).addClass('is_active').siblings('.nav_item').removeClass('is_active'); 
-                    }
-                    
-                    $('html, body').stop().animate({
-                        scrollTop: $target.offset().top - 200
-                    }, function () {
-                        window.location.hash = target;
-                    });
+                if( $windowWidth <= 1023 ){
+                    offset = 250
+                }
+                else {
+                    offset = 200
+                }
+    
+                $('html, body').stop().animate({
+                    scrollTop: $target.offset().top - offset
+                }, function () {
+                    window.location.hash = target;
                 });
-
             });
 
             //submenu services slick on mobile
