@@ -103,24 +103,24 @@
 
                 var url  = window.location.hash;
                 var hash = url.substring(url.indexOf("#")+1);
-                $('.services_nav .nav_item.' + hash).addClass('is_active').siblings('.nav_item').removeClass('is_active');     
-                $('.subnav .menu .menu_item.' + hash).addClass('is_active').siblings('.menu_item').removeClass('is_active');     
+                $('.services_nav .nav_item.' + hash).addClass('is_active slick-current').siblings('.nav_item').removeClass('is_active slick-current');     
+                $('.subnav .menu .menu_item.' + hash).addClass('is_active slick-current').siblings('.menu_item').removeClass('is_active slick-current');     
             }            
             else {
                 
-                $('.services_nav .nav_item.botox').addClass('is_active');
-                $('.subnav .menu .menu_item.botox').addClass('is_active');
+                $('.services_nav .nav_item.botox').addClass('is_active slick-current');
+                $('.subnav .menu .menu_item.botox').addClass('is_active slick-current');
             }
                         
             $('.submenu .menu_item').click(function(){
 
                 var anchor = $(this).attr('data-anchor');
-                $('.subnav .menu .menu_item.' + anchor).addClass('is_active').siblings('.menu_item').removeClass('is_active'); 
-                $('.services_nav .nav_item.' + anchor).addClass('is_active').siblings('.slick-slide').removeClass('is_active');  
+                $('.subnav .menu .menu_item.' + anchor).addClass('is_active slick-current').siblings('.menu_item').removeClass('is_active slick-current'); 
+                $('.services_nav .nav_item.' + anchor).addClass('is_active slick-current').siblings('.slick-slide').removeClass('is_active slick-current');  
 
                 if( !$('.services_nav .nav_item.' + anchor).hasClass('is_active') ) {
-                    $('.services_nav .nav_item.is_active').removeClass('is_active');
-                    $('.services_nav .nav_item.' + anchor).addClass('is_active');
+                    $('.services_nav .nav_item.is_active').removeClass('is_active slick-current');
+                    $('.services_nav .nav_item.' + anchor).addClass('is_active slick-current');
                 }
 
             });      
@@ -130,8 +130,8 @@
             });           
             
             $('.services_nav .nav_item').click(function(){
-                $('.services_nav .nav_item.is_active').removeClass('is_active, slick-current');
-                $(this).addClass('is_active, slick-current');
+                $('.services_nav .nav_item.is_active').removeClass('is_active slick-current');
+                $(this).addClass('is_active slick-current');
             });            
                         
             //smooth scroll
