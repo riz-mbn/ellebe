@@ -53,7 +53,7 @@ else {
                     </a>
                     <span class="navicon hide-for-large" data-toggle="header">mobile menu</span>
                     <nav class="navmenu show-for-large">                        
-                        <ul class="menu align-right dropdown" data-dropdown-menu data-smooth-scroll data-offset="500">
+                        <ul class="menu align-right dropdown" data-dropdown-menu>
                             <li><a href="<?php echo home_url();?>">Home</a></li>
                             <li><a href="<?php echo home_url("/services/");?>">Services</a>
                                 <ul>

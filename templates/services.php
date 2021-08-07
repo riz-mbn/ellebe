@@ -23,7 +23,7 @@
     </div>
     <div class="subnav">
         <div class="grid-container">
-            <ul class="menu">
+            <ul class="menu services_menu">
                 <li class="menu_item botox" data-anchor="botox" ><a href="<?php echo home_url().'/services/#botox' ?>">BOTOX</a></li>
                 <li class="menu_item dermafiller" data-anchor="dermafiller" ><a href="<?php echo home_url().'/services/#dermafiller' ?>">DERMA FILLER</a></li>
                 <li class="menu_item pdo" data-anchor="pdo" ><a href="<?php echo home_url().'/services/#pdo' ?>">PDO THREAD LIFT</a></li>
@@ -35,7 +35,7 @@
     </div>
 </section>
 <div class="services_content">
-    <div class="services_nav">
+    <div class="services_nav services_menu">
         <div class="nav_item botox" data-anchor="botox" ><div><a href="<?php echo home_url().'/services/#botox' ?>"><span>BOTOX</span></a></div></div>
         <div class="nav_item dermafiller" data-anchor="dermafiller"><div><a href="<?php echo home_url().'/services/#dermafiller' ?>"><span>DERMA FILLER</span></a></div></div>
         <div class="nav_item pdo" data-anchor="pdo" ><div><a href="<?php echo home_url().'/services/#pdo' ?>"><span>PDO THREAD LIFT</span></a></div></div>

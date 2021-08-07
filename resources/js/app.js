@@ -33,8 +33,46 @@
                 $('.navicon').click();
             });
 
+            var lastId, topMenu = $('.services_menu'),
+            topMenuHeight = topMenu.outerHeight()+15,
+            // All list items
+            menuItems = topMenu.find('a'), 
+            // Anchors corresponding to menu items
+            scrollItems = menuItems.map(function(){
+                var url = $(this).attr("href");
+                var hash = url.substring(url.indexOf("#"));
+                var item = $(hash);
+                if (item.length) { return item; }
+            });   
 
-            $(window).scroll(function() {                
+            $(window).scroll(function() {  
+
+                // Get container scroll position
+                var fromTop = $(this).scrollTop() + topMenuHeight;
+
+                // Get id of current scroll item
+                var cur = scrollItems.map(function(){
+                    var offset = $(this).offset().top - 200;
+                    if (offset < fromTop)
+                    return this;
+                });
+                
+                // Get the id of the current element
+                cur = cur[cur.length-1];
+                var id = cur && cur.length ? cur[0].id : "";
+                if (lastId !== id) {
+                    lastId = id;                    
+
+                        $('.services_menu .menu_item.' + id).addClass('is_active').siblings('.menu_item').removeClass('is_active');     
+                        
+                    if( !$('.services_nav .nav_item.' + id).hasClass('is_active') ) {
+                        $('.services_nav .nav_item.is_active').removeClass('is_active slick-current');
+                        $('.services_nav .nav_item.' + id).addClass('is_active slick-current');
+                    }
+                }
+            
+
+
                 //stick on main menu
                 var button_up;
                 var sticky = false;
@@ -80,7 +118,8 @@
                 } else {
                     $('.subnav').removeClass('is_sticky');
                 }
-                    
+
+
 
             });
             //Click event to scroll to top
@@ -104,34 +143,37 @@
                 var url  = window.location.hash;
                 var hash = url.substring(url.indexOf("#")+1);
                 $('.services_nav .nav_item.' + hash).addClass('is_active slick-current').siblings('.nav_item').removeClass('is_active slick-current');     
-                $('.subnav .menu .menu_item.' + hash).addClass('is_active slick-current').siblings('.menu_item').removeClass('is_active slick-current');     
+                $('.subnav .menu .' + hash).addClass('is_active').siblings('.menu_item').removeClass('is_active');    
             }            
             else {
                 
                 $('.services_nav .nav_item.botox').addClass('is_active slick-current');
-                $('.subnav .menu .menu_item.botox').addClass('is_active slick-current');
+                $('.subnav .menu .menu_item.botox').addClass('is_active');
             }
                         
-            $('.submenu .menu_item').click(function(){
+            $('.submenu .menu_item').click(function(e){
 
                 var anchor = $(this).attr('data-anchor');
-                $('.subnav .menu .menu_item.' + anchor).addClass('is_active slick-current').siblings('.menu_item').removeClass('is_active slick-current'); 
+                $('.subnav .menu .menu_item.' + anchor).addClass('is_active').siblings('.menu_item').removeClass('is_active'); 
                 $('.services_nav .nav_item.' + anchor).addClass('is_active slick-current').siblings('.slick-slide').removeClass('is_active slick-current');  
 
                 if( !$('.services_nav .nav_item.' + anchor).hasClass('is_active') ) {
                     $('.services_nav .nav_item.is_active').removeClass('is_active slick-current');
                     $('.services_nav .nav_item.' + anchor).addClass('is_active slick-current');
                 }
+                e.preventDefault();
 
             });      
 
-            $('.subnav .menu .menu_item').click(function(){
+            $('.subnav .menu .menu_item').click(function(e){
                 $(this).addClass('is_active').siblings('.menu_item').removeClass('is_active'); 
+                e.preventDefault();
             });           
             
-            $('.services_nav .nav_item').click(function(){
+            $('.services_nav .nav_item').click(function(e){
                 $('.services_nav .nav_item.is_active').removeClass('is_active slick-current');
                 $(this).addClass('is_active slick-current');
+                e.preventDefault();
             });            
                         
             //smooth scroll
@@ -157,6 +199,8 @@
                     window.location.hash = target;
                 });
             });
+
+            
 
             //submenu services slick on mobile
             var $windowWidth = $(window).width();
