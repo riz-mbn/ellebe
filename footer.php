@@ -1,5 +1,4 @@
 
-
     </main>
     
     <footer id="footer" class="footer">
@@ -80,6 +79,153 @@
         </div>
     </footer>
 </div>  
+<script>
+(function($){
+	$(window).load(function(){
+		
+		var $windowWidth = $(window).width();
+		var offset = 0;
+		// *only* if we have anchor on the url
+		if(window.location.hash) {
+			if( $windowWidth <= 1023 ){ offset = 250;}
+			else { offset = 100; }	
+			var scroll = $(window.location.hash).offset().top - offset;
+			scroll  = scroll + 'px';
+			
+			// smooth scroll to the anchor id
+			$('html, body').animate({
+				scrollTop: scroll
+			});
+		
+			var url  = window.location.hash;
+			var hash = url.substring(url.indexOf("#")+1);
+			$('.services_nav .nav_item.' + hash).addClass('is_active slick-current').siblings('.slick-slide').removeClass('is_active slick-current');     
+			$('.subnav .menu .menu_item.' + hash).addClass('is_active').siblings('.menu_item').removeClass('is_active');     
+		}            
+		else {
+
+			$('.services_nav .nav_item.botox').addClass('is_active slick-current');
+			$('.subnav .menu .menu_item.botox').addClass('is_active');
+		}
+                        
+		$('.menu .submenu .menu_item').click(function(e){
+			var anchor = $(this).attr('data-anchor');
+			//$('.subnav .menu .menu_item.' + anchor).addClass('is_active').siblings().removeClass('is_active'); 
+			
+			if( !$('.services_nav .nav_item.' + anchor).hasClass('is_active') ) {
+				$('.services_nav .nav_item.is_active').removeClass('is_active slick-current');
+				$('.services_nav .nav_item.' + anchor).addClass('is_active slick-current');
+			}	
+			
+			e.stopPropagation();
+		});      
+
+		$('.subnav .menu .menu_item').click(function(e){
+			$('.subnav .menu .menu_item.is_active').removeClass('is_active');
+			$(this).addClass('is_active');
+		});           
+
+		$('.services_nav .nav_item').click(function(e){
+			$('.services_nav .nav_item.is_active').removeClass('is_active slick-current');
+			$(this).addClass('is_active slick-current');
+		});
+
+		//smooth scroll
+		$('a[href*="#"]').click(function (e) {
+			var target = this.hash;
+			var $target = $(target);
+			var name = this.hash.slice(1);
+			var offset = 0;
+           var $windowWidth = $(window).width();
+			
+			target = target.length ? target : $('[name=' + name +']');
+
+			if( $windowWidth <= 1023 ){
+				offset = 150;
+			}
+			else {
+				offset = 150;
+			}
+			
+			offset = $target.offset().top - offset + 'px';
+			
+			$('html, body').stop().animate({
+				scrollTop: offset
+			}, function () {
+				window.location.hash = target;
+			});
+		});
+		
+		
+            var lastId, topMenu = $('.services_menu'),
+            topMenuHeight = topMenu.outerHeight()+15,
+            // All list items
+            menuItems = topMenu.find('a'), 
+            // Anchors corresponding to menu items
+            scrollItems = menuItems.map(function(){
+                var url = $(this).attr("href");
+                var hash = url.substring(url.indexOf("#"));
+                var item = $(hash);
+                if (item.length) { return item; }
+            });   
+		
+			$(window).scroll(function() {  
+                // Get container scroll position
+                var fromTop = $(this).scrollTop()+topMenuHeight;
+				
+			if( $windowWidth <= 1023 ){ offset = 250;}
+			else { offset = 200; }	
+                // Get id of current scroll item
+                var cur = scrollItems.map(function(){
+                    var offsetTop = $(this).offset().top - offset;
+                    if (offsetTop < fromTop)
+                    return this;
+                });                
+                // Get the id of the current element
+                cur = cur[cur.length-1];
+                var id = cur && cur.length ? cur[0].id : "";
+
+				console.log(id);
+				
+                if (lastId !== id) {
+                    lastId = id;   
+					var serv_menu = ".services_menu .menu_item." + id;
+					$(serv_menu).addClass('is_active').siblings('.menu_item').removeClass('is_active');     
+					
+					if( !$('.services_nav .nav_item.' + id).hasClass('is_active') ) {
+						$('.services_nav .nav_item.is_active').siblings().removeClass('is_active slick-current');
+						$('.services_nav .nav_item.' + id).addClass('is_active slick-current');
+					}
+				} 
+				
+                //submenu services on scroll desktop
+                var getTop = $('.sticky-container').offset().top;                            
+                var scrollTop = $(window).scrollTop();
+                if ( scrollTop > 180) {
+                    $('.subnav').addClass('is_sticky');
+                    sticky = true;
+                } else {
+                    $('.subnav').removeClass('is_sticky');
+                }
+				
+				          
+                var scrollTop = $(window).scrollTop();
+                // sticky on submenu services and services on scroll mobile
+                if ( scrollTop > 250) {
+                    $('.services_nav, .services').addClass('is_sticky');
+                    sticky = true;
+
+                } else {
+                    $('.services_nav, .services').removeClass('is_sticky');
+                }
+
+
+			});
+		// $('img').removeAttr('width height');
+	});
+
+})(jQuery);
+</script>
 <?php wp_footer() ?>
 
 </body>
